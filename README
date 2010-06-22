@@ -1,0 +1,10 @@
+This direc now contains a few basic tutorials and a parser along with a few scripts that can help in moving through the tutorial
+It contains the following:
+
+1.Func called next.sh
+2.Func called resume.sh
+3.Script to move through the chroot
+4.A python parser
+
+Author:Vaibhav Agarwal
+Date:June 22,2010
