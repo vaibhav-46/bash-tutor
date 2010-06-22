@@ -1,0 +1,13 @@
+<start>
+<red>
+SECOND TUTORIAL:
+  The firt few commands are the most important commands in the whole of your bash experience.
+  These commands are necessary to move from one to another....
+  Some of these commands are </red>
+  <blue>              
+                > cd
+                > mkdir
+                > rmdir
+</blue>
+  <red> These commands are necessary to help the user move through the various files and to arrange them in a systematic manner </red>
+</red>             

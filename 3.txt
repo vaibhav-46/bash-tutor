@@ -1,0 +1,9 @@
+<red>
+This tutorial now looks at some more basic cmds ....
+These help in keeping your files arranged,renaming them,coping and pasting them etc..
+These will be usefull tpo a normal user to get his files arnd the file systems
+</red>
+<blue>
+>cp filename where_u_want_to_place
+        >mv initialname finalname
+</blue>        
