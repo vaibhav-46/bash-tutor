@@ -6,5 +6,7 @@ It contains the following:
 3.Script to move through the chroot
 4.A python parser
 
+But there is a small point with this parser..there should not be any lines of the form <clour><another colour>blah</another colour></colour> i.e if a colour is defined there has to be a text within it on both sides of the child tags
+<colour>data<tag>foo</tag>blah</colour> is a necissity
 Author:Vaibhav Agarwal
 Date:June 22,2010
