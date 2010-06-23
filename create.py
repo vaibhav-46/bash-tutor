@@ -3,7 +3,7 @@ def parser(x):
     import re
     from fu import fu
     f=open('/home/vaibhav/final/'+str(x)+'.txt','r+')
-    f1=open('/home/vaibhav/final/temp.txt',"r+")
+    f1=open('/home/vaibhav/final/temp.txt',"w+")
     doc=f.readlines()
     soup=BeautifulSoup(''.join(doc))
     soup.prettify()
@@ -59,7 +59,7 @@ def parser(x):
             mysame.contents[2].replaceWith(mysame.contents[2]+fu(mysame.parent.name))
         elif p==1:
             mysame.contents[0].replaceWith("\033[0;37;40m"+mysame.contents[0]+fu(mysame.parent.name))            
-    f1.write(soup.prettify())
+    f1.write(soup.renderContents())
 
 if __name__=="__main__":
 	import sys

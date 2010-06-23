@@ -1,0 +1,9 @@
+
+<red>[0;31;40mHello!!!
+\n   You are now going to learn about bash...this will help u interact with the OS better.
+\n   The first thing that comes to ones mind is that what exactly is a shell.
+\n   Something that will help a user interact with the OS.
+\n   bash is an improvement over the sh shell.
+\n   It has a lot of functional supports...which make life eaier for a new-person
+\n   Hope u enjoy this tutorial"  </red>
+\n

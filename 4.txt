@@ -1,3 +1,2 @@
-<start>
 <red>this is a very basic cmd line argument that one has to match such that we can<blue>say what we </blue>
 like to say</red>
