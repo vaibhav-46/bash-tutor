@@ -1,4 +1,4 @@
-<start><red>Hello!!!
+<red>Hello!!!
    You are now going to learn about bash...this will help u interact with the OS better.
    The first thing that comes to ones mind is that what exactly is a shell.
    Something that will help a user interact with the OS.

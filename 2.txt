@@ -1,4 +1,3 @@
-<start>
 <red>
 SECOND TUTORIAL:
   The firt few commands are the most important commands in the whole of your bash experience.
@@ -10,4 +9,4 @@ SECOND TUTORIAL:
                 > rmdir
 </blue>
   <red> These commands are necessary to help the user move through the various files and to arrange them in a systematic manner </red>
-</red>             
+             

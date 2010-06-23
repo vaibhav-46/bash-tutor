@@ -4,6 +4,7 @@ x=`cat file.txt`
 export x
 y=$(($x+1))
 export y
+clear
 python create.py $x
 sed -i -e 's/<\/*.*>//g' temp.txt
 if [[ "$y" -gt "5" ]];then

@@ -1,8 +1,9 @@
 
- 
-  [0;31;40mthis is a very basic cmd line argument that one has to match such that we can
-  
-   [0;34;40msay what we
-  
-  like to say
- 
+ [0;31;40mHello!!!
+   You are now going to learn about bash...this will help u interact with the OS better.
+   The first thing that comes to ones mind is that what exactly is a shell.
+   Something that will help a user interact with the OS.
+   bash is an improvement over the sh shell.
+   It has a lot of functional supports...which make life eaier for a new-person
+   Hope u enjoy this tutorial"
+
