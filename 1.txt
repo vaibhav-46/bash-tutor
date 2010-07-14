@@ -5,7 +5,7 @@ This application has been made with the idea that the most feared thing for a li
 <blue>
 This tutorial is meant to help you understand various commands that you might use in the process of using the terminal.Once you are comfartable with these commands it will become a lot easier for you to be able to run the computer.But the main point to remember while studying this tutorial is to keep trying out the commands that are given in the tutorial.There are a lot of examples in this tutorial and it is very important that you do try them out and make sure that you understand what is going on.This way you will not only learn but have a lot of practice along the way.</blue>
 <red>
-INSTRUCTIONS :
+INSTRUCTIONS:
 This tutorial is an interactive one and so you can browse through each chapter and to quit the chapter press q.To move around the chapters there are various commands that you can use:
 1.<green>next</green> --> This is to go to the next chapter in the tutorial (till maybe you know why you use next.sh... :p)
 2.<green>previous</green> -->This can be used to go to the previous chapter.
