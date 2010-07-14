@@ -70,7 +70,7 @@ def fu(st):
     if st=="red":
         return "\033[0;31;40m"
     elif st=="[document]":
-        return " "
+        return ""
     elif st=="green":
         return "\033[0;32;40m"
     elif st=="brown":
@@ -84,7 +84,7 @@ def fu(st):
     elif st=="white":
         return "\033[0;37;40m"
     elif st=="start":
-        return " "
+        return ""
                                             
 
     

@@ -1,0 +1,41 @@
+\t\t\t\t<brown>Filters-Chapter 9</brown>
+<red>
+The last chapter had a little segment on pipes.One class of programs that you can use with pipes are called filters.Filters take standard input and perform operations on it and then send the result to standard output.Confused?Dont be as you will soon understand.Some of the main filters are:
+
+1.<green>sort</green>--It sorts stdin (pipe or ">" or keyboard ) and then outputs the sorted result on stdout.
+<blue>
+Example:Sort has many options to help sort out the data in a perticular order.Some of the useful options of sort are:
+a.<green>-n</green> :This option is used to sort numerical values(try entering a text file with numbers and then sort them using the command sort -n file_name)
+b.<green>-r</green> :This option is used to revese the result i.e descending order instead of ascending order(In the previous case try sort -nr file_name) 
+c.<green>-M </green>:This option is used to sort months in order (Jan<Feb<Mar<...<Dec).Again try putting in months in a file and sort it -M option.
+d.<green>-k</green> : This option is used to sort a perticular data using keys that are an explicit indicator to a perticular data.
+Small example:Say we have to for some reason find a list of times of the files when they were last modified.This small script is used to find a list of the last modified times of the files.<green>for file in `ls ` ;do echo "$file  `date -r $file +%F`">>file.txt ;done and then cat file.txt | sort -k 2 </green>.Too confused,I will explain.The for loop is like in any other programming language and for all files in this directory,the command <green>date -r +%F</green> gives the last modified time of file in the format yy-mm-dd and we echo the output to file.txt(note that we use >> and not >-explain?).Then we sort the file with the option -k and the column number 2 i.e the date.
+<green>A more useful example:</green>Try typing <green> df -h | awk '{ print $5 }' | grep -v Use | cut -d% -f 1- | sort -nr </green>Seems frightening at first site but at the end of this tutorial this will seem trivial(awk is a terminal lang..more on this later).This gives us the size of the drives and % free in reverse order.
+</blue>
+
+2.<green>uniq</green>:Unique command is used to find out and replace from a file mutiple copies of the same thing.
+<blue>
+Example:Again unig has many examples that help the user in many ways.Some of them are:
+a.<green>-c</green>:This prefixes lines by the number of occurences.
+b.<green>-d</green>:This only prints the duplicate lines.
+c.<green>-i</green>:This ignores the differences in case when comparing.
+d.<green>-u</green>:This only prints unique lines.
+Make a file called file.txt with some data in it(anything min 5 lines but with something repeated exactly the same).Now try this command <green>cat file.txt | sort | uniq -dc </green> to get the duplicate lines in the file and how many times they appear.
+An important point to remember is that most of the bash history is stored in a file called .bash_history in home directory.You can use this to find out the most used commands(outside the tutorial) by <green> cat /home/`whoami`/.bash_history | uniq -dc | sort -k 1 | head -5 </green>.The head command picks up lines from the top and -5 indicates first 5 lines are to be picked.
+
+3.<green>grep</green>Grep is a very useful text searching tool.Grep helps read the input and find a perticular string anywhere in that input.
+<blue>
+Usage:grep Options Thing_to_be_searched place
+Exercise:Lets start simple : <green>echo "hello world!!This is a grep check and intentionally i write the spelling of error as rroer." | grep --color rroer </green> and you will see that the output is the whole line with the word highlighted.Now try echoing a file and searching for a word in that.If the word is there that perticular line will be displayed else there is no output.Grep -v option does the opposite of the search..it gives everything except the things that you asked for.Grep will be discussed separately as it is a very useful tool. 
+</blue>
+
+4.<green>head</green>This command picks up the first part of the file/input given to it.
+<blue>
+Usage:head option file/input
+Example:Remember the disc space example ..type in <green> df -h | awk ' { print $5 } ' | grep -v Use | cut -d% -f 1- | sort -nr | head </green>.This gives the maximum space free on the drives of your computer.Head command picks up the top most line in the input.
+</blue>
+<green>Just like the head command there is a tail command that is very much similar to head in usage but the only difference is that it reads the last part of the file (pretty obvious ).
+</green>
+Now we have covered some of the most useful commands of bash and also the  most frequently used commands.
+</red>
+

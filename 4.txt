@@ -1,2 +1,30 @@
-<red>this is a very basic cmd line argument that one has to match such that we can<blue>say what we </blue>
-like to say</red>
+<brown>\t\t\t\t\t\t\t\tChapter 4---Directory commands</brown>
+
+<red>Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
+The main directory is the root directory also known by /.This contains every file that is available on the computer.Now some of the main sub-directories of this folder are:<green>
+a./Boot
+b./Etc
+c./bin
+d./usr
+e./home (/home/$USER is where most of your regular files are present)
+</green>
+and many more..do navigate through them and try finding out about these directories using cd and ls command.Also move around these diretories using cd and see how they are arranged.Also there is a command called <green>file</green> that can be used to see what kind of file we are looking at..say you can type in <grren>file $PWD</green> and it will give you the name and tell you that it is a directory.More on file later but it can be used to find out about various different kinds of files likw text files(containing ASCII characters),executables etc..Get familiar with the general layout and a rough idea of some important files like <green>.bashrc,init.d,profile etc</green>.(Hint in the home directory type <green>ls -a</green>)
+
+One question at this stage will obviously be how to create and delete these directories.Note that as a general user you can only create directories in the home folder.So the main commands are:
+1.<green>mkdir</green>:This command is used to create a new directory inside the present working directory(type <green>pwd</green> to know its name).This can be used to create a new directory at any point.Also remember that the file/direc name should prefarabely not contain spaces in between.<blue>
+
+Usage:mkdir name_of_directory
+Experiment:Try making a directory named say Shaastra  and cd'ing into it.Try putting some data into it.Also try to get back one step up using cd .. / cd -</blue>
+
+Now that we have learnt how to create a directory it is also essential to know how to remove directories.Before starting on rmdir remember that anything removed by the below way cannot be got back as it is permanently deleted. 
+
+2.<green>rmdir</green>:This command is used to remove a empty directory i.e any directory that is empty can be permanently removed using this method.
+<blue>
+Usage:rmdir name_of_direc
+Experiment:Try to rm the directory Shaastra and also check the error if u try to delete a non-empty directory.
+
+So to delete a directory we need to empty it first and then delete.But this is not a very good process.In the next chapter we will see a command that can delete a non-empty direc.
+
+
+ 
+

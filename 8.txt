@@ -1,0 +1,34 @@
+<brown>\t\t\t\t\t\tInput And Output Redirections</brown>
+<red>
+In this lesson we will explore a powerful feature used by many command line programs.For example say we dont want to output the ls command on the screen,instead we want to store it in a file.This is easily possible using these redirections.
+
+<blue>Bash Redirection:</blue>First thing that you should know is that there are always three default files open:
+a.<green>stdin(0)</green>:This is generally the keyboard
+b.<green>stdout(1)</green>:This is the computer screen
+c.<green>stderr(2)</green>:This expands to standard error and this is also displayed on the monitor.
+Each open file is generally assigned a file descriptor as given in the brackets.For opening additional files,there remain descriptors 3 to 9.More on this at the end of the chapter.
+
+Now lets see some operators that help in redirecting the data flow:
+
+1.<green>">"</green>:Most command line programs display their result by sending their results to stdout.To redirect the output to a file ">" is used.
+<blue>
+Example:Try typing in <green>ls > ls.txt</green>and then check if there was any output.Also check if a file named ls.txt was created.If created display the file using the command <green>cat ls.txt</green>.Compare the ouput of this command with the ls command output.This shows that the ">" operator transfers the output to the given file.Also note that if > is used either a new file is created or a existing one is over-written.
+</blue>
+
+2.<green>">>"</green>--The only difference between the previous command and this command is that this appends text to the given file unlike the previous one which overwrites the data in the file.Note that both commands create a new file if one is not already present.
+<blue>
+Experiment:Try out the previous commands in 2 different ways.Now that we have a ls.txt,check the difference between ">>" and ">" using first <green>ls >> ls.txt and cat ls.txt</green> and then do <green>ls > ls.txt and cat ls.txt</green>.This will automatically tell the difference.
+</blue>
+3.<green>"<"</green>As we saw before we would like to read data from a file and not from the stdin and that is when this command is used.
+<blue>
+Example:Try saving a file with any sort of data containing say 5 dates in yy-mm-dd format each one in adifferent line.Then type this command <green>sort < file_name </green>.This command displays the ouput in a sorted manner.As you can see the "<" basically reads input from the file and gives the data to the command sort(sort will be discussed in detail in the next chapter).Note also that we could have redirected the sorted data to another file using <green> sort < file_name >outputfile_name</green>.
+As you can see a command can have both its input and output redirected.Also the order in most cases is not important.
+</blue>
+4.<green>Pipes(|)</green>:Now suppose we need to connect multiple commands i.e output the result of one command to another and so on.In such a case ">" and "<" are not so useful.With | ,the standard output of one command is fed into the standard input of another.
+<blue>
+Example:<green>ls -l | less </green>-Remember that there was a brief mention of less in the initial chapters.Well here we are using a pipe to input the contents of "ls -l" to less command which helps the user browse through the material.(do check the difference between ls -l and this command..if we dont use less we have to scroll in the terminal using Shift+Up arrow but less is more convenient).Also this command can be used to find the total number of files/directories in the given directory-<green> ls -l | wc -l </green>.(Again more on wc in the next chapter).</blue>
+
+Now that we have almost covered most of the basics,a little more on bash-redirection.These i/o redirection tools like ">",">>","<" and "|" can be used to even transfer the stdout,stdin and stderr.One small point about a particular file called /dev/null which can almost be called a black hole.Anything that is sent here is lost and hence sometimes we send the standard error to this file.This can be done using <green> 2>/dev/null </green> i.e the output of stderr(2) is transfered to /dev/null which is anyway lost...so no error.:p.In general if nothing is mentioned we assume it to be '1' or stdout.Thats why when we do <green>cat `whoami` > name.txt </green> it assumes that we are trying to send the stdout to name.txt.(Wondering what happened here-nothing much `` are used to execute terminal commands whoami gives the user name and this was transfered to name.txt)
+
+the next chapter deals with a few commands that are very very common in day to day usage.A few of these commands were already introduced in this chapter.They are known as Filters.</red>
+ 
