@@ -1,0 +1,54 @@
+<brown>\t\t\t\tRegular Expressions</brown>
+<red>A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that discribes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that start on one line and end on another.
+
+	There are three important parts of a regular expression.
+<green>Anchors</green>--These are used to modify the position of the pattern in relation to the line of text.
+<green>Character Sets</green>--These match one or more characters in the single position.
+<green>Modifiers</green>--These specify how many times the previous character set is repeated.
+
+No problem if you dont understand the examples below will help you understand.
+
+Now lets see some character that are used :
+<blue>
+<cyan> ^</cyan>: Matches the empty string at the beginning of the line(also represents the characters not in the range of list[see examples])
+<cyan>$ </cyan>: Matches the empty string at the end of the line.
+<cyan>*</cyan> : The preceding item will be matched zero or more times.
+<cyan>.</cyan> : Matches any single character.
+<cyan>?</cyan> : The preceding item is optional and will be matched,at most once
+<cyan>+</cyan> : The preceding item will be matched one or more times.(small distinction from *)
+<cyan>{N}</cyan>: The preceding item is matched exactly N times.
+<cyan>{N,}</cyan>:The preceding item is matched N or more times.
+<cyan>{N,M}</cyan>:The preceding item is matched at least N times,but not more then M times.
+<cyan>-</cyan> : It represents the range if it's not first or last in a list or ending point of range in a list
+<cyan>\< </cyan>: It matches the empty string at the start of word
+<cyan>\> </cyan>:This matches the empty string at the end of the word.
+</blue>
+
+<blue>
+This was the technical definition of regular expressions.Now lets see how exactly these are useful:
+1."foo*":This is interpreted as foo followed by anything else..it will match any of the following:foo,foobar,foo1223 etc.
+2.Lets try this out:<green>touch foo bar foobar foo123</green>.This creates 4 files with the corresponding names.In the last chapter we read about find.This helps us find some files.say for some reason we wnat to find all the file names starting with "foo".We type the command <green> find . -name "foo*"</green>."." stands for any match and foo* means that any file name starting with foo will be selected.Check if the output is as expected.The . and * are called <green>characters</green>.
+3.Now say we want all the files starting with or having foo in the file name.For this type the command <green>touch barfoo bafoor barforo </green> and then type <green>find . -name "*foo*" </green>.This gives all the words with foo somewhere in the file name.
+</blue>
+
+These regular expressions are widely used with tools that help in text editing like sed,awk and grep.These are very powerful tools as you will soon see.
+Say you want to select all the lines in a file that are not empty then <green>^.*$</green> returns all these lines.What happens here is that ^ says starting with,"." means that there must be a character to match and * means that there can be more than one of those in that line till the end(end because of $).
+
+Now lets say we want to search for the number in a file..in such a case we could say <green>[0-9]+</green> which means that there must be something of the list 0-9 ome or more times(due to +).Similarly we can search for capital letters with <green>[A-Z]*</green>.Thus we can see that regular expressions are pretty useful in searching for a perticular pattern.Also say we want to search for a pattern that does not have numbers then we use <green>[^0-9]</green>.Note that here ^ is used to signify the opposite of the list i.e digits should not be included in the search.Also we can have [^-0-9] meaning there should be no - and no digit.
+
+<green>Use of *</green>:Say we want to find all the lines in a file starting with a number.But then if there is some space before the start ^[0-9] does not give the required result.Instead we could write <green>^ *[0-9][0-9]* </green> and this will give all the lines starting with a number irrespective of the starting spaces.
+
+<blue>
+Some more example are
+<cyan>^\^</cyan>:This means that line starting with ^...note that the backslash is used to remove the special meaning of ^ and to take it literaaly.Remember that \ is used to turn on/off the special meaning  for that perticular symbol.Similar case for \$$...
+Say we wanted to search for a word that
+<blue>a.Started with a capital "T"
+b.was the first word on that line
+c.the second letter was a lower case letter
+d.the third letter was a vowel
+e.the fourth letter is not a vowel.Then the expression would be <green>^T[a-z][aeiou][^aeiou]</green>
+Also we can specify the number of times a perticular thing has to be matchced using the \{ \} construct.For example say we want to display all 7 letter words starting with t.Then we can enter <green>\< t*\{7\}\> </green> and this will select the 7 letter words(7 here is a modifier since it tells the user how many searches to make/or many times the prevoius character has to be repeated) starting with t.Note that if \< and \> were not used then sometimes it will also select a word having such a string as a substring.For example if we search for the it will also select there as it also has the in it.To prevent this we use \< and \> for beginning and end of word.
+</blue>
+This part is really important as the next few chapters will be using a lot of these regular expressions(From now on we will refer to them as regex).Hence it is necessary that you get a hang of these things before we move on
+</red>
+
