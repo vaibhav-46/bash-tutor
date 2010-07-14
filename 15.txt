@@ -1,0 +1,31 @@
+<brown>\t\t\t\t\t\tChapter 14----Tar-gz files operation</green>
+<red>
+Often wen we download something or copy from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
+
+1.<green>tar</green>:tar command stores and extracts fileas from a tape or disc archieves.TAR stands for Tape ARchive.This has various options that are to be used along with this command.
+<blue>
+Some options that are regularly used in tar are:
+<green>-c</green>:This option creates a new archive.
+<green>-v</green>:This option verbosely describes the  list files processed
+<green>-f</green>:this option stands for archive the file
+<green>--delete</green>:This option deletes files from the archives.
+<green>-t</green>:This option lists the contents of a archive.
+<green>-x</green>:This option helps in extracting files from the archive.
+
+Example:Say we want to archive all the pages that you have created during web buiding.Then type the command <green>tar -cvf web_pages *.html </green> and this will create a tar archive with all the files ending html.If no file is found it will return error and exit.This way we can create and extract archives.Some commonly used ways to extract from archives are
+.tar.bz2:<green>tar xjf arcive_name</green>
+.tar.gz:<green>tar xzf archive_name</green>
+.tar:<green>tar xf arcive_name</green>
+.tgz:<green>tar xzf archive_name</green>
+.tbz2:<green>tar xjf arcive_name</green></blue>
+
+2.<green>zip</green>:This command is similar to tar command in the sense that it archives the files in the zip format.It even follows the same options as the tar command.Point to note is that .zip files can be extracted using the command <green> unzip archive_name</green>
+
+3.<green>gzip</green>:This command is used to extract archives having the extension .gz or .z.
+
+4.<green> bunzip2</green>:This is used for extracting archives having the extensions .bz2,.bz,.tbz2 and bzip2.If some form is given to it that it does not understand it will reurn the same file with the name original_filename.out.
+
+These commands are very useful in extracting al the possible archives that are generally used.
+</red>
+
+
