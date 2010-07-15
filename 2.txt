@@ -5,13 +5,13 @@ Before we start of,there are many other tools inbuilt to help you get a feel of 
 1.<green>man</green>:This command is used to know how to use a perticular command,all its options and usage.This is one of the most important tools to know about the various commands.
 <blue>Usage:man cmd  
 example : man man
-</blue> 
+ 
 As the man pages for some commands run into several pages there are a few things that might be useful in reading the man pages:
  a)Press / followed by the phrase to search for a perticular word...To go the next word press n to go to the next
  b)Press space bar to go to the next page
  c)To exit press q
  d)If you don't know the exact name of the UNIX command you're looking for, you can use: man -k something => man -k responds by printing on the screen a list of all the commands it finds that are similar to the word you typed in place of something or that contain that word in the description of the command.
-
+</blue>
 2.<green>info</green>:This command is used to know the finer details of a perticular command..pretty useful to know how and why a perticular command is to be used.
 <blue> Usage:info cmd 
 Example:info info

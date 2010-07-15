@@ -17,7 +17,7 @@ if [[ "$y" -gt "$NUM_FILE" ]];then
   y=1
 fi
 echo $y>file.txt
-echo -e  `cat out`
+echo -e  `cat out` 
 echo -e "\033[0m "
 rm out*                       #Removes the unrequired files
 rm temp.txt    

@@ -21,7 +21,7 @@ Experiment:Try out the previous commands in 2 different ways.Now that we have a 
 </blue>
 3.<green>"<"</green>As we saw before we would like to read data from a file and not from the stdin and that is when this command is used.
 <blue>
-Example:Try saving a file with any sort of data containing say 5 dates in yy-mm-dd format each one in adifferent line.Then type this command <green>sort < file_name </green>.This command displays the ouput in a sorted manner.As you can see the "<" basically reads input from the file and gives the data to the command sort(sort will be discussed in detail in the next chapter).Note also that we could have redirected the sorted data to another file using <green> sort < file_name >outputfile_name</green>.
+Example:Try saving a file with any sort of data containing say 5 dates in yy-mm-dd format each one in a different line.Then type this command <green>sort < file_name </green>.This command displays the ouput in a sorted manner.As you can see the "<" basically reads input from the file and gives the data to the command sort(sort will be discussed in detail in the next chapter).Note also that we could have redirected the sorted data to another file using <green> sort < file_name >outputfile_name</green>.
 As you can see a command can have both its input and output redirected.Also the order in most cases is not important.
 </blue>
 4.<green>Pipes(|)</green>:Now suppose we need to connect multiple commands i.e output the result of one command to another and so on.In such a case ">" and "<" are not so useful.With | ,the standard output of one command is fed into the standard input of another.
