@@ -14,12 +14,12 @@ Usage: ps [options
 Examples:
 1.ps without options prints to stdout four items of information for atleast two processes currently on the system:the shell and ps.The four items are labelled PID,TTY,TIME and CMD.TIME is the amount of CPU time in minutes and seconds that the process has been running.CMD is the name of the command that launched the process.TTY (stands for terminal type ) is the name of the terminal that the user is logged into .
 2.<green>ps -aux | less </green> is the most common option that is used to obtain information about all the process.-a option tells the user to list all the process of all the users on the system.-u tells ps to provide detailed information about each process.The -x options adds to the list processes that have no controlling terminal(such as those which were started on booting).Note that the - is not mandatory here.
-2.<green<ps -ef | less </green> is an alternative to the above command.The -e option generates a list of information about every process currently running.The -f option generates a listing that contains fewer items of information for each process than the -l option.</blue>
+2.<green>ps -ef | less </green> is an alternative to the above command.The -e option generates a list of information about every process currently running.The -f option generates a listing that contains fewer items of information for each process than the -l option.</blue>
 
 3.<green>jobs</green>:This command prints all the background process that are running.This can be helpful to find out if any malfunctioning proram is running in the background.
 
 4.<green>bq</green>:This command is used to get a program to run in the background.
-<blue>bg options</blue.
+<blue>bg options</blue>.
 
 5.<green>kill</green>:This command is used to kill a process that is malfunctioning.But to kill a process the id of the process is required.Only then this command can be used.Basically kill sends a sort of warning to the application and based on the intensity of the warning the application takes action.(see examples) 
 <blue>

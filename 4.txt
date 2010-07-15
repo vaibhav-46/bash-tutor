@@ -8,7 +8,7 @@ c./bin
 d./usr
 e./home (/home/$USER is where most of your regular files are present)
 </green>
-and many more..do navigate through them and try finding out about these directories using cd and ls command.Also move around these diretories using cd and see how they are arranged.Also there is a command called <green>file</green> that can be used to see what kind of file we are looking at..say you can type in <grren>file $PWD</green> and it will give you the name and tell you that it is a directory.More on file later but it can be used to find out about various different kinds of files likw text files(containing ASCII characters),executables etc..Get familiar with the general layout and a rough idea of some important files like <green>.bashrc,init.d,profile etc</green>.(Hint in the home directory type <green>ls -a</green>)
+and many more..do navigate through them and try finding out about these directories using cd and ls command.Also move around these diretories using cd and see how they are arranged.Also there is a command called <green>file</green> that can be used to see what kind of file we are looking at..say you can type in <green>file $PWD</green> and it will give you the name and tell you that it is a directory.More on file later but it can be used to find out about various different kinds of files likw text files(containing ASCII characters),executables etc..Get familiar with the general layout and a rough idea of some important files like <green>.bashrc,init.d,profile etc</green>.(Hint in the home directory type <green>ls -a</green>)
 
 One question at this stage will obviously be how to create and delete these directories.Note that as a general user you can only create directories in the home folder.So the main commands are:
 1.<green>mkdir</green>:This command is used to create a new directory inside the present working directory(type <green>pwd</green> to know its name).This can be used to create a new directory at any point.Also remember that the file/direc name should prefarabely not contain spaces in between.<blue>
@@ -22,9 +22,9 @@ Now that we have learnt how to create a directory it is also essential to know h
 <blue>
 Usage:rmdir name_of_direc
 Experiment:Try to rm the directory Shaastra and also check the error if u try to delete a non-empty directory.
-
+</blue>
 So to delete a directory we need to empty it first and then delete.But this is not a very good process.In the next chapter we will see a command that can delete a non-empty direc.
-
+</red>
 
  
 

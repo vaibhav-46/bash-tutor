@@ -12,7 +12,8 @@ Explaination:The ~ stands for the home direc i.e /home/USERNAME and this directo
 After doing this use <green> "cd -"</green> to go back to the last cd-ed directory.Do play around with this but do make sure that you come back to the current direc(name can be got by typing "pwd" at the terminal.
 </blue>
 2.<green>ls</green>:This command is used to display the contents of a particular directory.
-<blue><green>ls</green>       :displays the contents of the directory in which the user is currently
+
+<green>ls</green>    <blue>   :displays the contents of the directory in which the user is currently
       <green>ls direc</green> :displays the contents of the given directory
 
 Experiment:Try out <green>ls -lh</green> and the command <green>ls -a</green> .Dont bother too much with the output as of now but that output is going to be useful as we move along.The only point to note as of now is that "h" option makes the size of the directories in human readable form(do try it out without the h and see but do this only after exit as inside the tutorial none of the file sizes are not big enough for this distinction).

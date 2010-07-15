@@ -17,7 +17,8 @@ Example:Say we want to archive all the pages that you have created during web bu
 .tar.gz:<green>tar xzf archive_name</green>
 .tar:<green>tar xf arcive_name</green>
 .tgz:<green>tar xzf archive_name</green>
-.tbz2:<green>tar xjf arcive_name</green></blue>
+.tbz2:<green>tar xjf arcive_name</green>
+This way most of the common files can be extracted.</blue>
 
 2.<green>zip</green>:This command is similar to tar command in the sense that it archives the files in the zip format.It even follows the same options as the tar command.Point to note is that .zip files can be extracted using the command <green> unzip archive_name</green>
 

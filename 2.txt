@@ -6,7 +6,7 @@ Before we start of,there are many other tools inbuilt to help you get a feel of 
 <blue>Usage:man cmd  
 example : man man
 </blue> 
-<red>As the man pages for some commands run into several pages there are a few things that might be useful in reading the man pages:
+As the man pages for some commands run into several pages there are a few things that might be useful in reading the man pages:
  a)Press / followed by the phrase to search for a perticular word...To go the next word press n to go to the next
  b)Press space bar to go to the next page
  c)To exit press q
@@ -15,9 +15,9 @@ example : man man
 2.<green>info</green>:This command is used to know the finer details of a perticular command..pretty useful to know how and why a perticular command is to be used.
 <blue> Usage:info cmd 
 Example:info info
-</blue><red>
+</blue>
 Again just as man is a vim-based(will talk about vim later-for now remember vim is a text-editor)application,so is info.So all the above points mentioned in context with man are applicable for info as well.
-</red>
+
 3.<green>whatis</green>:Another very useful command that helps a user find out more about a perticular command in brief. whatis searches  the  manual  page names and displays the manual page descriptions of any name matched.
 <blue>Usage:whatis thing_to_be_searched
 Example:Do try out <green>whatis mkdir</green> and <green>whatis ls</green>.These commands will be explained in the later chapters.

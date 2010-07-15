@@ -1,4 +1,4 @@
-<brown>\t\t\t\tRegular Expressions</brown>
+<brown>\t\t\t\tChapter 10-----Regular Expressions</brown>
 <red>A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that discribes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that start on one line and end on another.
 
 	There are three important parts of a regular expression.
@@ -10,18 +10,18 @@ No problem if you dont understand the examples below will help you understand.
 
 Now lets see some character that are used :
 <blue>
-<cyan> ^</cyan>: Matches the empty string at the beginning of the line(also represents the characters not in the range of list[see examples])
-<cyan>$ </cyan>: Matches the empty string at the end of the line.
-<cyan>*</cyan> : The preceding item will be matched zero or more times.
-<cyan>.</cyan> : Matches any single character.
-<cyan>?</cyan> : The preceding item is optional and will be matched,at most once
-<cyan>+</cyan> : The preceding item will be matched one or more times.(small distinction from *)
-<cyan>{N}</cyan>: The preceding item is matched exactly N times.
-<cyan>{N,}</cyan>:The preceding item is matched N or more times.
-<cyan>{N,M}</cyan>:The preceding item is matched at least N times,but not more then M times.
-<cyan>-</cyan> : It represents the range if it's not first or last in a list or ending point of range in a list
-<cyan>\< </cyan>: It matches the empty string at the start of word
-<cyan>\> </cyan>:This matches the empty string at the end of the word.
+<green> ^</green>: Matches the empty string at the beginning of the line(also represents the characters not in the range of list[see examples])
+<green>$ </green>: Matches the empty string at the end of the line.
+<green>*</green> : The preceding item will be matched zero or more times.
+<green>.</green> : Matches any single character.
+<green>?</green> : The preceding item is optional and will be matched,at most once
+<green>+</green> : The preceding item will be matched one or more times.(small distinction from *)
+<green>{N}</green>: The preceding item is matched exactly N times.
+<green>{N,}</green>:The preceding item is matched N or more times.
+<green>{N,M}</green>:The preceding item is matched at least N times,but not more then M times.
+<green>-</green> : It represents the range if it's not first or last in a list or ending point of range in a list
+<green>\< </green>: It matches the empty string at the start of word
+<green>\> </green>:This matches the empty string at the end of the word.
 </blue>
 
 <blue>
@@ -40,7 +40,7 @@ Now lets say we want to search for the number in a file..in such a case we could
 
 <blue>
 Some more example are
-<cyan>^\^</cyan>:This means that line starting with ^...note that the backslash is used to remove the special meaning of ^ and to take it literaaly.Remember that \ is used to turn on/off the special meaning  for that perticular symbol.Similar case for \$$...
+<green>^\^</green>:This means that line starting with ^...note that the backslash is used to remove the special meaning of ^ and to take it literaaly.Remember that \ is used to turn on/off the special meaning  for that perticular symbol.Similar case for \$$...
 Say we wanted to search for a word that
 <blue>a.Started with a capital "T"
 b.was the first word on that line
