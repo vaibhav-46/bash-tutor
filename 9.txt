@@ -1,4 +1,4 @@
-\t\t\t\t<brown>Filters-Chapter 9</brown>
+\t\t\t\t<brown>Filters-Chapter 8</brown>
 <red>
 The last chapter had a little segment on pipes.One class of programs that you can use with pipes are called filters.Filters take standard input and perform operations on it and then send the result to standard output.Confused?Dont be as you will soon understand.Some of the main filters are:
 

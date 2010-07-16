@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 10--Useful Commands</brown>
+<brown>\t\t\t\t\tChapter 9--Useful Commands</brown>
 <red>
 In this chapter we are going to cover a few commands that might not be used much but they are immensely useful in reducing the programmer's work.They are:
 

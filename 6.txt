@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 6---Cat and Echo commands</brown>
+<brown>\t\t\t\t\tChapter 5---Cat and Echo commands</brown>
 <red>
 Whatever we have done till now neither uses the monitor nor reads anything from the user.What if we want to read and print a text file on the screen.What if you want to save text in the form of a file.Then the commands<green>"cat" and "echo"</green> are used.These are very useful commands as you will see in the coming chapters.
 Lets see them in detail:
