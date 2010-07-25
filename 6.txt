@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 5---Cat and Echo commands</brown>
+<start><cyan>\t\t\t\t\tChapter 5---Cat and Echo commands</cyan>
 <red>
 Whatever we have done till now neither uses the monitor nor reads anything from the user.What if we want to read and print a text file on the screen.What if you want to save text in the form of a file.Then the commands<green>"cat" and "echo"</green> are used.These are very useful commands as you will see in the coming chapters.
 Lets see them in detail:
@@ -13,7 +13,7 @@ What cat does is first read the lines and store them in a file and then the seco
 4.Cat command along with <green>-vet</green> option prints unprintable characters in a file say escape sequences and colour sequences(see below).
 5.Also cat can be used to create a empty file using <green>cat > file_name </green>.
 </blue>
-Note: Cat is a very useful command as you will see as we move on.One point to remember is that the '>' is used to redirect the output to the file.More on this in the next chapter.(Do try this command too: <green>cat - </green> to escape press Ctrl+d) .Also you can combine text of mutiple files into one file using the command <green>cat file1 file2 file3 > file4.
+Note: Cat is a very useful command as you will see as we move on.One point to remember is that the '>' is used to redirect the output to the file.More on this in the next chapter.(Do try this command too: <green>cat - </green> to escape press Ctrl+d) .Also you can combine text of mutiple files into one file using the command <green>cat file1 file2 file3 > file4.</green>
 
 2.<green>Echo</green>:Just like cat,echo also prints on the screen but the main difference is that echo mostly takes input from the user and not from a file.
 <blue>
@@ -28,3 +28,4 @@ Hope you liked this example...;).
 Lets move on!!
  
 </red>
+</start>
