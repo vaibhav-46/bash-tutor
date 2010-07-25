@@ -1,38 +1,43 @@
-def parser(x,NAME):
-    """Parse a file and print it in colour in bash"""
-
+def parser(x,NAME,y):
     from BeautifulSoup import BeautifulSoup
     import re
+    from termcolor import colored
 
-    f=open(NAME+'/'+str(x)+'.txt','r+')
-    f1=open(NAME+'/temp.txt',"w+")
-
+    def color(present):
+        p1=len(present)
+        j=0
+        if p1==1:
+                print  colored (wrap(present.contents[j],y),present.name),
+        elif p1>1:
+            while j<p1:
+                if j%2==0:
+                    print colored(wrap(present.contents[j],y),present.name),
+                elif j%2==1:
+                    color(present.contents[j])
+                j=j+1
+           
+    def wrap(text,width):
+           return reduce(lambda line, word, width=width: '%s%s%s' %
+                  (line,
+                   ' \n'[(len(line)-line.rfind('\n')-1
+                         + len(word.split('\n',1)[0]
+                              ) >= width)],
+                   word),
+                  text.split(' ')
+                 )
+    
+    f=open(NAME+'/'+str(x)+'.txt','r+') 
+   
     doc=f.readlines()
     soup=BeautifulSoup(''.join(doc))
     soup.prettify()
-
-    maincolor={							#dictionary with the colours and their tags
-	"red":"\033[0;31m",
-	"green":"\033[0;32m",
- 	"brown":"\033[0;33m",
-	"blue":"\033[0;34m",
-	"magenta":"\033[0;35m",
-	"cyan":"\033[0;36m",
-	"white":"\033[0;37m",
-	"[document]":""
-	}
-
-    for colour in maincolor.keys():
-        for mysame in soup.findAll(colour):
-            p=len(mysame)
-            if p>=3:
-                mysame.contents[0].replaceWith(maincolor[colour]+mysame.contents[0])
-                mysame.contents[p-1].replaceWith(mysame.contents[p-1]+maincolor[mysame.parent.name])                                   
-            elif p==1:
-                mysame.contents[0].replaceWith(maincolor[colour]+mysame.contents[0]+maincolor[mysame.parent.name])
-    f1.write(soup.renderContents())
  
+    for tag in soup.start.findAll(recursive=False):
+       color(tag)
+                   
+                        
 if __name__=="__main__":
 	import sys
-	parser(int(sys.argv[1]),str(sys.argv[2])) 
-    
+	parser(int(sys.argv[1]),str(sys.argv[2]),int(sys.argv[3]))
+
+                   
