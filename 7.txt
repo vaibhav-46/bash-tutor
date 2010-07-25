@@ -1,6 +1,10 @@
-<brown>\t\t\t\t\tChapter 6--Mount</brown>
-<red>Mount is a very basic command that is used to mount filesystems like your cd,pendrives and other such external devices.
+<start><cyan>\t\t\t\t\tChapter 6--Mount</cyan>
+<red>
+Mount is a very basic command that is used to mount filesystems like your cd,pendrives and other such external devices.
 <blue>Usage:mount options file 
 Examples:
-1.This command <green> mount | column -t </green> can be used to display all the drives that you have presently mounted on the computer and their respective specs with the added benifit of nice formating.The pipe(|) is basically to pass the output of mount to the command column.More on pipes in the next xhapter.
-2.
+1.This command <green> mount | column -t </green> can be used to display all the drives that you have presently mounted on the computer and their respective specs with the added benifit of nice formating.The pipe(|) is basically to pass the output of mount to the command column.
+</blue>
+More on pipes in the next chapter.
+</red>
+</start>
