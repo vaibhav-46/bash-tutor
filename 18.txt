@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 17------Apt command</brown>
+<start><cyan>\t\t\t\t\tChapter 17------Apt command</cyan>
 <red>
 Once ypu get your computer goiong on,you would like some applications that can make your work easier.There is something called Synaptic Manager(System-->Administration-->Synaptic manager) that has the list of various applications that are available in the repository that you are connected through.But what if we want to get the applications using the terminal.Some of these commands are useful to do exctly that.Note that most of this commands require you to be super user.So you can use sudo before the command.
 
@@ -24,3 +24,4 @@ Usage:sudo apt-cache search pattern</blue>
 
 These commands are pretty useful in getting various applications from the repository and also later when we want to get an application from the source code.
 </red>
+</start>
