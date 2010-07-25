@@ -1,4 +1,4 @@
-<brown>\t\t\t\tChapter 16---Miscallaneous</brown>
+<start><cyan>\t\t\t\tChapter 16---Miscallaneous</cyan>
 <red>
 Ever wondered how to find out more about various files...their size and how to get only perticular people to access the files.In this chapter we will cover some commands that will help you do all of these commands.
 
@@ -9,7 +9,7 @@ Example:Try doing only<green> du</green> and you will see the disk usage of each
 
 Remember the output of the <green>ls -l </green>command that we mentioned earlier.Now is the time to analyse some of the output of it.Each of the output lines look something like this:
 <blue>-rwxr-xr-x number group_user owner size(in bytes) last_time_of_modification name</blue>. 
-Note that in some cases the first dash has a "d' written there which means that it is a directory.What do these initial rwx and stuff stand for.These are called the permissions for the given file.These decide who can access these files and who cannot.These are basically sets of 3:<blue>read(r),write(w),execute(x)</green>.The first set of three characters represent the rights of file owner,the second set the rights of files group and the third the rights of everyone else.These rights are the used to either allow or disallow access to various people.This is done using the following commands.
+Note that in some cases the first dash has a "d' written there which means that it is a directory.What do these initial rwx and stuff stand for.These are called the permissions for the given file.These decide who can access these files and who cannot.These are basically sets of 3:<blue>read(r),write(w),execute(x)</blue>.The first set of three characters represent the rights of file owner,the second set the rights of files group and the third the rights of everyone else.These rights are the used to either allow or disallow access to various people.This is done using the following commands.
 
 2.<green>chmod</green>:This command is used to change the permissions of the various files.It is a short form of change modulation.One important point before we see examples and usage is that the r,w,x variables are in order and are denoted by the binary numbers,So 111( 111 in binary=7 in decimal)stands for r,w,x all allowed while 101(101 in binary=5 in decimal) stands for r,x allowed but w disallwed.Using these decimal numbers we can change the owmnership of the files.
 <blue>
@@ -19,7 +19,7 @@ Example:<green>chmod 444 file_name </green> changes the file ownership to r--r--
 3.<green>chown</green>:Note that this command can be used only as a super user(more on this later).But this command is used to transfer the ownership of some file from one group to another.
 <blue>
 Usage:chown new_owner file_name
-Example:Say we want to change ownership of a file from "foo" user to "blah" user.Then we have to type <green>chown blah file_name </green> but note again that this can only be done as super user.
+Example:Say we want to change ownership of a file from "foo" user to "blah" user.Then we have to type <green>chown blah file_name </green> but note again that this can only be done as super user.</blue>
 
 4.<green>chgrp</green>:As the chown this command transfers the ownership of a file from one group to another.Same usage as the chown command.
 
@@ -29,4 +29,4 @@ Before we move on lets cover one very important thing called root:.The root user
 
 Now that we have covered sudo we are moving into more advanced commands that requuire the user to be a root/or administrator as you may call it.These commands deal with installing applications on the computer.
 </red>
- 
+ </start>
