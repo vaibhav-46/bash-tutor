@@ -1,4 +1,4 @@
-<brown>\t\t\t\tChapter 21</brown>
+<start><cyan>\t\t\t\tChapter 21</cyan>
 <red>
 This chapter covers some very important points/commands that are essential in the long run.
 
@@ -12,3 +12,4 @@ This chapter covers some very important points/commands that are essential in th
 4.<green>sleep</green>:This command is used to deay for a specific period of time.For example in a script say we want to change wallpapers every 30 seconds then we use this command to let the script become inactive for 30 seconds.
 Usage:sleep number
 </red>
+</start>
