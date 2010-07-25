@@ -1,4 +1,4 @@
-<brown>\t\t\t\tChapter 18-----VIM</brown>
+<start><cyan>\t\t\t\tChapter 18-----VIM</cyan>
 <red>
 This chapter has a few basic points on vim(text editor).Though there are many text editors there are 2 vary prominent ones : vim and emacs.Emacs will be covered in the next chapter.Before reading this chapter read the tutorial by typing in the terminal <green>vimtutor</green>.This tutorial has all the basics that are needed to get you started with vim.
 
@@ -10,5 +10,5 @@ Now that you have read the basics of vim,we will cover some more useful points o
 <green>:wq!</green>:Save and exit
 <green>:q!</green>:Exit and throw away changes
 3.
-
- 
+</red>
+ </start>
