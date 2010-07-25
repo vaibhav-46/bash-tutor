@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\t\t\t\tChapter 3---Directory commands</brown>
+<start><cyan>\t\t\t\t\t\t\t\tChapter 3---Directory commands</cyan>
 
 <red>Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
 The main directory is the root directory also known by /.This contains every file that is available on the computer.Now some of the main sub-directories of this folder are:<green>
@@ -26,5 +26,5 @@ Experiment:Try to rm the directory Shaastra and also check the error if u try to
 So to delete a directory we need to empty it first and then delete.But this is not a very good process.In the next chapter we will see a command that can delete a non-empty direc.
 </red>
 
- 
+ </start>
 
