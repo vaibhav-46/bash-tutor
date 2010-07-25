@@ -1,6 +1,6 @@
-<brown>\t\t\t\t\t\tChapter 14----Tar-gz files operation</green>
+<start><cyan>\t\t\t\t\t\tChapter 14----Tar-gz files operation</cyan>
 <red>
-Often wen we download something or copy from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
+Often when we download something or copy from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
 
 1.<green>tar</green>:tar command stores and extracts fileas from a tape or disc archieves.TAR stands for Tape ARchive.This has various options that are to be used along with this command.
 <blue>
@@ -29,4 +29,4 @@ This way most of the common files can be extracted.</blue>
 These commands are very useful in extracting al the possible archives that are generally used.
 </red>
 
-
+</start>
