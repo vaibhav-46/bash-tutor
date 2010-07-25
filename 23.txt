@@ -2,7 +2,7 @@
 <cyan>\t\t\t\t\tChapter 22----Crontab</cyan>
 <red>
 Sometimes while using the computer,we feel bad that the computer cannot understand our emotions directly.Wont it be nice if the computer does something on its own when we want to do(say every 2nd Saturday clear some logs).This can actually be done using an application called crontab.Its a pretty useful thing to use to make the computer do something at a particular time.Before we do something type <green>crontab -l </green> and see what it echoes.It gives something like <blue>no crontab for user_name </blue>.Basically crontab has a file with the time of execution and what it has to perform.This command is used to show all the timers that you have set in this file.
-<green>Crontab</green> is a program making it easy for the users to schedule tasks and run programs at pre-determined periods of time.Now we will see some options that are commonly used along with crontab.
+<green>Crontab</green> is a program making it easy for the users to schedule tasks and run programs at pre-determined periods of time.Now we will see some options that are commonly used along with crontab.For Windows users,this is similar to the scheduled tasks that one uses.
 <blue>Some common options are:
 <green>crontab -l</green>:Lists the current cron jobs
 <green>crontab -e</green>:Edit your current crontab file and add/remove/edit crontab tasks.
