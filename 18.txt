@@ -23,5 +23,6 @@ Usage:sudo apt-get update</blue>
 Usage:sudo apt-cache search pattern</blue>
 
 These commands are pretty useful in getting various applications from the repository and also later when we want to get an application from the source code.
+In case you dont understand something or if something does not work you can read up about /etc/apt/sources.list and if you are further interested read up on dpkg.
 </red>
 </start>
