@@ -1,15 +1,15 @@
-<brown>\t\t\t\tChapter 20----Some Interesting commands</green>
+<start><cyan>\t\t\t\tChapter 20----Some Interesting commands</cyan>
 <red>
 In this chapter we are going to cover a few commands that are randomly used in various scripts.
 
 1.<green>date</green>:Just as the name suggests this command is used to display the date and time in various formats and of various files.
 
 Some common options of date are
-a.<green>-d</green>:This command is used along with string to give the whole date format.(try <green>date -d 21-july-2007 </blue> )
+a.<green>-d</green>:This command is used along with string to give the whole date format.(try <green>date -d 21-july-2007 </green> )
 b.<green>-r</green>:This command is used to find the last modified time of file.
 
-This is all right but most of the times we want the date in a particular format...date command offers a lot of formats that we can use.Note that we have to use a '+' an d then use the format ( ex. <blue> date option +fornat )
-<blue>
+This is all right but most of the times we want the date in a particular format...date command offers a lot of formats that we can use.Note that we have to use a '+' an d then use the format ( ex. <blue> date option +format )
+
 Some of the most used formats are:
 a.<green>%a</green>:gives locale's abbreviated weekday name
 b.<green>%B</green>:locale's full month name
@@ -37,3 +37,4 @@ Once you open the terminal(outside the tutorial) the thing displayed on the term
 </blue>
 Now armed with all this information,we can analyse the PS1 variable.
 </red>
+</start>
