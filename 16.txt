@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 15----Process The Processes!!!</brown>
+<start><cyan>\t\t\t\t\tChapter 15----Process The Processes!!!</cyan>
 <red>
 In this chapter we are going to help reduce the usage of the mouse.Suppose we have started a program say Firefox and we want to shut it down.How do we do that using the terminal?Please read the whole chapter before you start trying out anything on your own.
    First thing that you must know is that every process that runs on the computer has a unique id,and this id can be used to do a lot of process.Suppose we want to start firefox(do it outside the tutorial) from the terminal.This can be done by using the name firefox on the terminal.But then as long as Firefox is open we cannot use the terminal to do anything else.So to start terminal in the background so that it does not interfere with the terminal use the command <green>firefox & </green>.The & tells the computer to run the script in the background.Also the output on the terminal gives a number which is the process id of that application.This number is very important as this number uniquely identifies the application on the computer.
@@ -38,7 +38,7 @@ Usage:killall [options] name </blue>
 These commands are used a lot in managing the running of various applications.
 </red>
 
-
+</start>
 
 
 
