@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 12-----STREAM EDITOR</brown>
+<start><cyan>\t\t\t\t\tChapter 12-----STREAM EDITOR</cyan>
 <red>
 Stream Editor(or sed in short) is used to filter text i.e it takes text input and performs some operations(or set of operations) on it and outputs the modified text.Sed is typically used for extracting part of a file using pattern matching or substitute multiple occurences of a string within a file.If you want to work on text editing and a lot of it then sed is a tool that can make your life easier.Along with regex sed has awesome power and it can do a hell lot of things very easily as we shall see.
 <blue>
@@ -9,22 +9,24 @@ Try this:create a text file with some data say describing about grep that you le
 </blue>
 The / is called as a delimiter.But what if we have to replace an expression containing / like some directory name.It is not necessary to use only / as delimiter.We can use any symbol that is not found in both the strings as a delimiter like :,|,~ etc but we need 3 of them as shown in the example.Back to a few more examples:
 <blue>
-2.Using & as a matched string:Say we search for words staring with ch and we have to put those words in a bracket.If we dont know the final result how are we going to know what to substitute.In such a case & is helful as it stands for the text that has been selected.Example in the above case type <green> sed 's/ch[a-z]*/(&)/g' and this brackets all the wordsa starting with ch.Thus & is helpful when we dont know the resultant erpression.
+2.Using & as a matched string:Say we search for words staring with ch and we have to put those words in a bracket.If we dont know the final result how are we going to know what to substitute.In such a case & is helful as it stands for the text that has been selected.Example in the above case type <green> sed 's/ch[a-z]*/(&)/g' </green>and this brackets all the wordsa starting with ch.Thus & is helpful when we dont know the resultant erpression.
 
-3.One important point to note about sed is that it is not recurisve.Example <green> echo "nice loop" | sed 's/loop/loop the loop/' will not become an infinite loop,instead the output will be <green>nice loop the loop</green>
+3.One important point to note about sed is that it is not recursive.Example <green> echo "nice loop" | sed 's/loop/loop the loop/' </green>will not become an infinite loop,instead the output will be <green>nice loop the loop</green>
 </blue>
 Few more useful options of sed are:
-a.<green>-e</green>:If we want to get multiple replacements at the same time -e is used.<green>sed -e 's/a/A/' -e s/b/B' <old >new <green>
+a.<green>-e</green>:If we want to get multiple replacements at the same time -e is used.<green>sed -e 's/a/A/' -e s/b/B' < old >new </green>
 b.<green>-i</green>:A very useful command to make changes and save the resulting data into the same file. <green> sed -i 's/a/A/' file_name </green>.This time no "<" and ">" are needed because the command knows that both input and output are to the same file.
 c.<green>-n</green>:This command is used to prevent things from getting printed until the <green>-p</green> option is used.<green>echo "sunday is the best day | sed -n 's/day/night/gp' </green>
 
 Now we are going to cover some sed one liners that maybe useful to you in every-day usage:
 
 1.<green>sed '/regex/{x;p;x;}'</green>:insert a blank line above every line which matches "regex"
-2.<green>sed '/regex/G/' : insert a blank line below every line which matches "regex"
+2.<green>sed '/regex/G/' </green>: insert a blank line below every line which matches "regex"
 3.<green>sed -n "$="</green>:emulates "wc -l"
 4.<green>sed -n '/match/p' </green>:This is nothing but grep command.Thats why I said that whatever can be done with grep can be done using sed.
 5.<green>sed 10q </green>:prints first 10 lines of file.
 6.<green>sed '$!d'</green>:This prints the last line of a file.
 
 These are some of the most useful sed one-liners that we can use in day-to-day life.So now you can see that sed is an extremely powerful tool.Do look up more examples as it can make your life more easier,Lets move on now to another pattern and processing language called AWK.
+</red>
+</start>
