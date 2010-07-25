@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 9--Useful Commands</brown>
+<start><cyan>\t\t\t\t\tChapter 9--Useful Commands</cyan>
 <red>
 In this chapter we are going to cover a few commands that might not be used much but they are immensely useful in reducing the programmer's work.They are:
 
@@ -9,7 +9,7 @@ Example:Typing in <green>basename /usr/bin/sort</green> gives the output <cyan>s
 b.<green>rename</green>:This command is used to rename multiple files simultaneously using certain constraints.
 <blue>
 Usage:rename [option] files renamed_file and the main useful option is
-<green>-v</geen>:verbose i.e it confirms with the user before renaming the files.
+<green>-v</green>:verbose i.e it confirms with the user before renaming the files.
 Example:This command converts all uppercase file_names to lowercase:<green>rename 'y/A-Z/a-z/' *</green> .What happens here is that the expression 'y/A-Z/a-z/' takes all those files that have capital alphabets and converts them to small characters.The "*" captures the file_name and once the capital alphabets are changed to small the file name is retained.This is a regular expression and we will cover this in a later chapter.</blue>
 
 c.<green>dirname</green>:This command is the exact opposite of the basename command in the sense that it strips of the filename and gives only the directory part
@@ -31,7 +31,7 @@ Experiment:Browse through the various folders in the directory and try to find o
 f.<green>which</green>:This command is used to locate other commands and their location.But one point to remember is that which command can search only for executables and not for bash commands.(see examples)
 <blue>
 Usage:which command
-Examples:Try <green>which ls </green> and it gives the place where the ls command binary is present.Another example you can try is <green>which cd</green>.This will not give any output as cd is a bash command and not a binary.One more use of which is this:<green>var=`which ls`</green> and then <green>$var ~</green>.Here $var will act exactly like the command that was the argument of which.This can be helpful in a script that needs a particular command that might not be installedon the computer.So if the command does not exist we can have an alternative.
+Examples:Try <green>which ls </green> and it gives the place where the ls command binary is present.Another example you can try is <green>which cd</green>.This will not give any output as cd is a bash command and not a binary.One more use of which is this:<green>var=`which ls`</green> and then <green>$var ~</green>.Here $var will act exactly like the command that was the argument of which.This can be helpful in a script that needs a particular command that might not be installedon the computer.So if the command does not exist we can have an alternative.</blue>
 
 g.<green>find</green>:This command searches for files in a directory hierarchy.
 <blue>
@@ -41,4 +41,4 @@ Example:Try <green>find </green> and it basically finds all the files inside the
 These commands will be useful in many places to get the jobs done faster.In the next chapter we are going to cover a very important topic-regular expressions and they form the backbone of your usage of terminal.
 </red>
  
-
+</start>
