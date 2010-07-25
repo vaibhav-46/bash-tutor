@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\tChapter 11-GREP</brown>
+<start><cyan>\t\t\t\t\tChapter 11-GREP</cyan>
 <red> 
 In one of the previous chapters we had seen a little about grep.We now look in more detail at grep and its functionality.
 
@@ -26,3 +26,4 @@ Say we dont know the word-length then we can use <green> grep '\< c.*h\>' /usr/s
 </blue>
 So now we have a tool that can help us search text files.But what if we want to edit the data?Isnt there anything similar to find and replace that can be used?Well there is a tool called sed(stream editor) that helps manipulate text.We will look at sed in the next chapter.
 </red>
+</start>
