@@ -1,6 +1,6 @@
 <start><cyan>\t\t\tChapter 24-----User applications</cyan>
 <red>
-In this chapter we are going to cover some miscallaneous commands that might be used once in a while to understand about the vaious applications:
+In this chapter we are going to cover some miscallaneous commands that might be used once in a while to understand about the vaious applications in the system:
 
 1.<green>ifconfig</green>:This command is often used to configure a network interface.It is used at boot time to set up interfaces as necessary.
 <blue>
