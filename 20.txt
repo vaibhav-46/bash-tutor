@@ -1,3 +1,5 @@
-<brown>\t\t\t\tChapter 19-----Emacs</brown>
-
-In the last chapter we covered a little about vim.In this chapter we will introduce another text editor called Emacs.
+<start><cyan>\t\t\t\tChapter 19-----Emacs</cyan>
+<red>
+In the last chapter we covered a little about vim.In this chapter we will introduce another text editor called Emacs.a
+</red>
+</start>
