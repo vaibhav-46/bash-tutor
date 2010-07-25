@@ -1,12 +1,21 @@
-This direc now contains a few basic tutorials and a parser along with a few scripts that can help in moving through the tutorial
-It contains the following:
+This is a small collection of chapters that are contained as part of bash-tutor.This package contains 2 scripts as of now:
 
-1.Func called next.sh
-2.Func called resume.sh
-3.Script to move through the chroot
-4.A python parser
+1.next.sh : This script is used to move forward in the tutorial.
+2.create.py:This script is used to print the chapters in the tutorial.
 
-But there is a small point with this parser..there should not be any lines of the form <clour><another colour>blah</another colour></colour> i.e if a colour is defined there has to be a text within it on both sides of the child tags
-<colour>data<tag>foo</tag>blah</colour> is a necissity
-Author:Vaibhav Agarwal
-Date:June 22,2010
+The navigate.sh file will be sourced from the bashrc file inside the chroot.This way the user will be able to access all the functions of that file.
+The bashtutor.sh function is a dummy as of now that does not do anything.It is only when we have a chroot installed that this whole thing works.
+
+How to use it:Go to the folder containing the chapters and then use the command ./next.sh.
+
+
+To do list:
+
+1.Finish the other chapters.
+2.Improve the UI using ncurses.
+3.Make the scripts more representable .
+4.Improve the navigate.sh and bashtutor.sh scripts with vimplates and make it more user friendly.
+
+
+
+
