@@ -27,6 +27,8 @@ Example:Say we want to change ownership of a file from "foo" user to "blah" user
 <blue>
 Before we move on lets cover one very important thing called root:.The root user is the main user of the system and this user has all the privilages and control over the system.<green>Beware that any wrong changes made as super user can affect the computer</green>.That is why when we want to do install something or change ownership it can be done only by being super user.Type <green> su </green> to become the super user but it is not recommended unless it is absolutely necessary.A easier way to execute a super user command is to use <green> sudo </green> before the comamnd.This trick helps you you do the process as root and then exits immediately.</blue>
 
+Note though that chpasswd does not always work.In addition there are other commands like passwd,yppasswd which can also be used to change the password.If one of these do not work then try the others.
+
 Now that we have covered sudo we are moving into more advanced commands that requuire the user to be a root/or administrator as you may call it.These commands deal with installing applications on the computer.
 </red>
  </start>
