@@ -1,4 +1,4 @@
-<brown>\t\t\t\tChapter 10-----Regular Expressions</brown>
+<start><cyan>\t\t\t\tChapter 10-----Regular Expressions</cyan>
 <red>A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that discribes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that start on one line and end on another.
 
 	There are three important parts of a regular expression.
@@ -42,7 +42,7 @@ Now lets say we want to search for the number in a file..in such a case we could
 Some more example are
 <green>^\^</green>:This means that line starting with ^...note that the backslash is used to remove the special meaning of ^ and to take it literaaly.Remember that \ is used to turn on/off the special meaning  for that perticular symbol.Similar case for \$$...
 Say we wanted to search for a word that
-<blue>a.Started with a capital "T"
+a.Started with a capital "T"
 b.was the first word on that line
 c.the second letter was a lower case letter
 d.the third letter was a vowel
@@ -51,4 +51,4 @@ Also we can specify the number of times a perticular thing has to be matchced us
 </blue>
 This part is really important as the next few chapters will be using a lot of these regular expressions(From now on we will refer to them as regex).Hence it is necessary that you get a hang of these things before we move on
 </red>
-
+</start>
