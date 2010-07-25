@@ -1,4 +1,4 @@
-<brown>\t\t\t\t\t\tChapter 7------Input And Output Redirections</brown>
+<start><cyan>\t\t\t\t\t\tChapter 7------Input And Output Redirections</cyan>
 <red>
 In this lesson we will explore a powerful feature used by many command line programs.For example say we dont want to output the ls command on the screen,instead we want to store it in a file.This is easily possible using these redirections.
 
@@ -31,4 +31,4 @@ Example:<green>ls -l | less </green>-Remember that there was a brief mention of 
 Now that we have almost covered most of the basics,a little more on bash-redirection.These i/o redirection tools like ">",">>","<" and "|" can be used to even transfer the stdout,stdin and stderr.One small point about a particular file called /dev/null which can almost be called a black hole.Anything that is sent here is lost and hence sometimes we send the standard error to this file.This can be done using <green> 2>/dev/null </green> i.e the output of stderr(2) is transfered to /dev/null which is anyway lost...so no error.:p.In general if nothing is mentioned we assume it to be '1' or stdout.Thats why when we do <green>cat `whoami` > name.txt </green> it assumes that we are trying to send the stdout to name.txt.(Wondering what happened here-nothing much `` are used to execute terminal commands whoami gives the user name and this was transfered to name.txt)
 
 the next chapter deals with a few commands that are very very common in day to day usage.A few of these commands were already introduced in this chapter.They are known as Filters.</red>
- 
+</start>
