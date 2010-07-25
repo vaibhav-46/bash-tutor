@@ -1,4 +1,4 @@
-                      \t\t\t\t\t   <brown>CHAPTER 2---FEW BASIC HELPS</brown>
+ <start>                     \t\t\t\t\t   <cyan>CHAPTER 2---FEW BASIC HELPS</cyan>
 <red>
 The first and most basic commands that a user should learn are <green> 'ls' and 'cd'</green> as these are the most useful commands and these are used most often.
 1.<green>cd</green> :This is used to move from one directory to another. There are many ways of using cd.
@@ -25,4 +25,4 @@ More examples of this will follow in the next few chapters.
 
 </red>
  
-
+</start>
