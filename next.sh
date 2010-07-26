@@ -1,3 +1,17 @@
+##############################################################################################################
+# File Description: Bashtutor Script That Runs Through The Script
+#                   This script is what runs through the bash tutor, a partially interactive
+#                   application meant to give terminal newbies a complete picture of most available shell
+#                   utilities.
+# Author          : Vaibhav Agarwal
+# Date            : 26/07/2010
+# Remarks         :
+#
+# Known issues    :As of now there are no issues found with this 
+#
+# Future Work     :Maybe make the file saving process more error free
+#
+##############################################################################################################
 #!/bin/bash 
 
 x=`cat file.txt`
