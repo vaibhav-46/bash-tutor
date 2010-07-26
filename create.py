@@ -1,17 +1,18 @@
-def parser(x,NAME,y):
+def parser(x,NAME,width):
     from BeautifulSoup import BeautifulSoup
     import re
     from termcolor import colored
+    
 
     def color(present):
         p1=len(present)
         j=0
         if p1==1:
-                print  colored (wrap(present.contents[j],y),present.name),
+                print  colored (wrap(present.contents[j],width),present.name),
         elif p1>1:
             while j<p1:
                 if j%2==0:
-                    print colored(wrap(present.contents[j],y),present.name),
+                    print colored(wrap(present.contents[j],width),present.name),
                 elif j%2==1:
                     color(present.contents[j])
                 j=j+1
@@ -31,7 +32,6 @@ def parser(x,NAME,y):
     doc=f.readlines()
     soup=BeautifulSoup(''.join(doc))
     soup.prettify()
- 
     for tag in soup.start.findAll(recursive=False):
        color(tag)
                    
