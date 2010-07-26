@@ -7,7 +7,7 @@
 # Date            : 26/07/2010
 # Remarks         :
 #
-# Known issues    :As of now there are no issues found with this 
+# Known issues    :The create.py script does not print tab when we use \t 
 #
 # Future Work     :Maybe make the file saving process more error free
 #
@@ -19,7 +19,8 @@ export x
 y=$(($x+1))
 export y
 let NUM_FILE=$((`ls [0-9]*.txt| wc -l `))
-#printf "\e[8;70;180;t"
+printf "\e[8;70;180;t"
+clear
 size=$(stty size | awk '{print $2}')
 python create.py $x $PWD $size
 if [[ "$y" -gt "$NUM_FILE" ]];then
