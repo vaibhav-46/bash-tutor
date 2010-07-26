@@ -4,7 +4,6 @@ This is a small collection of chapters that are contained as part of bash-tutor.
 2.create.py:This script is used to print the chapters in the tutorial.
 
 The navigate.sh file will be sourced from the bashrc file inside the chroot.This way the user will be able to access all the functions of that file.
-The bashtutor.sh function is a dummy as of now that does not do anything.It is only when we have a chroot installed that this whole thing works.
 
 How to use it:Go to the folder containing the chapters and then use the command ./next.sh.
 
