@@ -14,7 +14,7 @@ To do list:
 2.Improve the UI using ncurses.
 3.Make the scripts more representable .
 4.Improve the navigate.sh and bashtutor.sh scripts with vimplates and make it more user friendly.
-
+5.Make the output scrollable
 
 
 
