@@ -11,6 +11,8 @@ This chapter covers some very important points/commands that are essential in th
 3.<green>dircolors</green>:This command is used to get color setup for ls.
 
 4.<green>sleep</green>:This command is used to deay for a specific period of time.For example in a script say we want to change wallpapers every 30 seconds then we use this command to let the script become inactive for 30 seconds.
-Usage:sleep number
+<blue>
+Usage:sleep number</blue>
+Maybe you can search for how to change the wallpapers using terminal!!
 </red>
 </start>
