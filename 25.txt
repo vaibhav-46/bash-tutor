@@ -1,44 +1,23 @@
-<start><cyan>\t\t\tChapter 24-----User applications</cyan>
-<red>
-In this chapter we are going to cover some miscallaneous commands that might be used once in a while to understand about the vaious applications in the system:
+<start><cyan>Chapter 24----Useful Tools</cyan>
 
-1.<green>ifconfig</green>:This command is often used to configure a network interface.It is used at boot time to set up interfaces as necessary.
+Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting an d in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
+
+1.<green> diff </green> : This command is used to compares file line by line and give the difference.
 <blue>
-Example:ifconfig <interface name>
-If no arguments are given it displays the status of the currently active interfaces.If a single interface argument is given,it displays the status of the given interface only.Some of the common options for ifconfig are:
-a.<green>-a</green>:displays all interfaces which are currently available,even if down
-b.<green>-s</green>:display a short list</blue>
+Usage:diff [options] file1 file2
+Example:For example write down two files with some similar data.Then use <green> type file1 file2 </green>.This gives the main difference between two files.This command also has various options that can be used with diff:
+a.<green>-i</green>:ignore case while comparing
+b.<green>-b</green>:ignore the number of white spaces
+c.<green>-u</green>:displays the lines of unified text
+d.<green>-y</green>:output in two columns
+e.<green>-r</green>:recursively compare any subdirectories found
+f.<green>-N</green>:treat absent files as empty
+These are some of the most common options that are used with diff.For a more extensive list refer to the man pages.</blue>
 
-2.<green>uname</green>:This prints the system information.Again this has various options that can be used to get some particular output.
-<blue>
-Some of the common options of uname are:
-a.<green>-a</green>:it displays all information
-b.<green>-s</green>:prints the kernel information
-c.<green>-p</green>:prints the processor type
-d.<green>-o</green>: prints the operating system </blue>
-Thus uname with any of these informations can be really useful in getting required system info.
+2.<green>patch </green>:This command helps apply a different file to the original.All patch does is it takes a patch file containing a difference listing produced by the <blue> diff </blue> program and applies those differences to one or more original files,producing patched versions.
+One of the main options of patch is the <green>-b </green> option that creates a backup file of the file that is being patched .Other than that there are multiple uses of this but then they are beyond the scope of this tutorial.
 
-We have covered some commands like <green> df </green> which help in getting information about system.Some other commands that are used to extract system information from the terminal are
-
-3.<green>glxinfo</green>:This command is used to ge details about OpenGL,the Xserver and your graphics card.Sometimes this is useful to see if the graphics card is working/responding.
-
-4.<green>lspci</green>:This command displays a list of all PCI devices.It basically is related to audio components.It displays information about PCI bses in the system and devices connected to them.
-<blue>
-Usage:lspci [options]
-Example:Try this <green> lspci | grep Audio </green>.This tells the user the audio card in use at that time.
-</blue>
-
-5.<green>lsusb</green>:This command displays all the USB buses and attached devices.Some of the main options for lsusb are:
-<blue>
-a.<green>-v</green>:this option tells lsusb to be verbose and display detailed information about the various devices.
-b.,green>-s</green>:it shows only devices in specified bus and/or devnum.
-</blue>
-
-6.<green>uptime</green>:This command is used to display the urrent time elapsed since last reboot,users and load avarage.
-
-7.<green>cat /proc/meminfo </green>:This is essentially useful in case of finding out about the momory in the system.
+So now that we have covered some(no pun) commands lets look at bash and how it can make our general work easier.
 </red>
 </start>
 
-
- 
