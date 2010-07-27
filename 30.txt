@@ -1,0 +1,23 @@
+<start><cyan>Starting off with a Sha-Bang</cyan>
+<white>
+To write a scriptusing bash the main thing is to include at the start of the file the statement <green>'#!/bin/bash'</green> and save the file with the ectension <green> .sh </green>.This tells the shell that the file is a shell script and the header tells the shell which shell to use(in this case it is bash).Note that once a script is written you have to make the script executable using the <blue> chmod </blue> command.
+
+Before we start off in detail a few comments are in order:
+
+1.Placing a <green> # </green> before a sentence makes the line a comment and that line is not read by shell(exception is #!).This is generally used to comment on the script so that someone reading the script can actually understandmore easily what is going on.Note that comments can even follow the end of a command.
+
+2.Almost all the commands explained before can be used in the script and they will be executed.
+
+3.the <green> ; </green> synbol permits putting two or more commands on the same line.For example we can use <blue>' echo hello ; echo there ' </blue> .Note though that this is a bad example and better examples will be seen in the loops chapter.
+
+4.All the regex expressions can be used in the scripts to varied effects.
+
+5.The <green> \ </green> is a very imporatnt symbol.For example we know that * is a regex expression.But what if we want to search for a pattern using grep containing *?In such a case \ is used.\ basically is used to either switch on or off the special meaning associated with a particular symbol.This is something that you will understand more with usage.
+
+6.<green> Command substitution </green> : The <blue> ` command ` </blue> or the <blue> $command </blue> makes available the output of the command for assignment to a variable without printing anything on the screen.For example we want to save the date in a variable(exlpained in the next chapter) .We can do so using the line <blue> date=$( date +%F | cut -d - -f3 ) </blue> or <green> date= `date +%f | cut -d - -f3` </blue>.
+
+
+Variables are how programming and scripting languages represent data.So the next chapter is going to solely dedicated to variables.
+</white>
+</start>
+
