@@ -1,0 +1,11 @@
+<start><cyan>\t\t\tQUOTING</cyan>
+<white>
+A lot of keys have special meaning in some context or the other.Quoting is used to remove the special meaning of characters or words:quotes can disable special treatment for special characters, they can prevent reserved words from being recognized as such and they can disable parameter expansion.There are various options for quoting:
+
+a.<green> \ </green>:As already mentioned \ is used as a escape character.It preserves the literal value of the next character that follows.Note that the usage of \ at the end of line then ignores the \n and it marks the continuation of the line ( example type <blue> echo "hello \ (enter) and then this is not a new line"</blue> and you see that even though the entry is in different lines the display is on the same line.
+
+b.<green> Single Quote (')</green>:These are used to preserve the literal value of each character within quotes.A single quote may not occur between single quotes,even when preceded by a backslash.Example:<blue>echo '$date'</blue> and this just prints $date and not the command date(because $ is taken as literal and not as command interpretation)
+
+c<green>Double Quote (") </green>:Using double quotes,the literal values of all characters enclosed is preserved,except for the dollar sign,the backtics(backward single quotes) and the backslash.Note that the backslash retains its meaning only when followed by dollar,double quote ,backslash or newline.
+
+There are a lot of other ways of using this which are beyond the scope of this tutorial.Refer to Absolute Begineers Guide online for more details.
