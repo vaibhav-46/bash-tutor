@@ -1,0 +1,18 @@
+<start><cyan>Shells</cyan>
+<white>
+All through this tutorial we have been using this word:<green>Shell</green>.What exactly is a shell?Why do we need a shell?
+
+To answer these questions we need to look at the functioning of the computer.The computer generally only understands 0 and 1.So if we want to make the computer do something,all the commands must be given to the computer in the form of binary files.But it is tough to imput programs in 0s and 1s.Generally we take the help of a compiler to convert programs written in ascii text to binary.So to execute a program you need a compiler.But then to do simple tasks like say print from 1 to 100 you dont want to go through thr process of writing a program,compiling and executing.And hence the <blue> scripting languages </blue> were created.Typically <green> scripting languages have a shell which can take complex instructions and execute them on the fly,without compiling.</green>
+
+In simple words:<red>Shell itself is a binary running in top of a computer and listening to your commands.<red>Without going into complex details about Kernel the shell is just a macro that reads certain english words like ls,cd and gives an output.There are a lot of shells available(to start a shell type the name in the terminal):
+a.<green>csh</green>:Basic shell
+b.<green>ksh</green>:Korn Shell
+c.<green>tcsh</green>:Turbo C shell
+d.<blue>bash</blue>:Bourne Again shell
+e.<green>rksh</green>:Restricted Korn shells
+
+and many others.From now,shell by default means the bash shell.The bash shell is very useful in the sense that it is easily customized using the bashrc,bash_profile and .profile files.Now that we know about what a shell is and also some commands we can start learning how to do bash scripting.
+<white>
+<green>Let The FUN begin </green>
+</white>
+</start>
