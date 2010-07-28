@@ -1,31 +1,29 @@
 <start><cyan>\t\t\t\t\tChapter 5---Cat and Echo commands</cyan>
-<red>
+<white>
 Whatever we have done till now neither uses the monitor nor reads anything from the user.What if we want to read and print a text file on the screen.What if you want to save text in the form of a file.Then the commands<green>"cat" and "echo"</green> are used.These are very useful commands as you will see in the coming chapters.
 Lets see them in detail:
 
 1.<green>Cat</green>:This can be used to save text to a file or to display contents to a file.Cat actually gets its name from the word concatenate.
-<blue>
-Usage:
-1.Cat has many uses but one cool usage is this-type<green> cat > temp.txt </green> and then start entering text to be saved in that file.After you finish typing press Ctrl+d to indicate EOF(end of file).Now type <green>cat temp.txt</green>.Voila,the lines that you entered are printed on the screen again.
+<blue>Usage</blue>:
+1.Cat has many uses but one cool usage is this-type<green> cat > temp.txt </green> and then start entering text to be saved in that file.After you finish typing press <red> Ctrl+d</red> to indicate EOF(end of file).Now type <green>cat temp.txt</green>.Voila,the lines that you entered are printed on the screen again.
 What cat does is first read the lines and store them in a file and then the second command reads the same file and then prints the contents in the terminal..
-2.Cat command along with -n prints the file along with line numbers.Make a text file and then try the command <green>echo -n file_name</green> to get the file along with the line number.This is particularly useful when we have to debug a script and we only know the line number where the mistake has been made.
-3.Another useful command is tac(yes...the reverse of cat).cat command prints a file in proper order.Do try out tac and see....real suprise.It prints the file in reverse order.Try <green>tac file_name</green>
-4.Cat command along with <green>-vet</green> option prints unprintable characters in a file say escape sequences and colour sequences(see below).
+2.Cat command along with <red>-n</red> prints the file along with line numbers.Make a text file and then try the command <green>echo -n file_name</green> to get the file along with the line number.This is particularly useful when we have to debug a script and we only know the line number where the mistake has been made.
+3.Another useful command is <red>tac</red>(yes...the reverse of cat).cat command prints a file in proper order.Do try out tac and see....real suprise.It prints the file in reverse order!!Try <green>tac file_name</green>
+4.Cat command along with <green>-vet</green> option prints unprintable characters in a file say escape sequences and color sequences(see below).
 5.Also cat can be used to create a empty file using <green>cat > file_name </green>.
-</blue>
-Note: Cat is a very useful command as you will see as we move on.One point to remember is that the '>' is used to redirect the output to the file.More on this in the next chapter.(Do try this command too: <green>cat - </green> to escape press Ctrl+d) .Also you can combine text of mutiple files into one file using the command <green>cat file1 file2 file3 > file4.</green>
+
+Note: Cat is a very useful command as you will see as we move on.One point to remember is that the '>' is used to redirect the output to the file.More on this in the next chapter.(Do try this command too: <green>cat - </green> to escape press <red>Ctrl+d</red>) .Also you can combine text of mutiple files into one file using the command <green>cat file1 file2 file3 > file4.</green>
 
 2.<green>Echo</green>:Just like cat,echo also prints on the screen but the main difference is that echo mostly takes input from the user and not from a file.
-<blue>
-Example:
+
+<blue>Example</blue>:
 1.Type in <green>echo "hello world"</green> and you will see the words appear on the screen.This way we can echo various things after taking them from the user.
-2.Say we want to store something in a variable and then echo it.Do it like this <green>x=4 </green>and then <green>echo $x</green>.Note that the $ is necessary(try without it and see.)This way we can save and echo variables and this is useful in debuging scripts by echoing variables.More on this later when we discuss bash-scripting.
-3.Also wondering how all these colours are coming on the screen...thats again due to echo.Time for an example:type<green>echo -e "\\033[0;31m blah"</green> and there is the colour.Check out different numbers from 31-37 to get different colours on terminal.The -e option of echo is used to recognize options like \\033 which is called a escape sequence and other things like \\t which stands for tab.
+2.Say we want to store something in a variable and then echo it.Do it like this <green>x=4 </green>and then <green>echo $x</green>.Note that the <red>$ is necessary</red>(try without it and see.)This way we can save and echo variables and this is useful in debuging scripts by echoing variables.More on this later when we discuss bash-scripting.
+3.Also wondering how all these colours are coming on the screen...thats again due to echo.Time for an example:type<green>echo -e "\033[0;31m blah"</green> and there is the colour.Check out different numbers from 31-37 to get different colours on terminal.The <red>-e</red> option of echo is used to recognize options like <red>\033</red> which is called a escape sequence and other things like <red>\t</red> which stands for tab.
 Hope you liked this example...;).
 4.Also try this <green>echo $PATH</green>.Again you see that PATH is a variable and it is pre-defined.Its a very important variable and will be discussed later in detail.
-</blue>
 
 Lets move on!!
  
-</red>
+</white>
 </start>
