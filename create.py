@@ -1,23 +1,23 @@
-def parser(x,NAME,width):
-    from BeautifulSoup import BeautifulSoup
-    import re
-    from termcolor import colored
+from BeautifulSoup import BeautifulSoup
+import re
+from termcolor import colored
     
-
-    def color(present):
+def color(present,pf):
         p1=len(present)
         j=0
         if p1==1:
-                print  colored (wrap(present.contents[j],width),present.name),
+                pf.write(colored(present.contents[j],present.name))
+
         elif p1>1:
             while j<p1:
                 if j%2==0:
-                    print colored(wrap(present.contents[j],width),present.name),
+                    pf.write(colored(present.contents[j],present.name))
                 elif j%2==1:
-                    color(present.contents[j])
+                    color(present.contents[j],pf)
                 j=j+1
-           
-    def wrap(text,width):
+
+                
+def wrap(text,width):
            return reduce(lambda line, word, width=width: '%s%s%s' %
                   (line,
                    ' \n'[(len(line)-line.rfind('\n')-1
@@ -27,17 +27,25 @@ def parser(x,NAME,width):
                   text.split(' ')
                  )
     
+
+def parser(x,NAME):
+
+    temp=open(NAME+'/temp.txt','r+')     
     f=open(NAME+'/'+str(x)+'.txt','r+') 
    
     doc=f.readlines()
     soup=BeautifulSoup(''.join(doc))
     soup.prettify()
     for tag in soup.start.findAll(recursive=False):
-       color(tag)
-                   
+       color(tag,temp)
+    temp.close()
+    final=open(NAME+'/temp.txt','r+')
+    for line in final:
+       print(wrap(line,90))
+                           
                         
 if __name__=="__main__":
 	import sys
-	parser(int(sys.argv[1]),str(sys.argv[2]),int(sys.argv[3]))
+	parser(int(sys.argv[1]),str(sys.argv[2]))
 
                    
