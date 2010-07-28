@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\t\t\tINTRODUCTION</cyan>
+<start><cyan>INTRODUCTION</cyan>
 <red>
 Hello everyone,
 This application has been made with the idea that the most feared thing for a linux newbie is the terminal.The main reason that terminal is feared by a new  user is his ignorance of the commands.But once you get used to the commands in the terminal you will find that the terminal is a very useful tool and it helps a regular user use the computer more effectively.</red>
