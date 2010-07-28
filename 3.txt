@@ -1,28 +1,26 @@
  <start>                     \t\t\t\t\t   <cyan>CHAPTER 2---FEW BASIC HELPS</cyan>
-<red>
-The first and most basic commands that a user should learn are <green> 'ls' and 'cd'</green> as these are the most useful commands and these are used most often.
+<white>
+The first and most basic commands that a user should learn are <red> 'ls' and 'cd'</red> as these are the most useful commands and these are used most often:
+
 1.<green>cd</green> :This is used to move from one directory to another. There are many ways of using cd.
   The following are the most important usages of cd:
-   <green> cd direc_name</green> : changes to the given directory 
-   <green> cd ..</green> :changes to a direc one above the present direc 
-   <green> cd </green> :without any file name it automatically goes to the home direc 
-<blue>  
-Usage:One thing that you can try is <green>cd ~/home/`whoami` </green> 
-Explaination:The ~ stands for the home direc i.e /home/USERNAME and this directory that you will change into is called a 'virtual home' of your computer.
-After doing this use <green> "cd -"</green> to go back to the last cd-ed directory.Do play around with this but do make sure that you come back to the current direc(name can be got by typing "pwd" at the terminal.
-</blue>
+<green>cd direc_name</green>:changes to the given directory 
+<green>cd ..</green>        :changes to a direc one above the present direc 
+<green>cd </green>          :without any file name it automatically goes to the home direc 
+
+<blue>Usage</blue>:Somne things that you can try are <green>cd ~ </green> and <green>cd /home/'whoami`</green>
+<blue>Explaination</blue>:The ~ stands for the home direc i.e /home/USERNAME and this directory that you will change into is called a 'virtual home' of your computer.After doing this use <green> "cd -"</green> to go back to the last cd-ed directory.Do play around with this but do make sure that you come back to the current direc(name can be got by typing <green>pwd</green> at the terminal.
+
 2.<green>ls</green>:This command is used to display the contents of a particular directory.
 
-<green>ls</green>    <blue>   :displays the contents of the directory in which the user is currently
-      <green>ls direc</green> :displays the contents of the given directory
+<green>ls</green>       :displays the contents of the directory in which the user is currently
+<green>ls direc</green> :displays the contents of the given directory
 
-Experiment:Try out <green>ls -lh</green> and the command <green>ls -a</green> .Dont bother too much with the output as of now but that output is going to be useful as we move along.The only point to note as of now is that "h" option makes the size of the directories in human readable form(do try it out without the h and see but do this only after exit as inside the tutorial none of the file sizes are not big enough for this distinction).
-</blue>
-In addition to these commands there is also a command that is very often used in the terminal.Suppose that the directory contains 100 files then the ls output reading becomes difficult.At that point of time <green>less </green>is very useful to read text outputs on the terminal.Once you use less you can navigate the output as if it were a Word document.This makes the output more readable.
+<blue>Experiment</blue>:Try out <green>ls -lh</green> and the command <green>ls -a</green> .Dont bother too much with the output as of now but that output is going to be useful as we move along.The only point to note as of now is that <red>h</red> option makes the size of the directories in human readable form(do try it out without the h and see but do this only after exit as inside the tutorial none of the file sizes are not big enough for this distinction).
 
+In addition to these commands there is also a command that is very often used in the terminal.Suppose that the directory contains 100 files then the ls output reading becomes difficult.At that point of time <red>less </red>is very useful to read text outputs on the terminal.Once you use less you can navigate the output as if it were a Word document.This makes the output more readable.
 
 More examples of this will follow in the next few chapters.
 
-</red>
- 
+</white>
 </start>
