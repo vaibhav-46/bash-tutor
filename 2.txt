@@ -1,33 +1,30 @@
 <start>                     <cyan>\t\t\t\t\tCHAPTER 1---SOMETHING VERY IMPORTANT</cyan>
-<red>
-Before we start of,there are many other tools inbuilt to help you get a feel of the commands in a better way.Some of these <green>helps</green> are inbuilt.
+<white>
+Before we start of,there are many other tools inbuilt to help you get a feel of the commands in a better way.Some of these <red>helps</red> are inbuilt.
 
-1.<green>man</green>:This command is used to know how to use a perticular command,all its options and usage.This is one of the most important tools to know about the various commands.
-<blue>Usage:man cmd  
-example : man man
- 
+1.<green>man</green>:This command is used to know how to use a particular command,all its options and usage.This is one of the most important tools to know about the various commands.
+<blue>Usage</blue>:man cmd  
+<blue>Example</blue>: man man
 As the man pages for some commands run into several pages there are a few things that might be useful in reading the man pages:
- a)Press / followed by the phrase to search for a perticular word...To go the next word press n to go to the next
+ a)Press <red>/</red> followed by the phrase to <red>search</red> for a particular word...To go the next word press n
  b)Press space bar to go to the next page
- c)To exit press q
- d)If you don't know the exact name of the UNIX command you're looking for, you can use: man -k something => man -k responds by printing on the screen a list of all the commands it finds that are similar to the word you typed in place of something or that contain that word in the description of the command.
-</blue>
+ c)To exit press <red>:q</red>
+ d)If you don't know the exact name of the UNIX command you're looking for, you can use:<red> man -k something</red> => man -k responds by printing on the screen a list of all the commands it finds that are similar to the word you typed in place of something or that contain that word in the description of the command.
+
 2.<green>info</green>:This command is used to know the finer details of a perticular command..pretty useful to know how and why a perticular command is to be used.
-<blue> Usage:info cmd 
-Example:info info
-</blue>
+<blue>Usage</blue>:info cmd 
+<blue>Example</blue>:info info
 Again just as man is a vim-based(will talk about vim later-for now remember vim is a text-editor)application,so is info.So all the above points mentioned in context with man are applicable for info as well.
 
-3.<green>whatis</green>:Another very useful command that helps a user find out more about a perticular command in brief. whatis searches  the  manual  page names and displays the manual page descriptions of any name matched.
-<blue>Usage:whatis thing_to_be_searched
-Example:Do try out <green>whatis mkdir</green> and <green>whatis ls</green>.These commands will be explained in the later chapters.
-</blue>
-4.<green>whereis</green>:This cmd is pretty useful to get to know the location of the binary file of a command in the computer directory and the path to it.Sometimes this can be very useful in searching for a perticular command file that you might have installed or you might want to change as you move along.</red>
-<blue>Usage:whereis object_to_be_search 
-Example:Do try out <green>whereis whatis</green> and <green>whereis find</green>.Whatis has already been explained and find will also be covered later. 
-</blue>
-<red>
-A small point to remember is that the commands in this tutorial are not exhaustive and hence it is necesary that one learn how to use the man pages as they are the ultimate source of information.This tutorial is intended to get you started with a few vital basics.These commands are going to be really useful as you move on because there are so many commands that are not going to be covered in this tutorial.Also note that as we move along we will see some small points which you might not understand at that point but hopefully by the end of the tutorial you will understand almost all the examples.</red>
+3.<green>whatis</green>:Another very useful command that helps a user find out more about a particular command in brief. whatis searches  the  manual  page names and displays the manual page descriptions of any name matched.
+<blue>Usage</blue>:whatis thing_to_be_searched
+<blue>Example</blue>:Do try out <green>whatis mkdir</green> and <green>whatis ls</green>.These commands will be explained in the later chapters.
+
+4.<green>whereis</green>:This cmd is pretty useful to get to know the location of the binary file of a command in the computer directory and the path to it.Sometimes this can be very useful in searching for a particular command file that you might have installed or you might want to change as you move along.
+<blue>Usage</blue>:whereis object_to_be_search 
+<blue>Example</blue>:Do try out <green>whereis whatis</green> and <green>whereis find</green>.whatis has already been explained and find will also be covered later. 
+
+A small point to remember is that the commands in this tutorial are not exhaustive and hence it is necesary that one learn how to use the man pages as they are the ultimate source of information.This tutorial is intended to get you started with a few vital basics.These commands are going to be really useful as you move on because there are so many commands that are not going to be covered in this tutorial.Also note that as we move along we will see some small points which you might not understand at that point but hopefully by the end of the tutorial you will understand almost all the examples.</white>
 
 \t\t\t<cyan>So,lets start!!!!!</cyan>
 </start>
