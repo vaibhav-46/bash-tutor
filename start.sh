@@ -13,7 +13,7 @@
 ##############################################################################################################
 
 # The total number of tutorials in the chapter.
-NUM_CHAPTERS=10
+NUM_CHAPTERS=$((`ls [0-9]*.txt | wc -l`))
 # This variable needs to be persistent, hence it is exported whenever changed
 CURRENT_CHAPTER=1
 
@@ -28,6 +28,8 @@ clear
 # Make the required navigation functions available
 source navigate.sh
 
+rm -f temp.txt
+touch temp.txt
 # This gets the terminal width to use in the printing routine
 width=$(stty size | awk '{print $2}')
-python create.py 1 $PWD $width
+python create.py 1 $PWD $width 
