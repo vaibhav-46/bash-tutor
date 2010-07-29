@@ -1,13 +1,13 @@
 <start><cyan>BASHRC file </cyan>
-<red>
-In the previous chapter we saw a number of files that are read before we start bash.But the most important file that is read in in the home directory and its path is ~/.bashrc.This is what is generally edited to customize bash.This is a very important file and making any miatake with this file can result in the bash terminal not working properly.This is where the aliases are defined and also it is determined whether the terminal will be colored or not.
+<white>
+In the previous chapter we saw a number of files that are read before we start bash.But the most important file that is read is in the home directory and its path is ~/.bashrc.This is what is generally edited to customize bash.This is a very important file and making any miatake with this file can result in the bash terminal not working properly.This is where the aliases are defined and also it is determined whether the terminal will be colored or not.
 
-In addition the PS1 variable is defined here.Any changes to the variable in this file changes the prompt from the next time this filem is read.To apply the chnages in the same bash terminal use the command <green> export ~/.bashrc </green>.In addition to this,we can even defime some functions in the bashrc file and then thosr functions can be used anytime in the terminal.A better way to do this is to include all the functins in a perticular file and then source the file using the command <green> source path_to_file </green> .
+In addition the PS1 variable is defined here.Any changes to the variable in this file changes the prompt from the next time this file is read.To apply the changes in the same bash terminal use the command <green> export ~/.bashrc </green>.In addition to this,we can even defime some functions in the bashrc file and then those functions can be used anytime in the terminal.A better way to do this is to include all the functins in a perticular file and then source the file using the command <green> source path_to_file </green> .
 
-In addition to this you can play around with this file.There are many people who have hosted their bashrc files online.You can look at them and see what all you can do with it.There is a lot of scope with this.</red>
-<blue>
-So All The Best with your bashrc file.</blue>
-<red>
+In addition to this you can play around with this file.There are many people who have hosted their bashrc files online.You can look at them and see what all you can do with it.There is a lot of scope with this.
+
+<red>So All The Best with your bashrc file.</red>
+
 Now that we have covered most of the basics it is now time we move on to bash-scripting and see how to create scripts that can help automatize tasks.
-</red>
+</white>
 </start>

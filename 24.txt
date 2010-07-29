@@ -1,8 +1,8 @@
 <start><cyan>\t\t\t\tChapter 23------Alsamixer and acpi</cyan>
-<red>
-For all those people who love music,it is a real pain to get the volume levels and other adjustments done using the mouse.What if you could do the whole thing using the terminal and the arrow keys.Well using the command <green>alsamixer</green> we can adjust the volumes of the speakers,headphones nad do other stuff related to audio.To try it out just type <green>alsamixer</green> and get started.Its a pretty well illustrated application and you can play around with it.
+<white>
+For all those people who love music,it is a real pain to get the volume levels and other adjustments done using the mouse.What if you could do the whole thing using the terminal and the arrow keys.Well using the command <green>alsamixer</green> we can adjust the volumes of the speakers,headphones and do other stuff related to audio.To try it out just type <green>alsamixer</green> and get started.Its a pretty well illustrated application and you can play around with it.
 
-Another ques:What if we want to know the system temperature at any point of time?Wont it be nice if we can find out the charging of the laptop battery directly from the terminal.Well there is a command <green>acpi</green> that is very useful in this case.After installing it using apt-get you can use it with various options like:
+Another question:What if we want to know the system temperature at any point of time?Wont it be nice if we can find out the charging of the laptop battery directly from the terminal.Well there is a command <green>acpi</green> that is very useful in this case.After installing it using apt-get you can use it with various options like:
 
 <green>-b</green>:This displays the battery charge
 <green>-t</green>:This displays the system temperature
@@ -10,6 +10,6 @@ Another ques:What if we want to know the system temperature at any point of time
 <green>-c</green>:This displays the cooling device information.
 
 These are some of the useful commands that you use pretty often.These commands help keep your computer more personalized doing what you want them to do.
-</red>
+</white>
 </start>
 

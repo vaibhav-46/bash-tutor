@@ -1,18 +1,18 @@
 <start><cyan>\t\t\t\tChapter 21</cyan>
-<red>
+<white>
 This chapter covers some very important points/commands that are essential in the long run.
 
-1.<green>PATH</green>:This is a predefined variable in bash.First try <green>echo $PATH </green>.It will show you a list of many files/folders separated by :.All these folders contain various executables.Whenever you type in a command say ls the first thing that bash does is search for those commands in the various folders in this variable.Note that the first instance where the comamnd is met will be executed.Try this <green>whereis ls</green> and check if the folder is included in the PATH variable.Now suppose that you have written some script and you want to run it everytime.Then we can include all the scripts in one directory and then include that directory in the PATH variable.This can be done using the command <green>'PATH=new_direc:$PATH' </green> and then <green>export PATH</green>(export will be explained when we discuss variables later on) .From now on everytime you give a command it first searches the given directory and then the other directories in the PATH variable.
+1.<green>PATH</green>:This is a predefined variable in bash.First try <green>echo $PATH </green>.It will show you a list of many files/folders separated by <red>:</red>.All these folders contain various executables.Whenever you type in a command,say <red>ls</red> the first thing that bash does is search for those commands in the various folders in this variable <red>in order</red>.Note that the first instance where the comamnd is found,will be executed.Try this <green>whereis ls</green> and check if the folder is included in the PATH variable.Now suppose that you have written some script and you want to run it everytime.Then we can include all the scripts in one directory and then include that directory in the PATH variable.This can be done using the command <green>'PATH=new_direc:$PATH' </green> and then <green>export PATH</green>(export will be explained when we discuss variables later on) .From now on everytime you give a command it first searches the given directory and then the other directories in the PATH variable.
 
-2.<green>alias</green>:Just wonder if you had to type in next instead of n for each and every chapter in this tutorial.Wont that be too much work.Thats why there is an option in the terminal such that you can have a shortcut for some command.Say we want the cp command to be always interactive.In such a case we can use the command <green> alias cp='cp -i' </green> and this will make the cp command interactive always.Similarly in this tutorial we have aliased the next scrript to n.But remember that the alias that we do in the terminal are only valid as long as that session or any of its child process are running.Once that session is closed that alias is lost.
- Also note a small point that if we want to run an aliased version of a command,that can be done using <green> \command </green>.This ignores the alias and runs it as a bash command.
-<blue>  Then how do we make an alias permanent.There is a file called the bashrc file in your /home/$USER directory.Search that file and you will find some basic alias already(do this outside the tutorial).Edit this file in any text editor of your choice and add the alias command there and then restart the terminal.From now on the alias is permanent and it can be used whenever you want.</blue>
+2.<green>alias</green>:Sometimes we use a particular command a lot like say finding out the amount of disc space free which we discussed before.But that is such a long command.It becomes very painful to keep typing the whole thing everytime.Thats why there is an option in the terminal such that you can have a<red> shortcut for some command</red>.Say we want the cp command to be always interactive.In such a case we can use the command <red> alias cp='cp -i' </red> and this will make the cp command interactive always.But remember that the alias that we do in the terminal are only valid as long as that session or any of its child process are running.Once that session is closed that alias is lost.
+ Also note a small point that if we want to run an aliased version of a command,that can be done using <red> \command </red>.This ignores the alias and runs it as a bash command.
+  Then how do we make an alias permanent?There is a file called the <red>.bashrc file</red> in your <red>/home/$USER</red> directory.Search that file and you will find some basic aliases already(do this outside the tutorial).Edit this file in any text editor of your choice and add the alias command there and then restart the terminal.From now on,the alias is permanent and it can be used whenever you want.
 
 3.<green>dircolors</green>:This command is used to get color setup for ls.
 
 4.<green>sleep</green>:This command is used to deay for a specific period of time.For example in a script say we want to change wallpapers every 30 seconds then we use this command to let the script become inactive for 30 seconds.
-<blue>
-Usage:sleep number</blue>
+
+<blue>Usage</blue>:sleep number
 Maybe you can search for how to change the wallpapers using terminal!!
-</red>
+</white>
 </start>

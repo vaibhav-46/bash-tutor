@@ -26,7 +26,7 @@ Thus we see that we can print the date and time in various formats in various co
 Once you open the terminal(outside the tutorial) the thing displayed on the terminal is something like this 
 <red> username@machine-name:$ </red>
 This option is stored as the variable <red>PS1</red> and it can be modified.Also suppose you type in <green> ls \ </green>,it gives a promt generally <green>'>'</green>.This is stored in the variable <red>PS2</red>.Try to <red>echo $PS1 and $PS2</red>.When we echo PS1 we get something like this
- <red> '\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$' </red>(outside the tutorial).Now what does this stand for..before analysing this we will see some special escape characters:
+ <red> '\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$' </red>(outside the tutorial).Now what does all this mean..for that we will see some special escape characters:
 
 1.<green>'\a'</green>:an ascii bell character
 2.<green>'\d'</green>:date (u can even use the various formats)
@@ -38,6 +38,6 @@ This option is stored as the variable <red>PS1</red> and it can be modified.Also
 8.<green>'\['</green>:This begins a sequence of non-printing characters which could be used to embed a terminal con-trol sequence into the prompt
 9.<green>'\]'</green>:This ends a sequence of non-printing characters
 
-Now armed with all this information,we can analyse the PS1 variable.Do try playing around with it,you will learn a lot.
+Now armed with all this information,you can analyse the PS1 variable.(Just a case in point the debian_chroot is just a variable...dont ponder too much about it).Do try playing around with it,you will learn a lot.
 </white>
 </start>

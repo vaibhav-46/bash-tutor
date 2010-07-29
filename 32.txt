@@ -9,3 +9,5 @@ b.<green> Single Quote (')</green>:These are used to preserve the literal value 
 c<green>Double Quote (") </green>:Using double quotes,the literal values of all characters enclosed is preserved,except for the dollar sign,the backtics(backward single quotes) and the backslash.Note that the backslash retains its meaning only when followed by dollar,double quote ,backslash or newline.
 
 There are a lot of other ways of using this which are beyond the scope of this tutorial.Refer to Absolute Begineers Guide online for more details.
+</white>
+</start>

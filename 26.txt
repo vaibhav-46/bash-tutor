@@ -1,20 +1,18 @@
-<start><cyan>Chapter 25----Sppeding up process</cyan>
-<red>
+<start><cyan>Chapter 25----Speeding up process</cyan>
+<white>
 Sometimes while working on the computer we want a particular process to run faster than the others.And sometimes we know that some process is taking up too much of the CPU speed and we wont to reduce its priorities.This can be done using two commands called nice and renice.In this chapter we are going to cover these two commands in detail:
 
 a.<green>nice</green>:This command helps run a program with modified scheduling priority.
-<blue>
-Usage:nice [option] [command [arg]..]
-Example:The default schedule priority is 10.-20 stands for maximum priority and 19 stands for least favourable.This way we can change the priority of the given command.
-</blue>
+
+<blue>Usage</blue>:nice [option] [command [arg]..]
+<blue>Example</blue>:The <red>default</red> schedule priority is <red>10.20</red> stands for <red>maximum</red> priority and 19 stands for least favourable.This way we can change the priority of the given command.
 
 b.<green>renice</green>:This alters the priority of running processes.Renicing a user causes all processes owned by the user to have their scheduling priority altered.
-<blue>Some options of renice are:
+Some options of renice are:
 1.<green>-n</green>:This option changes the scheduling priority of the process,process group or user.
 2.<green>-u</green>:Force the who parameters to be interpreted as user names.
-</blue>
 
-These two process help the user prevent spend more time in front of the computer biting his nails waiting for a process to finish while the process is in competition with another process.
-</red>
+These two process help the user prevent from spending more time in front of the computer biting his nails waiting for a process to finish while the process is in competition with another process.Now you decide which process is more important to you.
+</white>
 </start>
 

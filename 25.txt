@@ -1,23 +1,23 @@
 <start><cyan>Chapter 24----Useful Tools</cyan>
-
-Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting an d in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
+<white>
+Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting and in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
 
 1.<green> diff </green> : This command is used to compares file line by line and give the difference.
-<blue>
-Usage:diff [options] file1 file2
-Example:For example write down two files with some similar data.Then use <green> type file1 file2 </green>.This gives the main difference between two files.This command also has various options that can be used with diff:
+
+<blue>Usage</blue>:diff [options] file1 file2
+<blue>Example</blue>:For example write down two files with some similar data.Then use <green> type file1 file2 </green>.This gives the main difference between two files.This command also has various options that can be used with diff:
 a.<green>-i</green>:ignore case while comparing
 b.<green>-b</green>:ignore the number of white spaces
 c.<green>-u</green>:displays the lines of unified text
 d.<green>-y</green>:output in two columns
 e.<green>-r</green>:recursively compare any subdirectories found
 f.<green>-N</green>:treat absent files as empty
-These are some of the most common options that are used with diff.For a more extensive list refer to the man pages.</blue>
+These are some of the most common options that are used with diff.<red>For a more extensive list refer to the man pages.</red>
 
-2.<green>patch </green>:This command helps apply a different file to the original.All patch does is it takes a patch file containing a difference listing produced by the <blue> diff </blue> program and applies those differences to one or more original files,producing patched versions.
-One of the main options of patch is the <green>-b </green> option that creates a backup file of the file that is being patched .Other than that there are multiple uses of this but then they are beyond the scope of this tutorial.
+2.<green>patch </green>:This command helps apply a different file to the original.All patch does is it takes a patch file containing a difference listing produced by the <red> diff </red> program and applies those differences to one or more original files,producing patched versions.
+One of the main options of patch is the <green>-b </green> option that creates a backup file of the file that is being patched .Other than that there are multiple uses of this but then they are beyond the scope of this tutorial.<red>For more information refer to the man pages.</red>
 
 So now that we have covered some(no pun) commands lets look at bash and how it can make our general work easier.
-</red>
+</white>
 </start>
 

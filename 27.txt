@@ -1,15 +1,15 @@
 <start><cyan>\t\t\t\tImportant Bash files</cyan>
-
+<white>
 Ever wondered how the terminal starts every time you click on the symbol.How does it know the PS1 variable(i.e the display prompt in the terminal).Obviously there must be some file where all the required variables are stored.In this chapter we will see some of these files:
 
-a.<green>/etc/profile </green>:This is the file generally read when the terminal is invoked interactively.These usually set the shell variables like PATH,USER,MAIL,HOSTNAME and HISTSIZE(HISTSIZE defines the size of the .bash_history file in the home folder which stores the bash history).All settings that you want to apply to all your user's environments should be in this file
+a.<green>/etc/profile </green>:This is the file generally read when the terminal is invoked interactively.These usually sets the shell variables like <red>PATH,USER,MAIL,HOSTNAME and HISTSIZE</red>(HISTSIZE defines the size of the .bash_history file in the home folder which stores the bash history).All settings that you want to apply to all your user's environments should be in this file
 
-b.<green>/etc/bashrc </green>: As you will see later bash is not the only type of shell.So all the bash-configuration files are placed in this file since /etc/profile is read by other shells.Sometimes the alias are found in thus file.
+b.<green>/etc/bashrc </green>: As you will see later bash is not the only type of shell.So all the bash-configuration files are placed in this file since /etc/profile is read by other shells.Sometimes the alias are found in this file.
 
-c.<green>~/.bash_profile </green>:Though optional this is the preferred configuration file for configuring user environments individually.In this file,users can add extra configuration options or change default settings.This generally exports the <green> bashrc </green> file(we will exclusively cover this file in the next chapter)
+c.<green>~/.bash_profile </green>:Though optional this is the preferred configuration file for configuring user environments individually.In this file,users can add extra configuration options or change default settings.This generally exports the <red> bashrc </red> file(we will exclusively cover bashrc file in the next chapter)
 
-d.<green>~/.bash_logout </green>:This file again optional contains specific instructions for the log out procedure.This is useful for remote connections,which will leave a clean window after closing them.Generally this is executed when we use <green> exit </green> to exit the tutorial.
+d.<green>~/.bash_logout </green>:This file again optional contains specific instructions for the log out procedure.This is useful for remote connections,which will leave a clean window after closing them.Generally this is executed when we use <red> exit </red> to exit the tutorial.
 
 These are some of the files that are read when bash is started.But there is a very important file read by bash before starting and this is what we are going to see in the next chapter.
-</red>
+</white>
 </start> 
