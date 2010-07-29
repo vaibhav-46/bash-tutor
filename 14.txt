@@ -1,12 +1,12 @@
 <start><cyan>\t\t\t\t\t Chapter 13------AWK</cyan>
-<red>
-Awk is a pattern scanning and programming language.It is very useful in the sense that it is an excellent filter and report writer.The wierd word "AWK" is derived from the name of the language's three developers: A.Aho , B. W. Kernighan and P.Weinberger.
+<white>
+Awk is a pattern scanning and programming language.It is very useful in the sense that it is an excellent filter and report writer.The wierd word "AWK" is derived from the name of the language's three developers:<red> A.Aho , B. W. Kernighan and P.Weinberger.</red>
 
-Remember that the essential organisation of an awk program follows the form: <green> pattern { action }
-<blue>
-Example:Say we have a file called line.txt containing the following information
-name  id  occupation  address  phone-no  description 
-of the person with each person;s data in a new line .Now lets say that we want to find out about a person in the file say "ravi"
-We then type>green> awk '/ravi/" list.txt</green> and this gives all the lines having ravi in it(can be done through awk also).But what if want only particular data like the id and the number.Thats when awk is really useful. Type <green> awk '/ravi/'  {print $1,$2,$4}' list.txt </green> and this will give only the second and the third columns.But what if we want all the names of people having id less than 70 ...that can aslo be done using awk like this <green>awk '{ (if $2 < 70) print $1":" $2 $3 }' list.txt </green>.Note that if no search pattern is found it will display the whole file and if we want to insert any of our own text,it can be done using " ".
-</red>
+Remember that the essential organisation of an awk program follows the form: <red> pattern { action } </red>
+
+<blue>Example</blue>:Say we have a file called line.txt containing the following information in a form of table
+<red>name  id  occupation  address  phone-no  description </red>
+of the person with each person's data in a new line .Now lets say that we want to find out about a person in the file say "ravi"
+We then type <green> awk '/ravi/' list.txt</green> and this gives all the lines having ravi in it(can be done through grep also?).But what if want only particular data like the id and the number.Thats when awk is really useful. Type <green> awk '/ravi/' '{print $1,$2,$4}' list.txt </green> and this will give only the second and the third columns.But what if we want all the names of people having id less than 70 ...that can aslo be done using awk like this <green>awk '{ (if $2 < 70) print $1":" $2 $3 }' list.txt </green>.Note that if no search pattern is found it will display the whole file and if we want to insert any of our own text,it can be done using " ".
+</white>
 </start>

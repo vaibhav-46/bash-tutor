@@ -1,44 +1,42 @@
 <start><cyan>\t\t\t\t\tChapter 9--Useful Commands</cyan>
-<red>
+<white>
 In this chapter we are going to cover a few commands that might not be used much but they are immensely useful in reducing the programmer's work.They are:
 
 a.<green>basename</green>:This command strips directory and suffix from filenames i.e it only prints the NAME.
-<blue>
-Example:Typing in <green>basename /usr/bin/sort</green> gives the output <cyan>sort</cyan>.So it prints NAME with any leading directory components removed.Also we can use basename to strip file names of perticular parts..not only the first part.<green>basename file.txt .txt </green> will give the output " file ".
-</blue>
+
+<blue>Example</blue>:Typing in <green>basename /usr/bin/sort</green> gives the output <red>sort</red>.So it prints NAME with any leading directory components removed.Also we can use basename to strip file names of perticular parts..not only the first part.<green>basename file.txt .txt </green> will give the output <red> file </red>.
+
 b.<green>rename</green>:This command is used to rename multiple files simultaneously using certain constraints.
-<blue>
-Usage:rename [option] files renamed_file and the main useful option is
-<green>-v</green>:verbose i.e it confirms with the user before renaming the files.
-Example:This command converts all uppercase file_names to lowercase:<green>rename 'y/A-Z/a-z/' *</green> .What happens here is that the expression 'y/A-Z/a-z/' takes all those files that have capital alphabets and converts them to small characters.The "*" captures the file_name and once the capital alphabets are changed to small the file name is retained.This is a regular expression and we will cover this in a later chapter.</blue>
+
+<blue>Usage</blue>:rename [option] files renamed_file and the main useful option is
+<green>-v</green>:<red>verbose</red> i.e it confirms with the user before renaming the files.
+<blue>Example</blue>:This command converts all uppercase file_names to lowercase:<green>rename 'y/A-Z/a-z/' *</green> .What happens here is that the expression 'y/A-Z/a-z/' takes all those files that have capital alphabets and converts them to small characters.The<red> "*"</red> captures the file_name and once the capital alphabets are changed to small the file name is retained.This is a regular expression and we will cover this in a later chapter.
 
 c.<green>dirname</green>:This command is the exact opposite of the basename command in the sense that it strips of the filename and gives only the directory part
-<blue>
-Example:Citing the same example typing <green>dirname /usr/bin/sort</green> gives the output <cyan>/usr/bin</cyan>.Thus only the name is cut off and the directory part is left intact.
-</blue>
+
+<blue>Example</blue>:Citing the same example typing <green>dirname /usr/bin/sort</green> gives the output <red>/usr/bin</red>.Thus only the name is cut off and the directory part is left intact.
 
 d.<green>wc</green>:wc prints newline,word and byte counts for each file.This is perticularly useful to get the number of lines in the text file or the input.
-<blue>
-Usage:wc [option] file
-Example:One basic thing that you can try is to find out the number of things in the directory.This can be done using <green>ls | wc -l</green> .The -l only displays the new line count and not the other 2 counts.In general you will be more interested in the number of new-lines rather than the no. of words or byte counts.Also note that if we enter the command <green>wc file1 file2</green> this gives an output of 3 lines,the first containing the 3 differnet counts of file1,second line contains the 3 different counts of file2 and the third line contains the total sum of the 2 lines.</blue>
+
+<blue>Usage</blue>:wc [option] file
+<blue>Example</blue>:One basic thing that you can try is to find out the number of things in the directory.This can be done using <green>ls | wc -l</green> .The -l only displays the new line count and not the other 2 counts.In general you will be more interested in the number of new-lines rather than the no. of words or byte counts.Also note that if we enter the command <green>wc file1 file2</green> this gives an output of 3 lines,the first containing the 3 differnet counts of file1,second line contains the 3 different counts of file2 and the third line contains the total sum of the 2 lines.
 
 e.<green>file</green>:This command is very useful to determine the type of file.
-<blue>
-Usage:file file_name
-Experiment:Browse through the various folders in the directory and try to find out the various file types.You will find that some are ASCII text or executables.This is useful in knowing about a file and how you can open it.
-</blue>
+
+<blue>Usage</blue>:file file_name
+<blue>Experiment</blue>:Browse through the various folders in the directory and try to find out the various file types.You will find that some are ASCII text or executables.This is useful in knowing about a file and how you can open it.
 
 f.<green>which</green>:This command is used to locate other commands and their location.But one point to remember is that which command can search only for executables and not for bash commands.(see examples)
-<blue>
-Usage:which command
-Examples:Try <green>which ls </green> and it gives the place where the ls command binary is present.Another example you can try is <green>which cd</green>.This will not give any output as cd is a bash command and not a binary.One more use of which is this:<green>var=`which ls`</green> and then <green>$var ~</green>.Here $var will act exactly like the command that was the argument of which.This can be helpful in a script that needs a particular command that might not be installedon the computer.So if the command does not exist we can have an alternative.</blue>
+
+<blue>Usage</blue>:which command
+<blue>Examples</blue>:Try <green>which ls </green> and it gives the place where the ls command binary is present.Another example you can try is <green>which cd</green>.This will <red>not</red> give any output as cd is a <red> bash command</red> and not a binary.One more use of which is this:<green>var=`which ls`</green> and then <green>$var ~</green>.Here $var will act exactly like the command that was the argument of which.This can be helpful in a script that needs a particular command that might not be installedon the computer.So if the command does not exist we can have an alternative.
 
 g.<green>find</green>:This command searches for files in a directory hierarchy.
-<blue>
-Usage:find option path expression
-Example:Try <green>find </green> and it basically finds all the files inside the given folder.If you are doind this outside the tutorial the output will go out of control and to stop it press <green>Ctrl+d</green>.One more useful usage of find is <green>find . -name "expression" </green>.The expression can even have regular expressions like . and * and this helps in searching the present directory for files having a perticular pattern as their file name.(Nex chapter covers regular expressions)
-</blue>
+
+<blue>Usage</blue>:find option path expression
+<blue>Example</blue>:Try <green>find </green> and it finds all the files inside the given folder.If you are doind this outside the tutorial the output will go out of control and to stop it press <red>Ctrl+d</red>.One more useful usage of find is <green>find . -name "expression" </green>.The expression can even have <red>regular expressions like . and *</red> and this helps in searching the present directory for files having a perticular pattern as their file name.(Next chapter covers regular expressions)
+
 These commands will be useful in many places to get the jobs done faster.In the next chapter we are going to cover a very important topic-regular expressions and they form the backbone of your usage of terminal.
-</red>
+</white>
  
 </start>
