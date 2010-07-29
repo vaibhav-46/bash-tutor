@@ -4,8 +4,8 @@
 # Date            : 26/07/2010
 # Remarks         :
 #
-# Known issues    : Does not check for boundary conditions - going before the
-#                   first chapter and beyond the last chapter
+# Known issues    : 
+#                   
 #
 # Future Work     : Listing the index
 #
@@ -16,7 +16,7 @@ function readfile()
         printf "\e[8;70;180;t"
         clear
         size=$(stty size | awk '{print $2}')
-	rm f temp.txt
+	rm -f temp.txt
 	touch temp.txt
         python create.py $CURRENT_CHAPTER $PWD $size
 }
