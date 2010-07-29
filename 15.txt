@@ -3,7 +3,7 @@
 Often when we download something or copy something from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
 
 1.<green>tar</green>:tar command stores and extracts fileas from a tape or disc archieves.TAR stands for Tape ARchive.This has various options that are to be used along with this command.
-<blue>
+
 Some options that are regularly used in tar are:
 <green>-c</green>:This option creates a new archive.
 <green>-v</green>:This option verbosely describes the  list files processed
@@ -12,13 +12,13 @@ Some options that are regularly used in tar are:
 <green>-t</green>:This option lists the contents of a archive.
 <green>-x</green>:This option helps in extracting files from the archive.
 
-Example:Say we want to archive all the pages that you have created during web buiding.Then type the command <green>tar -cvf web_pages *.html </green> and this will create a tar archive with all the files ending html.If no file is found it will return error and exit.This way we can create and extract archives.Some commonly used ways to extract from archives are
+<blue>Example</blue>:Say we want to archive all the pages that you have created during web buiding.Then type the command <green>tar -cvf web_pages *.html </green> and this will create a tar archive with all the files ending html.If no file is found it will return error and exit.This way we can create and extract archives.Some commonly used ways to extract from archives are
 .tar.bz2:<green>tar xjf arcive_name</green>
 .tar.gz:<green>tar xzf archive_name</green>
 .tar:<green>tar xf arcive_name</green>
 .tgz:<green>tar xzf archive_name</green>
 .tbz2:<green>tar xjf arcive_name</green>
-This way most of the common files can be extracted.</blue>
+This way most of the common files can be extracted.
 
 2.<green>zip</green>:This command is similar to tar command in the sense that it archives the files in the zip format.It even follows the same options as the tar command.Point to note is that .zip files can be extracted using the command <green> unzip archive_name</green>
 
@@ -26,7 +26,28 @@ This way most of the common files can be extracted.</blue>
 
 4.<green> bunzip2</green>:This is used for extracting archives having the extensions .bz2,.bz,.tbz2 and bzip2.If some form is given to it that it does not understand it will reurn the same file with the name original_filename.out.
 
-These commands are very useful in extracting al the possible archives that are generally used.
-</red>
+These commands are very useful in extracting all the possible archives that are generally used.Finally this is a small script that will generally extract any archive that you like.The way to execute this script is <green>./script_name archive</green>
+
+#!/bin/bash
+
+if [ -f $1 ]];then
+case $1 in
+	*.tar.bz)       tar xjf $1   ;;
+	*.tar.gz)	tar xzf $1   ;;
+	*.bz2)          bunzip2 $1   ;;
+	*.rar)		rar x $1     ;;
+	*.gz)		gunzip $1    ;;
+	*.tar)		tar xf $1    ;;
+	*.tbz2)		tar xjf $1   ;;
+	*.tgz)		tar xzf $1   ;;
+	*.zip)		unzip $1   ;;
+	*.z)		uncompress $1 ;;
+	*)
+esac
+else
+   echo "$1 is not a valid file"
+fi
+
+</white>
 
 </start>
