@@ -1,34 +1,34 @@
 <start><cyan>\t\t\t\tChapter 16---Miscallaneous</cyan>
-<red>
+<white>
 Ever wondered how to find out more about various files...their size and how to get only perticular people to access the files.In this chapter we will cover some commands that will help you do all of these commands.
 
 1<green>du</green>:This command is used to estimate file space usage.This finds the size of all the files in the given directory.
-<blue>
-Usage: du [options]
-Example:Try doing only<green> du</green> and you will see the disk usage of each and every file in the directory.But then we dont want the size of all the files in that directory.We want the disc usage for the present directory.Then we use <green>du -s</green>.But then if the file is too large the output is in terms of bytes.To make it more raedable use <green>du -sh</green>.This command is used to get the sizes in human readable format.</blue>
 
-Remember the output of the <green>ls -l </green>command that we mentioned earlier.Now is the time to analyse some of the output of it.Each of the output lines look something like this:
-<blue>-rwxr-xr-x number group_user owner size(in bytes) last_time_of_modification name</blue>. 
-Note that in some cases the first dash has a "d' written there which means that it is a directory.What do these initial rwx and stuff stand for.These are called the permissions for the given file.These decide who can access these files and who cannot.These are basically sets of 3:<blue>read(r),write(w),execute(x)</blue>.The first set of three characters represent the rights of file owner,the second set the rights of files group and the third the rights of everyone else.These rights are the used to either allow or disallow access to various people.This is done using the following commands.
+<blue>Usage</blue>: du [options]a
+<blue>Example</blue>:Try doing only<green> du</green> and you will see the disk usage of each and every file in the directory.But then we dont want the size of all the files in that directory.We want the disc usage for the present directory.Then we use <green>du -s</green>.But then if the file is too large the output is in terms of bytes.To make it more readable use <green>du -sh</green>.This command is used to get the sizes in<red> human readable format</red>.
 
-2.<green>chmod</green>:This command is used to change the permissions of the various files.It is a short form of change modulation.One important point before we see examples and usage is that the r,w,x variables are in order and are denoted by the binary numbers,So 111( 111 in binary=7 in decimal)stands for r,w,x all allowed while 101(101 in binary=5 in decimal) stands for r,x allowed but w disallwed.Using these decimal numbers we can change the owmnership of the files.
-<blue>
-Usage:chmod number file_name
-Example:<green>chmod 444 file_name </green> changes the file ownership to r--r--r-- i.e read only for everyone.Another example is <green>chmod 711 filr_name </green> and this means the owner can do anything but others can only run the file.</blue>
+Remember the output of the <red>ls -l </red>command that we mentioned earlier.Now is the time to analyse some of the output of it.Each of the output lines look something like this:
+<red>-rwxr-xr-x  number  group_user  owner  size(in bytes)  last_time_of_modification  name</red>. 
+Note that in some cases the first dash has a <red>'d'</red> written there,which means that it is a <red>directory</red>.What do these initial rwx and stuff stand for?These are called the permissions for the given file.These decide who can access these files and who cannot.These are basically sets of 3:<red>read(r),write(w),execute(x)</red>.The first set of three characters represent the rights of <red>file owner</red>,the second set the rights of <red>files group</red> and the third the rights of <red>everyone else</red>.These rights are used to either allow or disallow access to various people.This is done using the following commands.
 
-3.<green>chown</green>:Note that this command can be used only as a super user(more on this later).But this command is used to transfer the ownership of some file from one group to another.
-<blue>
-Usage:chown new_owner file_name
-Example:Say we want to change ownership of a file from "foo" user to "blah" user.Then we have to type <green>chown blah file_name </green> but note again that this can only be done as super user.</blue>
+2.<green>chmod</green>:This command is used to change the permissions of the various files.It is a short form of <red>change modulation</red>.One important point before we see examples and usage is that the r,w,x variables are in order and are denoted by the binary numbers.So <red>111</red>( 111 in binary=7 in decimal)stands for <red>r,w,x all allowed</red> while <red>101</red>(101 in binary=5 in decimal) stands for <red>r,x allowed but w disallowed</red>.Using these decimal numbers we can change the owmnership of the files.
+
+<blue>Usage</blue>:chmod binary_number file_name
+<blue>Example</blue>:<green>chmod 444 file_name </green> changes the file ownership to r--r--r-- i.e read only for everyone.Another example is <green>chmod 711 file_name </green> and this means the owner can do anything but others can only run the file.
+
+3.<green>chown</green>:Note that this command can be used only as a <red>super user</red>(more on what a super user is later).But this command is used to transfer the ownership of some file from one group to another.
+
+<blue>Usage</blue>:chown new_owner file_name
+<blue>Example</blue>:Say we want to change ownership of a file from "foo" user to "blah" user.Then we have to type <green>chown blah file_name </green> but note again that this can only be done as <red>super user.</red>
 
 4.<green>chgrp</green>:As the chown this command transfers the ownership of a file from one group to another.Same usage as the chown command.
 
 5.<green>chpasswd</green>:This command is used to change the login password from the terminal.
-<blue>
-Before we move on lets cover one very important thing called root:.The root user is the main user of the system and this user has all the privilages and control over the system.<green>Beware that any wrong changes made as super user can affect the computer</green>.That is why when we want to do install something or change ownership it can be done only by being super user.Type <green> su </green> to become the super user but it is not recommended unless it is absolutely necessary.A easier way to execute a super user command is to use <green> sudo </green> before the comamnd.This trick helps you you do the process as root and then exits immediately.</blue>
 
-Note though that chpasswd does not always work.In addition there are other commands like passwd,yppasswd which can also be used to change the password.If one of these do not work then try the others.
+Before we move on,lets cover one very important thing called root/super user.The root user is similar to the administrator in a multiple account Windows computer.It is the main user of the system and this user has all the privilages and control over the system.<red>Beware that any wrong changes made as super user can affect the computer</red>.That is why when we want to install something or change ownership it can be done only by being super user.Using <red> sudo </red> before a command to use things that only the system administrator can do(it asks for the admin password to confirm).Note that it is not a good practise to stay logged as root as any wrong command can ruin the system.Thats why the <red> sudo </red> trick helps you you do the process as root and then exits immediately.
+
+Note though that chpasswd does not always work.In addition there are other commands like<red> passwd,yppasswd</red> which can also be used to change the password.If one of these do not work,try the others.
 
 Now that we have covered sudo we are moving into more advanced commands that requuire the user to be a root/or administrator as you may call it.These commands deal with installing applications on the computer.
-</red>
+</white>
  </start>

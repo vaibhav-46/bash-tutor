@@ -1,14 +1,14 @@
 <start><cyan>\t\t\t\tChapter 18-----VIM</cyan>
-<red>
-This chapter has a few basic points on vim(text editor).Though there are many text editors there are 2 vary prominent ones : vim and emacs.Emacs will be covered in the next chapter.Before reading this chapter read the tutorial by typing in the terminal <green>vimtutor</green>.This tutorial has all the basics that are needed to get you started with vim.
+<white>
+This chapter has a few basic points on vim(text editor).Though there are many text editors there are 2 very prominent ones :<red> vim and emacs</red>.Emacs will be covered in the next chapter.Before reading this chapter read the tutorial by typing in the terminal <red>vimtutor</red>.This tutorial has all the basics that are needed to get you started with vim.
 
 Now that you have read the basics of vim,we will cover some more useful points of vim here.Some points may be repeated here but thats just to signify the importance of those commands:
 
-1.Searhing is done using <green>/</green>.To find next <green>n</green> and previous<green> N</green>.To replace use <green>%s/this/that</green>.% is used for find and replace all.
+1.Searching is done using <red>/</red>.To find next <red>n</red> and previous<red> N</red>.To replace use <red>%s/this/that</red>.
 2.Saving and exiting can be done using:
 <green>:q</green>:Exit the tutorial 
 <green>:wq!</green>:Save and exit
 <green>:q!</green>:Exit and throw away changes
 3.
-</red>
+</white>
  </start>

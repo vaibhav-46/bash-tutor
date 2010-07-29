@@ -1,5 +1,5 @@
 <start><cyan>\t\t\t\tChapter 19-----Emacs</cyan>
-<red>
+<white>
 In the last chapter we covered a little about vim.In this chapter we will introduce another text editor called Emacs.a
-</red>
+</white>
 </start>
