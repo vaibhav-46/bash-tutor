@@ -1,11 +1,18 @@
 This is a small collection of chapters that are contained as part of bash-tutor.This package contains 2 scripts as of now:
 
-1.next.sh : This script is used to move forward in the tutorial.
-2.create.py:This script is used to print the chapters in the tutorial.
+1.navigate.sh: This script is used to move around in the tutorial.
+2.start.sh:This script is used to print the first chapter in the tutorial.
 
-The navigate.sh file will be sourced from the bashrc file inside the chroot.This way the user will be able to access all the functions of that file.
+The navigate.sh file will be sourced from the bashrc file inside the chroot.This way the user will be able to access all the functions of that file.For now we have to manually source the navigate.sh file.
 
-How to use it:Go to the folder containing the chapters and then use the command ./next.sh.
+Usage:
+1.Move to the folder
+2. ./start.sh gives the first chapter
+3. give the command----" source navigate.sh "
+4.Now you can use the functions:
+   next
+   prev
+   goto
 
 
 To do list:
