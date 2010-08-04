@@ -1,4 +1,4 @@
-<start><cyan>Chapter 24----Useful Tools</cyan>
+<start><title>Chapter 24----Useful Tools</title>
 <white>
 Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting and in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
 

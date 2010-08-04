@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tFilters-Chapter 8</cyan>
+<start><title>Filters-Chapter 8</title>
 <white>
 The last chapter had a little segment on pipes.Pipes are really useful in various ways.One class of programs that you can use with pipes are called filters.Filters take standard input and perform operations on it and then send the result to standard output.Confused?Dont be,as you will soon understand.<red>Some of the main filters are</red>:
 

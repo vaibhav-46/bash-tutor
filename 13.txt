@@ -1,5 +1,6 @@
-<start><cyan>\t\t\t\t\tChapter 12-----STREAM EDITOR</cyan>
-<white>Stream Editor(or sed in short) is used to filter text i.e it takes text input and performs some operations(or set of operations) on it and outputs the modified text.Sed is typically used for extracting part of a file using pattern matching or substitute multiple occurences of a string within a file.If you want to work on text editing and a lot of it then sed is a tool that can make your life easier.Along with regex sed has awesome power and it can do a hell lot of things very easily as we shall see.
+<start><title>Chapter 12-----STREAM EDITOR</title>
+<white>
+Stream Editor(or sed in short) is used to filter text i.e it takes text input and performs some operations(or set of operations) on it and outputs the modified text.Sed is typically used for extracting part of a file using pattern matching or substitute multiple occurences of a string within a file.If you want to work on text editing and a lot of it then sed is a tool that can make your life easier.Along with regex sed has awesome power and it can do a hell lot of things very easily as we shall see.
 <blue>
 Usage and Examples</blue>:
 

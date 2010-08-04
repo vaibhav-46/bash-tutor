@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 16---Miscallaneous</cyan>
+<start><title>Chapter 16---Miscallaneous</title>
 <white>
 Ever wondered how to find out more about various files...their size and how to get only perticular people to access the files.In this chapter we will cover some commands that will help you do all of these commands.
 

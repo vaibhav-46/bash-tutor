@@ -1,4 +1,4 @@
-<start><cyan>Starting off with a Sha-Bang</cyan>
+<start><title>Starting off with a Sha-Bang</title>
 <white>
 To write a script using bash the main thing is to include at the start of the file the statement <red>'#!/bin/bash'</red> and save the file with the extension <red> .sh </red>.This tells the shell that the file is a shell script and the header tells the shell which shell to use(in this case it is bash).Note that once a script is written you have to make the script executable using the <red> chmod </red> command.
 

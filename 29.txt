@@ -1,4 +1,4 @@
-<start><cyan>Shells</cyan>
+<start><title>Shells</title>
 <white>
 All through this tutorial we have been using this word:<green>Shell</green>.What exactly is a shell?Why do we need a shell?
 

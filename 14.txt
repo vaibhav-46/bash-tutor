@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\t Chapter 13------AWK</cyan>
+<start><title> Chapter 13------AWK</title>
 <white>
 Awk is a pattern scanning and programming language.It is very useful in the sense that it is an excellent filter and report writer.The wierd word "AWK" is derived from the name of the language's three developers:<red> A.Aho , B. W. Kernighan and P.Weinberger.</red>
 

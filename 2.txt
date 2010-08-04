@@ -1,4 +1,4 @@
-<start>                     <cyan>\t\t\t\t\tCHAPTER 1---SOMETHING VERY IMPORTANT</cyan>
+<start>                     <title>CHAPTER 1---SOMETHING VERY IMPORTANT</title>
 <white>
 Before we start of,there are many other tools inbuilt to help you get a feel of the commands in a better way.Some of these <red>helps</red> are inbuilt.
 
@@ -26,5 +26,5 @@ Again just as man is a vim-based(will talk about vim later-for now remember vim 
 
 A small point to remember is that the commands in this tutorial are not exhaustive and hence it is necesary that one learn how to use the man pages as they are the ultimate source of information.This tutorial is intended to get you started with a few vital basics.These commands are going to be really useful as you move on because there are so many commands that are not going to be covered in this tutorial.Also note that as we move along we will see some small points which you might not understand at that point but hopefully by the end of the tutorial you will understand almost all the examples.</white>
 
-\t\t\t<cyan>So,lets start!!!!!</cyan>
+<title>So,lets start!!!!!</title>
 </start>

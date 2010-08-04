@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 21</cyan>
+<start><title>Chapter 21</title>
 <white>
 This chapter covers some very important points/commands that are essential in the long run.
 

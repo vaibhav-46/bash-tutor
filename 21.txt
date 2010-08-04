@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 20----Some Interesting commands</cyan>
+<start><title>Chapter 20----Some Interesting commands</title>
 <white>
 In this chapter we are going to cover a few commands that are randomly used in various scripts.
 
@@ -32,7 +32,7 @@ This option is stored as the variable <red>PS1</red> and it can be modified.Also
 2.<green>'\d'</green>:date (u can even use the various formats)
 3.<green>'\e'</green>:an ASCII escape charcter(like 033 given in echo chapter)
 4.<green>'\H'</green>:The host name
-5.<green>'\t'</green>:time in 24 hour format('T' denotes 12 hour format)
+5.<green>''</green>:time in 24 hour format('T' denotes 12 hour format)
 6.<green>'\u'</green>:username of current user
 7.<green>'\w'</green>:basename of current working directory
 8.<green>'\['</green>:This begins a sequence of non-printing characters which could be used to embed a terminal con-trol sequence into the prompt

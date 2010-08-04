@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\tChapter 4---Ctrl+{C,P,V}</cyan>
+<start><title>Chapter 4---Ctrl+{C,P,V}</title>
 <white>
 Till now we have learnt how to play around with directories but most of the time the most important thing for a user is how to copy files,rename them or move them from one directory to another.In this tutorial we are going to learn about commands that help in file copying,renaming and moving.
 

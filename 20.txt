@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 19-----Emacs</cyan>
+<start><title>Chapter 19-----Emacs</title>
 <white>
 In the last chapter we covered a little about vim.In this chapter we will introduce another text editor called Emacs.a
 </white>

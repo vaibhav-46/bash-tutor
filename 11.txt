@@ -1,5 +1,6 @@
-<start><cyan>\t\t\t\tChapter 10-----Regular Expressions</cyan>
-<white>A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that discribes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that span across multiple lines.
+<start><title>Chapter 10-----Regular Expressions</title>
+<white>
+A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that discribes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that span across multiple lines.
 
 There are three important parts of a regular expression:
 <green>Anchors</green>--These are used to modify the position of the pattern in relation to the line of text.

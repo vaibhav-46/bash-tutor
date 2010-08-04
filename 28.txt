@@ -1,4 +1,4 @@
-<start><cyan>BASHRC file </cyan>
+<start><title>BASHRC file </title>
 <white>
 In the previous chapter we saw a number of files that are read before we start bash.But the most important file that is read is in the home directory and its path is ~/.bashrc.This is what is generally edited to customize bash.This is a very important file and making any miatake with this file can result in the bash terminal not working properly.This is where the aliases are defined and also it is determined whether the terminal will be colored or not.
 

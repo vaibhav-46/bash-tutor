@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\tChapter 17------Apt command</cyan>
+<start><title>Chapter 17------Apt command</title>
 <white>
 Well you see your friend's computer and like the gmail-notifier that he has.You want it for yourself too but how do you get it...Synaptic Manager(System-->Administration-->Synaptic manager)ofcourse.But then is there a command that can be used to do so?Synaptic Manager() has the list of various applications that are available in the repository that you are connected to.But what if we want to get the applications using the terminal?Obviously are useful to do exctly that.Note that most of this commands require you to be super user.So you can use sudo before the command.
 

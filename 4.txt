@@ -1,6 +1,6 @@
-<start><cyan>\t\t\t\t\t\t\t\tChapter 3---Directory commands</cyan>
-
-<white>Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
+<start><title>Chapter 3---Directory commands</title>
+<white>
+Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
 The main directory is the root directory also known by /.This contains every file that is available on the computer.Now some of the main sub-directories of this folder are:<red>
 a./Boot
 b./Etc

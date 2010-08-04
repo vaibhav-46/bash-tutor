@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 18-----VIM</cyan>
+<start><title>Chapter 18-----VIM</title>
 <white>
 This chapter has a few basic points on vim(text editor).Though there are many text editors there are 2 very prominent ones :<red> vim and emacs</red>.Emacs will be covered in the next chapter.Before reading this chapter read the tutorial by typing in the terminal <red>vimtutor</red>.This tutorial has all the basics that are needed to get you started with vim.
 

@@ -1,5 +1,6 @@
-<start><cyan>\t\t\t\t\tChapter 11-GREP</cyan>
-<white>In one of the previous chapters we had seen a little about grep.We now look in more detail at grep and its functionality.
+<start><title>Chapter 11-GREP</title>
+<white>
+In one of the previous chapters we had seen a little about grep.We now look in more detail at grep and its functionality.
 
 Grep utility allows a user to search through a file for a pattern and returns customized information about where that pattern exists within the specified  file/standard input.
 <blue>Usage</blue>:grep options pattern_to_search file_name1 file2 

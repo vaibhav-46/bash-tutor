@@ -17,8 +17,11 @@ function readfile()
         clear
         size=$(stty size | awk '{print $2}')
 	rm -f temp.txt
+        rm -f out.txt
 	touch temp.txt
-        python create.py $CURRENT_CHAPTER $PWD $size
+	touch out.txt
+        python create.py $CURRENT_CHAPTER $PWD $(($size-10))
+	cat out.txt | less -r
 }
 
 

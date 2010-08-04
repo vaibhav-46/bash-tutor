@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\tChapter 6--Mount</cyan>
+<start><title>Chapter 6--Mount</title>
 <white>
 <red>Mount</red> is a very basic command that is used to mount filesystems like your cd,pendrives and other such external devices.
 <blue>Usagei</blue>:mount options file 

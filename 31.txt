@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tVariables</cyan>
+<start><title>Variables</title>
 <white>
 A variable is nothing but a label,a name assigned to a location or set of locations in computer memory holding an item of data.Bash variables are untyped i.e you need not specify that the variable is a string or integer variable.Note that there are some variblea that are predefines by bash like
 

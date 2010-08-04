@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\tChapter 5---Cat and Echo commands</cyan>
+<start><title>Chapter 5---Cat and Echo commands</title>
 <white>
 Whatever we have done till now neither uses the monitor nor reads anything from the user.What if we want to read and print a text file on the screen.What if you want to save text in the form of a file.Then the commands<green>"cat" and "echo"</green> are used.These are very useful commands as you will see in the coming chapters.
 Lets see them in detail:
@@ -19,7 +19,7 @@ Note: Cat is a very useful command as you will see as we move on.One point to re
 <blue>Example</blue>:
 1.Type in <green>echo "hello world"</green> and you will see the words appear on the screen.This way we can echo various things after taking them from the user.
 2.Say we want to store something in a variable and then echo it.Do it like this <green>x=4 </green>and then <green>echo $x</green>.Note that the <red>$ is necessary</red>(try without it and see.)This way we can save and echo variables and this is useful in debuging scripts by echoing variables.More on this later when we discuss bash-scripting.
-3.Also wondering how all these colours are coming on the screen...thats again due to echo.Time for an example:type<green>echo -e "\033[0;31m blah"</green> and there is the colour.Check out different numbers from 31-37 to get different colours on terminal.The <red>-e</red> option of echo is used to recognize options like <red>\033</red> which is called a escape sequence and other things like <red>\t</red> which stands for tab.
+3.Also wondering how all these colours are coming on the screen...thats again due to echo.Time for an example:type<green>echo -e "\033[0;31m blah"</green> and there is the colour.Check out different numbers from 31-37 to get different colours on terminal.The <red>-e</red> option of echo is used to recognize options like <red>\033</red> which is called a escape sequence and other things like <red></red> which stands for tab.
 Hope you liked this example...;).
 4.Also try this <green>echo $PATH</green>.Again you see that PATH is a variable and it is pre-defined.Its a very important variable and will be discussed later in detail.
 

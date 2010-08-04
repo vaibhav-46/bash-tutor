@@ -1,4 +1,4 @@
-<start><cyan>\t\t\tQUOTING</cyan>
+<start><title>QUOTING</title>
 <white>
 A lot of keys have special meaning in some context or the other.Quoting is used to remove the special meaning of characters or words:quotes can disable special treatment for special characters, they can prevent reserved words from being recognized as such and they can disable parameter expansion.There are various options for quoting:
 

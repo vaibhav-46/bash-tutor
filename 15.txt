@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\t\tChapter 14----Tar-gz files operation</cyan>
+<start><title>Chapter 14----Tar-gz files operation</title>
 <white>
 Often when we download something or copy something from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
 
@@ -32,17 +32,17 @@ These commands are very useful in extracting all the possible archives that are 
 
 if [ -f $1 ]];then
 case $1 in
-	*.tar.bz)       tar xjf $1   ;;
-	*.tar.gz)	tar xzf $1   ;;
-	*.bz2)          bunzip2 $1   ;;
-	*.rar)		rar x $1     ;;
-	*.gz)		gunzip $1    ;;
-	*.tar)		tar xf $1    ;;
-	*.tbz2)		tar xjf $1   ;;
-	*.tgz)		tar xzf $1   ;;
-	*.zip)		unzip $1   ;;
-	*.z)		uncompress $1 ;;
-	*)
+*.tar.bz)       tar xjf $1   ;;
+*.tar.gz)tar xzf $1   ;;
+*.bz2)          bunzip2 $1   ;;
+*.rar)rar x $1     ;;
+*.gz)gunzip $1    ;;
+*.tar)tar xf $1    ;;
+*.tbz2)tar xjf $1   ;;
+*.tgz)tar xzf $1   ;;
+*.zip)unzip $1   ;;
+*.z)uncompress $1 ;;
+*)
 esac
 else
    echo "$1 is not a valid file"

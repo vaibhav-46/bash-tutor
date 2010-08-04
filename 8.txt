@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\t\t\tChapter 7------Input And Output Redirections</cyan>
+<start><title>Chapter 7------Input And Output Redirections</title>
 <white>
 In this lesson we will explore a powerful feature used by many command line programs.For example say we dont want to output the ls command on the screen,instead we want to store it in a file.This is easily possible using <red>I/O</red> redirections.
 

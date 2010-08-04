@@ -1,4 +1,4 @@
-<start><cyan>\t\t\tINTRODUCTION</cyan>
+<start><title>INTRODUCTION</title>
 <white>
 Hello everyone,
 This application has been made with the idea that the most feared thing for a linux newbie is the terminal.The main reason that terminal is feared by a new  user is his <blue>ignorance of the commands</blue>.But once you get used to the commands in the terminal you will find that the terminal is a very useful tool and it helps a regular user use the computer more effectively.
@@ -13,3 +13,58 @@ This tutorial is an interactive one and so you can browse through each chapter a
 4.<green>start</green> -->This can be used to start the tutorial again in case you seemed to have forgotten everything...:p.
 </white>
 </start>
+[36mINTRODUCTION[0m[37m
+Hello everyone,
+This application has been made with the idea that the most feared thing for a linux newbie
+is the terminal.The main reason that terminal is feared by a new  user is his
+[0m[34mignorance of the commands[0m[37m.But once you get used to the commands in the
+terminal you will find that the terminal is a very useful tool and it helps a regular user
+use the computer more effectively.
+
+This tutorial is meant to help you understand various commands that you might use in the
+process of using the terminal.Once you are comfartable with these commands it will become
+a lot easier for you to be able to run the computer.[0m[31mBut the main point to
+remember while studying this tutorial is to keep trying out the commands that are given in
+the tutorial.[0m[37mThere are a lot of examples in this tutorial and it is very
+important that you do try them out and make sure that you understand what is going on.This
+way you will not only learn but have a lot of practice along the way.
+
+[0m[32mINSTRUCTIONS[0m[37m:
+This tutorial is an interactive one and so you can browse through each chapter and then
+try it out before moving on.To move around the chapters there are various commands that
+you can use:
+1.[0m[32mnext[0m[37m --> This is to go to the next chapter in the tutorial (till maybe
+you know why you use next.sh... :p)
+2.[0m[32mprevious[0m[37m -->This can be used to go to the previous chapter.
+3.[0m[32mindex[0m[37m -->This can be used to view all the commands that have been
+covered in this tutorial.
+4.[0m[32mstart[0m[37m -->This can be used to start the tutorial again in case you
+seemed to have forgotten everything...:p.
+[0m[36mINTRODUCTION[0m[37m
+Hello everyone,
+This application has been made with the idea that the most feared thing for a linux newbie
+is the terminal.The main reason that terminal is feared by a new  user is his
+[0m[34mignorance of the commands[0m[37m.But once you get used to the commands in the
+terminal you will find that the terminal is a very useful tool and it helps a regular user
+use the computer more effectively.
+
+This tutorial is meant to help you understand various commands that you might use in the
+process of using the terminal.Once you are comfartable with these commands it will become
+a lot easier for you to be able to run the computer.[0m[31mBut the main point to
+remember while studying this tutorial is to keep trying out the commands that are given in
+the tutorial.[0m[37mThere are a lot of examples in this tutorial and it is very
+important that you do try them out and make sure that you understand what is going on.This
+way you will not only learn but have a lot of practice along the way.
+
+[0m[32mINSTRUCTIONS[0m[37m:
+This tutorial is an interactive one and so you can browse through each chapter and then
+try it out before moving on.To move around the chapters there are various commands that
+you can use:
+1.[0m[32mnext[0m[37m --> This is to go to the next chapter in the tutorial (till maybe
+you know why you use next.sh... :p)
+2.[0m[32mprevious[0m[37m -->This can be used to go to the previous chapter.
+3.[0m[32mindex[0m[37m -->This can be used to view all the commands that have been
+covered in this tutorial.
+4.[0m[32mstart[0m[37m -->This can be used to start the tutorial again in case you
+seemed to have forgotten everything...:p.
+[0m

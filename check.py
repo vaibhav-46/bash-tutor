@@ -28,30 +28,25 @@ def wrap(text,width):
                  )
     
 
-def parser(x,NAME,size):
+def parser(x,NAME):
 
     temp=open(NAME+'/temp.txt','r+')     
     f=open(NAME+'/'+str(x)+'.txt','r+') 
-    out=open(NAME+'/out.txt','r+')
+    out=open(NAME+'/out.txt','r+')    
+
     doc=f.readlines()
     soup=BeautifulSoup(''.join(doc))
     soup.prettify()
     for tag in soup.start.findAll(recursive=False):
-        if tag.name=="title":
-                name=len(tag.contents[0])
-                for i in range(1,(size-name)/2):
-                        temp.write(" "),
-                temp.write(colored(tag.contents[0],'cyan'))
-        else:
-                color(tag,temp)
+       color(tag,temp)
     temp.close()
     final=open(NAME+'/temp.txt','r+')
     for line in final:
-       out.write(wrap(line,size))
+       out.write(wrap(line,90))
                            
                         
 if __name__=="__main__":
 	import sys
-	parser(int(sys.argv[1]),str(sys.argv[2]),int(sys.argv[3]))
+	parser(int(sys.argv[1]),str(sys.argv[2]))
 
                    

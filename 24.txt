@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tChapter 23------Alsamixer and acpi</cyan>
+<start><title>Chapter 23------Alsamixer and acpi</title>
 <white>
 For all those people who love music,it is a real pain to get the volume levels and other adjustments done using the mouse.What if you could do the whole thing using the terminal and the arrow keys.Well using the command <green>alsamixer</green> we can adjust the volumes of the speakers,headphones and do other stuff related to audio.To try it out just type <green>alsamixer</green> and get started.Its a pretty well illustrated application and you can play around with it.
 

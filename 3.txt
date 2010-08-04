@@ -1,4 +1,4 @@
- <start>                     \t\t\t\t\t   <cyan>CHAPTER 2---FEW BASIC HELPS</cyan>
+<start>                        <title>CHAPTER 2---FEW BASIC HELPS</title>
 <white>
 The first and most basic commands that a user should learn are <red> 'ls' and 'cd'</red> as these are the most useful commands and these are used most often:
 

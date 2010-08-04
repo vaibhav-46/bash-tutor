@@ -1,4 +1,4 @@
-<start><cyan>Chapter 25----Speeding up process</cyan>
+<start><title>Chapter 25----Speeding up process</title>
 <white>
 Sometimes while working on the computer we want a particular process to run faster than the others.And sometimes we know that some process is taking up too much of the CPU speed and we wont to reduce its priorities.This can be done using two commands called nice and renice.In this chapter we are going to cover these two commands in detail:
 

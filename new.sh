@@ -22,17 +22,12 @@ export CURRENT_CHAPTER
 
 # Setting the terminal screen to display the tutorial
 # This enlarges the terminal to the maximum size
-printf "\e[8;70;180;t"
-clear
-
+terminator -m
 # Make the required navigation functions available
 source navigate.sh
 
 rm -f temp.txt
-rm -f out.txt
 touch temp.txt
-touch out.txt
 # This gets the terminal width to use in the printing routine
 width=$(stty size | awk '{print $2}')
-python create.py 1 $PWD $(($width-10)) 
-cat out.txt | less -r
+python create.py 1 $PWD $width 

@@ -1,4 +1,4 @@
-<start><cyan>\t\t\t\tImportant Bash files</cyan>
+<start><title>Important Bash files</title>
 <white>
 Ever wondered how the terminal starts every time you click on the symbol.How does it know the PS1 variable(i.e the display prompt in the terminal).Obviously there must be some file where all the required variables are stored.In this chapter we will see some of these files:
 
