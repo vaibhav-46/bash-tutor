@@ -1,0 +1,12 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+#bindkey -k k2 stuff qnext
+register n qnext
+bindkey -k k2 process n
+
+
+split
+screen
+focus
+screen

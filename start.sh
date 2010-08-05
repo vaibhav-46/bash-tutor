@@ -25,7 +25,7 @@ export CURRENT_CHAPTER
 printf "\e[8;70;120;t"
 clear
 # Make the required navigation functions available
-source navigate.sh
+source ./navigate.sh
 
 rm -f temp.txt
 rm -f out.txt
