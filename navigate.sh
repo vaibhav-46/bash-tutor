@@ -11,6 +11,12 @@
 #
 ##############################################################################################################
 
+for i in `seq 1 $NUM_CHAPTERS`; 
+    do
+        screen -X eval "bindkey -t g$i stuff 'qgoto $i '";
+done
+
+
 function readfile()
 {
         printf "\e[8;70;120;t"

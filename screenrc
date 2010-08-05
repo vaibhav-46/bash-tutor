@@ -1,12 +1,21 @@
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
+# Approach 1
 #bindkey -k k2 stuff qnext
+
+# Approach 2
 register n qnext
+register p qprev
+register g 'qgoto '
 bindkey -k k2 process n
+bindkey -k k1 process p
+bindkey -k k3 process g
 
 
 split
 screen
 focus
 screen
+
+
