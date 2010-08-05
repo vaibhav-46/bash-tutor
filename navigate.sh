@@ -11,9 +11,12 @@
 #
 ##############################################################################################################
 
+# Make the terminal silent and add the keybindings for goto command to the
+# existing screen sessions 
+
 for i in `seq 1 $NUM_CHAPTERS`; 
     do
-        screen -X eval "bindkey -t g$i stuff 'qgoto $i '";
+        screen -X eval "bindkey -t g$i stuff 'qgoto $i '" 2> /dev/null &> /dev/null;
 done
 
 
