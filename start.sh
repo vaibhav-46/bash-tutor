@@ -22,9 +22,8 @@ export CURRENT_CHAPTER
 
 # Setting the terminal screen to display the tutorial
 # This enlarges the terminal to the maximum size
-printf "\e[8;70;180;t"
+printf "\e[8;70;120;t"
 clear
-
 # Make the required navigation functions available
 source navigate.sh
 
@@ -36,3 +35,4 @@ touch out.txt
 width=$(stty size | awk '{print $2}')
 python create.py 1 $PWD $(($width-10)) 
 cat out.txt | less -r
+

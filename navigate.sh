@@ -13,7 +13,7 @@
 
 function readfile()
 {
-        printf "\e[8;70;180;t"
+        printf "\e[8;70;120;t"
         clear
         size=$(stty size | awk '{print $2}')
 	rm -f temp.txt
