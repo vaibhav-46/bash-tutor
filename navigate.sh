@@ -22,6 +22,7 @@ function readfile()
 	touch out.txt
         python create.py $CURRENT_CHAPTER $PWD $(($size-10))
 	cat out.txt | less -r
+	echo $NUM_CHAPTERS
 }
 
 
@@ -31,16 +32,15 @@ function next()
 	then
 	CURRENT_CHAPTER=1
 	fi
-	$NUM_CHAPTERS=$(( `ls [0-9]*.txt | wc -l ` ))
+	NUM_CHAPTERS=$(( `ls [0-9]*.txt | wc -l ` ))
 	if [[ "$CURRENT_CHAPTER" -eq "$NUM_CHAPTERS" ]]
 	then 
         echo "Chapters done...hope you liked the tutorial"
-        exit 0
-        fi
+        else
         CURRENT_CHAPTER=$(($CURRENT_CHAPTER + 1))
 	export CURRENT_CHAPTER
         readfile
-         
+        fi
 }
 
 
