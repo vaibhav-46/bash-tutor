@@ -1,0 +1,22 @@
+Now that the whole thing is almost done,a small list of things that are to be finished of are:
+
+State Machine:
+--------------
+
+1.goto number has to be followed by enter(This was your idea but I dont think this is much of a problem...the user can always press enter as he will not be using this often...)
+
+Introduction Page:
+-----------------
+
+1.Insert a picture using the libcasa pictures in the main page.
+2.Add the instructions in the second page of the ncurses display.
+3.Another idea that I had was to change the 1.txt file to intro-page and then directly start with chapter 1.The reason being that if a user does goto 11 he expects to be going to 11 chapter but actually he sees the 10th chapter.
+
+Chapter:
+-------
+
+A few chapters contents have to be refined but this is not a very urgent process.
+
+
+Anything else that has to be done or any more ideas to be implemented please do mail me.
+

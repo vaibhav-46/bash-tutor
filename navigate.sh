@@ -31,7 +31,6 @@ function readfile()
 	touch out.txt
         python create.py $CURRENT_CHAPTER $PWD $(($size-10))
 	cat out.txt | less -r
-	echo $NUM_CHAPTERS
 }
 
 
