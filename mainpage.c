@@ -40,7 +40,7 @@ refresh();
 my_wins[0]=newwin(win1_x-4,win1_y-2,1,1);
 box(my_wins[0],0,0);
 
-wattron(my_wins[0],COLOR_PAIR(1));
+wattron(my_wins[0],COLOR_PAIR(2));
 mvwprintw(my_wins[0],2,2,"Instructions ");
 mvwprintw(my_wins[0],3,2,"This application has been made with an idea of helping the user get accustomed to the terminal.");
 mvwprintw(my_wins[0],4,2,"The way to move around in this tutorial is:");
@@ -48,13 +48,15 @@ mvwprintw(my_wins[0],6,2,"Next Chapter:F2");
 mvwprintw(my_wins[0],7,2,"Prev Chapter:F3");
 mvwprintw(my_wins[0],8,2,"To goto a specific chapter type in g<number>");
 mvwprintw(my_wins[0],9,2,"For example to goto 12th chapter press g12");
-mvwprintw(my_wins[0],10,2,"To resume: F4");
-mvwprintw(my_wins[0],11,2,"To see the list of contents: F6");
+mvwprintw(my_wins[0],10,2,"To resume: F4(to be done)");
+mvwprintw(my_wins[0],11,2,"To see the list of contents: F6(to be done)");
 wattron(my_wins[0],A_BOLD);
-mvwprintw(my_wins[0],15,2,"So what are you waiting for press F2 and get started");
+mvwprintw(my_wins[0],17,2,"So what are you waiting for press F2 and get started");
 wattroff(my_wins[0],A_BOLD);
 mvwprintw(my_wins[0],12,2,"To exit the tutorial press Ctrl+a followed by \\ and y");
-wattroff(my_wins[0],COLOR_PAIR(1));
+mvwprintw(my_wins[0],13,2,"If at any instant the tutorial does not work you can always fall back ");
+mvwprintw(my_wins[0],14,2,"on the default of pressing next or prev after q");
+wattroff(my_wins[0],COLOR_PAIR(2));
 refresh();
 
 
@@ -68,7 +70,7 @@ update_panels();
 
 attron(COLOR_PAIR(4));
 mvprintw(win_x-3,0,"1.Press tab to see the instructions");
-mvprintw(win_x-2,0,"2.To resume press F4");
+mvprintw(win_x-2,0,"2.To resume press F4(presently does not work)");
 attroff(COLOR_PAIR(4));
 doupdate();
 

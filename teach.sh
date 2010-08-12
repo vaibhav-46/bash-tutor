@@ -1,3 +1,3 @@
 #!/bin/bash
 ./check
-screen
+screen bash bashtutor.sh

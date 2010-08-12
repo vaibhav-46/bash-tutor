@@ -16,13 +16,15 @@
 
 for i in `seq 1 $NUM_CHAPTERS`; 
     do
-        screen -X eval "bindkey -t g$i stuff 'qgoto $i '" 2> /dev/null &> /dev/null;
+        screen -X eval "bindkey -t g$i stuff 'qgoto $i 
+'" 2> /dev/null &> /dev/null;
 done
 
 
 function readfile()
 {
         printf "\e[8;70;120;t"
+	echo $NUM_CHAPTERS
         clear
         size=$(stty size | awk '{print $2}')
 	rm -f temp.txt
@@ -42,7 +44,8 @@ function next()
 	fi
 	NUM_CHAPTERS=$(( `ls [0-9]*.txt | wc -l ` ))
 	if [[ "$CURRENT_CHAPTER" -eq "$NUM_CHAPTERS" ]]
-	then 
+	then
+	clear 
         echo "Chapters done...hope you liked the tutorial"
         else
         CURRENT_CHAPTER=$(($CURRENT_CHAPTER + 1))
@@ -56,12 +59,13 @@ function prev()
 {
         if [[ "$CURRENT_CHAPTER" -eq "1" ]]
 	then 
-        echo "This is the first chapter....there is nothing before this"
-	exit 1
-        fi
-        CURRENT_CHAPTER=$(($CURRENT_CHAPTER - 1))
+	clear
+        echo "This is the first chapter....there is nothing before this!!"
+        else
+	CURRENT_CHAPTER=$(($CURRENT_CHAPTER - 1))
         export CURRENT_CHAPTER
         readfile
+	fi
 }
 
 

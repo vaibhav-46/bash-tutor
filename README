@@ -1,27 +1,18 @@
 This is a small collection of chapters that are contained as part of bash-tutor.This package contains 2 scripts as of now:
 
-1.navigate.sh: This script is used to move around in the tutorial.
-2.start.sh:This script is used to print the first chapter in the tutorial.
+All that has to be done is to copy the screenrc file to the home folder as .screenrc file and then run teach.sh.
 
-The navigate.sh file will be sourced from the bashrc file inside the chroot.This way the user will be able to access all the functions of that file.For now we have to manually source the navigate.sh file.
+Navigation:
+-----------
 
-Usage:
-1.Move to the folder
-2. ./start.sh gives the first chapter
-3. give the command----" source navigate.sh "
-4.Now you can use the functions:
-   next
-   prev
-   goto
+1.To go to the next chapter press F3
+2.To go to the next chapter press F2
+3.To go to a required chapter press g followed by the number
 
+Todo :
+------
 
-To do list:
-
-1.Finish the other chapters.
-2.Improve the UI using ncurses.
-3.Make the scripts more representable .
-4.Improve the navigate.sh and bashtutor.sh scripts with vimplates and make it more user friendly.
-5.Make the output scrollable
-
+1.insert a penguin in the start page
+2.try and get some way for the user to restart
 
 
