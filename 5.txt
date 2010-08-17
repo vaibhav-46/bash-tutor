@@ -1,26 +1,29 @@
-<start><title>Chapter 4---Ctrl+{C,P,V}</title>
+<start><title>Chapter 5---Cat and Echo commands</title>
 <white>
-Till now we have learnt how to play around with directories but most of the time the most important thing for a user is how to copy files,rename them or move them from one directory to another.In this tutorial we are going to learn about commands that help in file copying,renaming and moving.
+Whatever we have done till now neither uses the monitor nor reads anything from the user.What if we want to read and print a text file on the screen.What if you want to save text in the form of a file.Then the commands<green>"cat" and "echo"</green> are used.These are very useful commands as you will see in the coming chapters.
+Lets see them in detail:
 
-1.<green>cp</green>:This command is used to copy files from one place to another.This can also be used for copying multiple files at the same time.
+1.<green>Cat</green>:This can be used to save text to a file or to display contents to a file.Cat actually gets its name from the word concatenate.
+<blue>Usage</blue>:
+1.Cat has many uses but one cool usage is this-type<green> cat > temp.txt </green> and then start entering text to be saved in that file.After you finish typing press <red> Ctrl+d</red> to indicate EOF(end of file).Now type <green>cat temp.txt</green>.Viola,the lines that you entered are printed on the screen again.
+What cat does is first read the lines and store them in a file and then the second command reads the same file and then prints the contents in the terminal..
+2.Cat command along with <red>-n</red> prints the file along with line numbers.Make a text file and then try the command <green>echo -n file_name</green> to get the file along with the line number.This is particularly useful when we have to debug a script and we only know the line number where the mistake has been made.
+3.Another useful command is <red>tac</red>(yes...the reverse of cat).cat command prints a file in proper order.Do try out tac and see....real surprise.It prints the file in reverse order!!Try <green>tac file_name</green>
+4.Cat command along with <green>-vet</green> option prints unprintable characters in a file say escape sequences and color sequences(see below).
+5.Also cat can be used to create a empty file using <green>cat > file_name </green>.
 
-<blue>Usagei<blue>:cp option file(1) file(2) file(3)......file(n) destination_folder
-<blue>Example</blue>:A small point to remember is that <red>~</red> is the name of the home directory(try <green>echo ~ </green>).After loging out of chroot also do try out this ...it will display the home directory.Coming back to cp,the address of files and destination must be properly given,otherwise you could end up losing data.
-Some of the main options for copy are:
-<green>-v</green>:<red>verbose</red>--explains what is going on.Its better for it to be interactive so that you dont end up doing something that you dont want.
-<green>-r</green>:<red>recursively</red>--mostly used for directory coping.
+Note: Cat is a very useful command as you will see as we move on.One point to remember is that the '>' is used to redirect the output to the file.More on this in the next chapter.(Do try this command too: <green>cat - </green> to escape press <red>Ctrl+d</red>) .Also you can combine text of multiple files into one file using the command <green>cat file1 file2 file3 > file4.</green>
 
-2.<green>mv</green>:This command has a double advantage.It can be used to move files from one directory to another and also it can be used for renaming of files.
+2.<green>Echo</green>:Just like cat,echo also prints on the screen but the main difference is that echo mostly takes input from the user and not from a file.
 
-<blue>Usage:</blue>
-a.To move a file:<green>mv options file1 file2 file3 ... destination</green>(last word is always the destination)
-b.To rename a file:<green>mv options file1 file2 </green>(changing name from file1 to file2--observe that basically you are moving the file within the same directory because if no directory is specified it assumes that it is the PWD.)
-<blue>Example</blue>:Look around and see if u can find any files to cp and mv around using these commands.Refer the man pages for more information.
+<blue>Example</blue>:
+1.Type in <green>echo "hello world"</green> and you will see the words appear on the screen.This way we can echo various things after taking them from the user.
+2.Say we want to store something in a variable and then echo it.Do it like this <green>x=4 </green>and then <green>echo $x</green>.Note that the <red>$ is necessary</red>(try without it and see.)This way we can save and echo variables and this is useful in debugging scripts by echoing variables.More on this later when we discuss bash-scripting.
+3.Also wondering how all these colors are coming on the screen...thats again due to echo.Time for an example:type<green>echo -e "\033[0;31m blah"</green> and there is the color.Check out different numbers from 31-37 to get different colors on terminal.The <red>-e</red> option of echo is used to recognize options like <red>\033</red> which is called a escape sequence and other things like <red></red> which stands for tab.
+Hope you liked this example...;).
+4.Also try this <green>echo $PATH</green>.Again you see that PATH is a variable and it is predefined.Its a very important variable and will be discussed later in detail.
 
-3.<green>clear</green>:Clear is used to clean the terminal screen and get it neat and empty again.<green>Ctrl+l</green> is the keyboard shortcut for clear command.
-
-<blue>Usage</blue>:clear
-
-So this tutorial was intended to get the basic hurdles out of the way.From now we will move further and take a step towards more complicated commands.
+Lets move on!!
+ 
 </white>
 </start>

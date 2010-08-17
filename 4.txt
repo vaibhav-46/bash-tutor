@@ -1,29 +1,26 @@
-<start><title>Chapter 3---Directory commands</title>
+<start><title>Chapter 4---Ctrl+C,P,V</title>
 <white>
-Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
-The main directory is the root directory also known by /.This contains every file that is available on the computer.Now some of the main sub-directories of this folder are:<red>
-a./Boot
-b./Etc
-c./bin
-d./usr
-e./home (/home/$USER is where most of your regular files are present)
-</red>
-and many more..do navigate through them and try finding out about these directories using cd and ls command.Also move around these diretories using cd and see how they are arranged.Also there is a command called <red>file</red> that can be used to see what kind of file we are looking at..say you can type in <green>file $PWD</green> and it will give you the name and tell you that it is a directory.More on file later but it can be used to find out about various different kinds of files like text files(containing ASCII characters),executables etc..Get familiar with the general layout and a rough idea of some important files like <red>.bashrc,init.d,profile etc</red>.(Hint in the home directory type <green>ls -a</green>)
+Till now we have learn t how to play around with directories but most of the time the most important thing for a user is how to copy files,rename them or move them from one directory to another.In this tutorial we are going to learn about commands that help in file copying,renaming and moving.
 
-One question at this stage will obviously be how to create and delete these directories.Note that as a general user you can only create directories in the home folder.So the main commands are:
-1.<green>mkdir</green>:This command is used to create a new directory inside the present working directory(type <green>pwd</green> to know its name).This can be used to create a new directory at any point.Also remember that the file/direc name should prefarabely not contain spaces in between.
+1.<green>cp</green>: This command is used to copy files from one place to another.This can also be used for copying multiple files at the same time.
 
-<blue>Usage</blue>:mkdir name_of_directory
-<blue>Experiment</blue>:Try making a directory named say Shaastra  and cd'ing into it.Try putting some data into it.Also try to get back one step up using <red> cd .. </red> or <red> cd - </red>
+<blue>Usage<blue>: cp option file(1) file(2) file(3)......file(n) destination_folder
+<blue>Example</blue>: A small point to remember is that <red>~</red> is the name of the home directory(try <green>echo ~ </green>).After logging out of chroot also do try out this ...it will display the home directory.Coming back to cp,the address of files and destination must be properly given,otherwise you could end up losing data.
+Some of the main options for copy are:
+<green>-v</green>: <red>verbose</red>--explains what is going on.Its better for it to be interactive so that you don't end up doing something that you don't want.
+<green>-r</green>: <red>recursively</red>--mostly used for directory coping.
 
-Now that we have learnt how to create a directory it is also essential to know how to remove directories.Before starting on rmdir remember that anything removed by the below way cannot be got back as it is permanently deleted. 
+2.<green>mv</green>: This command has a double advantage.It can be used to move files from one directory to another and also it can be used for renaming of files.
 
-2.<green>rmdir</green>:This command is used to remove a empty directory i.e any directory that is empty can be permanently removed using this method.
+<blue>Usage:</blue>
+a.To move a file:<green>mv options file1 file2 file3 ... destination</green>(last word is always the destination)
+b.To rename a file: <green>mv options file1 file2 </green>(changing name from file1 to file2--observe that basically you are moving the file within the same directory because if no directory is specified it assumes that it is the PWD.)
+<blue>Example</blue>: Look around and see if u can find any files to cp and mv around using these commands.Refer the man pages for more information.
 
-<blue>Usage</blue>:rmdir name_of_direc
-<blue>Experiment</blue>:Try to rm the directory Shaastra and also check the error if you try to delete a non-empty directory.
+3.<green>clear</green>: Clear is used to clean the terminal screen and get it neat and empty again.<green>Ctrl+l</green> is the keyboard shortcut for clear command.
 
-So to delete a directory we need to empty it first and then delete.But this is not a very good process.In the next chapter we will see a command that can delete a non-empty direc.
+<blue>Usage</blue>: clear
+
+So this tutorial was intended to get the basic hurdles out of the way.From now we will move further and take a step towards more complicated commands.
 </white>
- </start>
-
+</start>

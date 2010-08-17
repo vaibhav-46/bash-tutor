@@ -1,18 +1,33 @@
-<start><title>Shells</title>
+<start><title>Chapter 29---Variables</title>
 <white>
-All through this tutorial we have been using this word:<green>Shell</green>.What exactly is a shell?Why do we need a shell?
+A variable is nothing but a label,a name assigned to a location or set of locations in computer memory holding an item of data.Bash variables are untyped i.e you need not specify that the variable is a string or integer variable.Note that there are some variable that are predefines by bash like
 
-To answer these questions we need to look at the functioning of the computer.The computer generally only understands 0 and 1.So if we want to make the computer do something,all the commands must be given to the computer in the form of binary files.But it is tough to imput programs in 0s and 1s.Generally we take the help of a compiler to convert programs written in ascii text to binary.So to execute a program you need a compiler.But then to do simple tasks like say print from 1 to 100 you dont want to go through thr process of writing a program,compiling and executing.And hence the <blue> scripting languages </blue> were created.Typically <green> scripting languages have a shell which can take complex instructions and execute them on the fly,without compiling.</green>
+1.COLUMNS 
+2.PS1
+3.PATH
+Use the command <green> printenv </green> to see all the predefined variables.
 
-In simple words:<red>Shell itself is a binary running in top of a computer and listening to your commands.<red>Without going into complex details about Kernel the shell is just a macro that reads certain english words like ls,cd and gives an output.There are a lot of shells available(to start a shell type the name in the terminal):
-a.<green>csh</green>:Basic shell
-b.<green>ksh</green>:Korn Shell
-c.<green>tcsh</green>:Turbo C shell
-d.<blue>bash</blue>:Bourne Again shell
-e.<green>rksh</green>:Restricted Korn shells
+There are two parts related with a variable:<red>label and value </red>.Well how do we distinguish between the two?The name of the variable is the label and $variable_name is the value of it.For example let us say that we define a variable called var1 and initialize it as 
+<green>var1=25</green>.
+In that case the command <green> echo $var1 </green> gives the result 25 because thats the value stored in var1.Note that $variable is actually a simplified form of ${variable}.In contexts where the simplified syntax can cause error we use ${variable}.
 
-and many others.From now,shell by default means the bash shell.The bash shell is very useful in the sense that it is easily customized using the bashrc,bash_profile and .profile files.Now that we know about what a shell is and also some commands we can start learning how to do bash scripting.
-<white>
-<green>Let The FUN begin </green>
+<green>Assignment</green>: One very important thing is that while assigning any variable there should not be any space before and after the '=' sign.We can assign the variables in various ways like:
+<red>a=123
+hello=$a</red>
+Also note that quoting(explained later) is also very important while assigning  variables to strings.
+
+<green>export </green>: A variable created in a shell is only available to the current shell.It is a local variable:child processes of the current shell will not be aware of this variable.Try the following commands and see <red> 1.shell_name=bash 2.echo $shell_name 3.bash 4.echo $shell_name 5,exit </red>.You notice that in the child process the variable is unassigned(basically the variable is <red>NULL</red>).
+In order to pass variables to a sub shell,we need to export the variables using the export command.Type in the command <green>export shell_name</green> after assigning it and then do the same steps in order.Now the child process also recognizes the variable.Also note that changing the variable in the child process does not change the variable in the parent.
+
+<green>Positional Parameters</green>:Arguments passed to the script from the command line: $0 , $1 ,$2 .... $* and $@
+
+$0:name of the script
+$1:first argument
+$2:second argument
+${10}:10th argument(note the brackets for numbers>9)
+$* and $@:all the positional parameters
+This will be extensively used in the <green> if </green> command.
+
+This is almost all that is important with variables.In the next chapter we are going to cover something called as quoting.
 </white>
 </start>

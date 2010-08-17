@@ -1,32 +1,12 @@
-<start><title>Chapter 12-----STREAM EDITOR</title>
+<start><title> Chapter 13------AWK</title>
 <white>
-Stream Editor(or sed in short) is used to filter text i.e it takes text input and performs some operations(or set of operations) on it and outputs the modified text.Sed is typically used for extracting part of a file using pattern matching or substitute multiple occurences of a string within a file.If you want to work on text editing and a lot of it then sed is a tool that can make your life easier.Along with regex sed has awesome power and it can do a hell lot of things very easily as we shall see.
-<blue>
-Usage and Examples</blue>:
+Awk is a pattern scanning and programming language.It is very useful in the sense that it is an excellent filter and report writer.The weird word "AWK" is derived from the name of the language's three developers:<red> A.Aho , B. W. Kernighan and P.Weinberger.</red>
 
-1.The main use of sed is replacement of text.You remember the find and replace option,well sed allows that.The command to do that is <green>sed 's/old_word/new_word/ </green>(note that the 3 / are necessay as we will see).But this change has to be done on some text that has to be input to the command.One way is the pipe and the other is the I/O redirection.Also try <green>echo "Sunday is the bast day of the week" | sed 's/day/night/'</green> and <green>echo "Sunday is the best day of the week | sed 's/day/night/g'</green>
-Try this:create a text file with some data say describing about grep that you learnt in the last chapter.Now since sed can do almost all that grep can do you can create a new file called sed changing grep to sed using  <green>sed 's/grep/sed/g' < file_name >fileout_name </green>.If g was not used sed only replaces the first find(g stands for global).The expressions to search can also contain regular expressions.
+Remember that the essential organization of an awk program follows the form: <red> pattern { action } </red>
 
-The / is called as a delimiter.But what if we have to replace an expression containing / like some directory name.It is not necessary to use only / as delimiter.We can use any symbol that is not found in both the strings as a delimiter like :,|,~ etc but we need 3 of them as shown in the example.Back to a few more examples:
-
-2.Using<red> &</red> as a matched string:Say we search for words staring with ch and we have to put those words in a bracket.If we dont know the final result how are we going to know what to substitute.In such a case & is helful as it stands for the text that has been selected.Example in the above case: type <green> sed 's/ch[a-z]*/(&)/g' </green>and this brackets all the words starting with ch.Thus & is helpful when we dont know the resultant expression.
-
-3.One important point to note about sed is that it is not recursive.Example <green> echo "nice loop" | sed 's/loop/loop the loop/' </green>will not become an infinite loop,instead the output will be <red>nice loop the loop</red>
-
-Few more useful options of sed are:
-a.<green>-e</green>:If we want to get multiple replacements at the same time -e is used.<green>sed -e 's/a/A/' -e s/b/B' < old >new </green>
-b.<green>-i</green>:A very useful command to make changes and save the resulting data into the same file. <green> sed -i 's/a/A/' file_name </green>.This time no "<" and ">" are needed because the command knows that both input and output are to the same file.
-c.<green>-n</green>:This command is used to prevent things from getting printed until the <red>-p</red> option is used.<green>echo "sunday is the best day | sed -n 's/day/night/gp' </green>
-
-Now we are going to cover some sed one liners that maybe useful to you in every-day usage:
-
-1.<green>sed '/regex/{x;p;x;}'</green>:insert a blank line above every line which matches "regex"
-2.<green>sed '/regex/G/' </green>: insert a blank line below every line which matches "regex"
-3.<green>sed -n "$="</green>:emulates <red>"wc -l"</red>
-4.<green>sed -n '/match/p' </green>:This is nothing but grep command.Thats why I said that whatever can be done with grep can be done using sed.
-5.<green>sed 10q </green>:prints first 10 lines of file.
-6.<green>sed '$!d'</green>:This prints the last line of a file.
-
-These are some of the most useful sed one-liners that we can use in day-to-day life.So now you can see that sed is an extremely powerful tool.Do look up more examples as it can make your life more easier,Lets move on now to another pattern and processing language called AWK.
+<blue>Example</blue>:Say we have a file called line.txt containing the following information in a form of table
+<red>name  id  occupation  address  phone-no  description </red>
+of the person with each person's data in a new line .Now lets say that we want to find out about a person in the file say "ravi"
+We then type <green> awk '/ravi/' list.txt</green> and this gives all the lines having ravi in it(can be done through grep also?).But what if want only particular data like the id and the number.Thats when awk is really useful. Type <green> awk '/ravi/' '{print $1,$2,$4}' list.txt </green> and this will give only the second and the third columns.But what if we want all the names of people having id less than 70 ...that can also be done using awk like this <green>awk '{ (if $2 < 70) print $1":" $2 $3 }' list.txt </green>.Note that if no search pattern is found it will display the whole file and if we want to insert any of our own text,it can be done using " ".
 </white>
 </start>

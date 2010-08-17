@@ -1,15 +1,18 @@
-<start><title>Chapter 23------Alsamixer and acpi</title>
+<start><title>Chapter 24----Speeding up process</title>
 <white>
-For all those people who love music,it is a real pain to get the volume levels and other adjustments done using the mouse.What if you could do the whole thing using the terminal and the arrow keys.Well using the command <green>alsamixer</green> we can adjust the volumes of the speakers,headphones and do other stuff related to audio.To try it out just type <green>alsamixer</green> and get started.Its a pretty well illustrated application and you can play around with it.
+Sometimes while working on the computer we want a particular process to run faster than the others.And sometimes we know that some process is taking up too much of the CPU speed and we wont to reduce its priorities.This can be done using two commands called nice and renice.In this chapter we are going to cover these two commands in detail:
 
-Another question:What if we want to know the system temperature at any point of time?Wont it be nice if we can find out the charging of the laptop battery directly from the terminal.Well there is a command <green>acpi</green> that is very useful in this case.After installing it using apt-get you can use it with various options like:
+a.<green>nice</green>: This command helps run a program with modified scheduling priority.
 
-<green>-b</green>:This displays the battery charge
-<green>-t</green>:This displays the system temperature
-<green>-v</green>:This displays every single device
-<green>-c</green>:This displays the cooling device information.
+<blue>Usage</blue>: nice [option] [command [arg]..]
+<blue>Example</blue>: The <red>default</red> schedule priority is <red>10.20</red> stands for <red>maximum</red> priority and 19 stands for least favorable.This way we can change the priority of the given command.
 
-These are some of the useful commands that you use pretty often.These commands help keep your computer more personalized doing what you want them to do.
+b.<green>renice</green>: This alters the priority of running processes.Renicing a user causes all processes owned by the user to have their scheduling priority altered.
+Some options of renice are:
+1.<green>-n</green>: This option changes the scheduling priority of the process,process group or user.
+2.<green>-u</green>: Force the who parameters to be interpreted as user names.
+
+These two process help the user prevent from spending more time in front of the computer biting his nails waiting for a process to finish while the process is in competition with another process.Now you decide which process is more important to you.
 </white>
 </start>
 

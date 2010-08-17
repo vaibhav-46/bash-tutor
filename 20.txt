@@ -1,5 +1,18 @@
-<start><title>Chapter 19-----Emacs</title>
+<start><title>Chapter 20---Various Useful Commands</title>
 <white>
-In the last chapter we covered a little about vim.In this chapter we will introduce another text editor called Emacs.a
+This chapter covers some very important points/commands that are essential in the long run.
+
+1.<green>PATH</green>: This is a predefined variable in bash.First try <green>echo $PATH </green>.It will show you a list of many files/folders separated by <red>:</red>.All these folders contain various executables.Whenever you type in a command,say <red>ls</red> the first thing that bash does is search for those commands in the various folders in this variable <red>in order</red>.Note that the first instance where the command is found,will be executed.Try this <green>whereis ls</green> and check if the folder is included in the PATH variable.Now suppose that you have written some script and you want to run it everytime.Then we can include all the scripts in one directory and then include that directory in the PATH variable.This can be done using the command <green>'PATH=new_direc:$PATH' </green> and then <green>export PATH</green>(export will be explained when we discuss variables later on) .From now on everytime you give a command it first searches the given directory and then the other directories in the PATH variable.
+
+2.<green>alias</green>: Sometimes we use a particular command a lot like say finding out the amount of disc space free which we discussed before.But that is such a long command.It becomes very painful to keep typing the whole thing everytime.Thats why there is an option in the terminal such that you can have a<red> shortcut for some command</red>.Say we want the cp command to be always interactive.In such a case we can use the command <red> alias cp='cp -i' </red> and this will make the cp command interactive always.But remember that the alias that we do in the terminal are only valid as long as that session or any of its child process are running.Once that session is closed that alias is lost.
+ Also note a small point that if we want to run an aliased version of a command,that can be done using <red> \command </red>.This ignores the alias and runs it as a bash command.
+  Then how do we make an alias permanent?There is a file called the <red>.bashrc file</red> in your <red>/home/$USER</red> directory.Search that file and you will find some basic aliases already(do this outside the tutorial).Edit this file in any text editor of your choice and add the alias command there and then restart the terminal.From now on,the alias is permanent and it can be used whenever you want.
+
+3.<green>dircolors</green>: This command is used to get color setup for ls.
+
+4.<green>sleep</green>: This command is used to decay for a specific period of time.For example in a script say we want to change wallpapers every 30 seconds then we use this command to let the script become inactive for 30 seconds.
+
+<blue>Usage</blue>:sleep number
+Maybe you can search for how to change the wallpapers using terminal!!
 </white>
 </start>

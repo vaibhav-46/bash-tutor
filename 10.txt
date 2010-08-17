@@ -1,42 +1,54 @@
-<start><title>Chapter 9--Useful Commands</title>
+<start><title>Chapter 10---Regular Expressions</title>
 <white>
-In this chapter we are going to cover a few commands that might not be used much but they are immensely useful in reducing the programmer's work.They are:
+A regular expression is set of characters that specify a pattern.Put another way regular expression is a pattern that describes a set of strings.Regular expressions are used when you want to search for specific lines of text containing a particular pattern.Note that regular expressions search for patterns on a single line and not for patterns that span across multiple lines.
 
-a.<green>basename</green>:This command strips directory and suffix from filenames i.e it only prints the NAME.
+There are three important parts of a regular expression:
+<green>Anchors</green>: These are used to modify the position of the pattern in relation to the line of text.
+<green>Character Sets</green>: These match one or more characters in the single position.
+<green>Modifiers</green>: These specify how many times the previous character set is repeated.
 
-<blue>Example</blue>:Typing in <green>basename /usr/bin/sort</green> gives the output <red>sort</red>.So it prints NAME with any leading directory components removed.Also we can use basename to strip file names of perticular parts..not only the first part.<green>basename file.txt .txt </green> will give the output <red> file </red>.
+No problem if you don't understand the examples below will help you understand.
 
-b.<green>rename</green>:This command is used to rename multiple files simultaneously using certain constraints.
+Now lets see some character that are used :
 
-<blue>Usage</blue>:rename [option] files renamed_file and the main useful option is
-<green>-v</green>:<red>verbose</red> i.e it confirms with the user before renaming the files.
-<blue>Example</blue>:This command converts all uppercase file_names to lowercase:<green>rename 'y/A-Z/a-z/' *</green> .What happens here is that the expression 'y/A-Z/a-z/' takes all those files that have capital alphabets and converts them to small characters.The<red> "*"</red> captures the file_name and once the capital alphabets are changed to small the file name is retained.This is a regular expression and we will cover this in a later chapter.
+<green> ^</green>: Matches the <red>empty string at the beginning of the line</red>(also represents the characters not in the range of list[see examples])
+<green>$ </green>: Matches the<red> empty string at the end of the line.</red>
+<green>*</green> : The preceding item will be matched <red>zero or more times.</red>
+<green>.</green> : Matches any <red>single character.</red>
+<green>?</green> : The preceding item is optional and will be <red>matched at most once</red>
+<green>+</green> : The preceding item will be <red>matched one or more times</red>.(small distinction from *)
+<green>{N}</green>: The preceding item is <red>matched exactly N times.</red>
+<green>{N,}</green>: The preceding item is <red>matched N or more times.</red>
+<green>{N,M}</green>: The preceding item is matched at<red> least N times,but not more then M times.</red>
+<green>-</green> : It represents the range if it's not first or last in a list or ending point of range in a list
+<green>\< </green>: It matches the <red>empty string at the start of word</red>
+<green>\> </green>: This matches the <red>empty string at the end of the word.</red>
 
-c.<green>dirname</green>:This command is the exact opposite of the basename command in the sense that it strips of the filename and gives only the directory part
 
-<blue>Example</blue>:Citing the same example typing <green>dirname /usr/bin/sort</green> gives the output <red>/usr/bin</red>.Thus only the name is cut off and the directory part is left intact.
+This was the technical definition of regular expressions.Now lets see how exactly these are useful:
+1.<blue>"foo*"</blue>: This is interpreted as foo followed by anything else..it will match any of the following:foo,foobar,foo1223 etc.
+2.Lets try this out: <green>touch foo bar foobar foo123</green>.This creates 4 files with the corresponding names.In the last chapter we read about find.This helps us find some files.Say for some reason we want to find all the file names starting with "foo".We type the command <green> find . -name "foo*"</green>."." stands for any match and foo* means that any file name starting with foo will be selected.Check if the output is as expected.The . and * are called <red>characters</red>.
+3.Now say we want all the files starting with or having foo in the file name.For this type the command <green>touch barfoo bafoor barforo </green> and then type <green>find . -name "*foo*" </green>.This gives all the words with <red>foo anywhere in the file name.</red>
 
-d.<green>wc</green>:wc prints newline,word and byte counts for each file.This is perticularly useful to get the number of lines in the text file or the input.
+These regular expressions are widely used with tools that help in text editing like sed,awk and grep.These are very powerful tools as you will soon see.
 
-<blue>Usage</blue>:wc [option] file
-<blue>Example</blue>:One basic thing that you can try is to find out the number of things in the directory.This can be done using <green>ls | wc -l</green> .The -l only displays the new line count and not the other 2 counts.In general you will be more interested in the number of new-lines rather than the no. of words or byte counts.Also note that if we enter the command <green>wc file1 file2</green> this gives an output of 3 lines,the first containing the 3 differnet counts of file1,second line contains the 3 different counts of file2 and the third line contains the total sum of the 2 lines.
+1.Say you want to select all the lines in a file that are not empty then <red>^.*$</red> returns all these lines.What happens here is that ^ says starting with,"." means that there must be a character to match and * means that there can be more than one of those in that line till the end(end because of $).
 
-e.<green>file</green>:This command is very useful to determine the type of file.
+2.Now lets say we want to search for the number in a file..in such a case we could say <green>[0-9]+</green> which means that there must be something of the list 0-9 one or more times(due to +).Similarly we can search for capital letters with <green>[A-Z]*</green>.Thus we can see that regular expressions are pretty useful in searching for a particular pattern.Also say we want to search for a pattern that does not have numbers then we use <green>[^0-9]</green>.Note that here ^ is used to signify the opposite of the list i.e digits should not be included in the search.Also we can have [^-0-9] meaning there should be no - and no digit.
 
-<blue>Usage</blue>:file file_name
-<blue>Experiment</blue>:Browse through the various folders in the directory and try to find out the various file types.You will find that some are ASCII text or executables.This is useful in knowing about a file and how you can open it.
+<blue>Use of *</blue>: Say we want to find all the lines in a file starting with a number.But then if there is some space before the start ^[0-9] does not give the required result.Instead we could write <green>^ *[0-9][0-9]* </green> and this will give all the lines starting with a number irrespective of the starting spaces.
 
-f.<green>which</green>:This command is used to locate other commands and their location.But one point to remember is that which command can search only for executables and not for bash commands.(see examples)
+Some more example are
+<blue>^\^</blue>: This means that line starting with ^...note that the backslash is used to remove the special meaning of ^ and to take it literally.Remember that \ is used to turn on/off the special meaning for that particular symbol.Similar case for \$$...
+Say we wanted to search for a word that
+a.Started with a capital "T"
+b.was the first word on that line
+c.the second letter was a lower case letter
+d.the third letter was a vowel
+e.the fourth letter is not a vowel.
+Then the expression would be <green>^T[a-z][aeiou][^aeiou]</green>
+Also we can specify the number of times a particular thing has to be matched using the \{ \} construct.For example say we want to display all 7 letter words starting with t.Then we can enter <green>\< t*\{7\}\> </green> and this will select the 7 letter words(7 here is a modifier since it tells the user how many searches to make/or how many times the previous character has to be repeated) starting with t.Note that if \< and \> were not used then sometimes it will also select a word having such a string as a substring.For example if we search for <red>the</red>,it will also select <red>there</red> as it also has <red>the</red> in it.To prevent this we use <red>\< and \> for beginning and end of word</red>.
 
-<blue>Usage</blue>:which command
-<blue>Examples</blue>:Try <green>which ls </green> and it gives the place where the ls command binary is present.Another example you can try is <green>which cd</green>.This will <red>not</red> give any output as cd is a <red> bash command</red> and not a binary.One more use of which is this:<green>var=`which ls`</green> and then <green>$var ~</green>.Here $var will act exactly like the command that was the argument of which.This can be helpful in a script that needs a particular command that might not be installedon the computer.So if the command does not exist we can have an alternative.
-
-g.<green>find</green>:This command searches for files in a directory hierarchy.
-
-<blue>Usage</blue>:find option path expression
-<blue>Example</blue>:Try <green>find </green> and it finds all the files inside the given folder.If you are doind this outside the tutorial the output will go out of control and to stop it press <red>Ctrl+d</red>.One more useful usage of find is <green>find . -name "expression" </green>.The expression can even have <red>regular expressions like . and *</red> and this helps in searching the present directory for files having a perticular pattern as their file name.(Next chapter covers regular expressions)
-
-These commands will be useful in many places to get the jobs done faster.In the next chapter we are going to cover a very important topic-regular expressions and they form the backbone of your usage of terminal.
+This part is really important as the next few chapters will be using a lot of these regular expressions(From now on we will refer to them as regex).Hence it is necessary that you get a hang of these things before we move on
 </white>
- 
 </start>

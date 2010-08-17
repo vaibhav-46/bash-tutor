@@ -1,18 +1,15 @@
-<start><title>Chapter 21</title>
+<start><title>Chapter 22---Alsamixer and acpi</title>
 <white>
-This chapter covers some very important points/commands that are essential in the long run.
+For all those people who love music,it is a real pain to get the volume levels and other adjustments done using the mouse.What if you could do the whole thing using the terminal and the arrow keys.Well using the command <green>alsamixer</green> we can adjust the volumes of the speakers,headphones and do other stuff related to audio.To try it out just type <green>alsamixer</green> and get started.Its a pretty well illustrated application and you can play around with it.
 
-1.<green>PATH</green>:This is a predefined variable in bash.First try <green>echo $PATH </green>.It will show you a list of many files/folders separated by <red>:</red>.All these folders contain various executables.Whenever you type in a command,say <red>ls</red> the first thing that bash does is search for those commands in the various folders in this variable <red>in order</red>.Note that the first instance where the comamnd is found,will be executed.Try this <green>whereis ls</green> and check if the folder is included in the PATH variable.Now suppose that you have written some script and you want to run it everytime.Then we can include all the scripts in one directory and then include that directory in the PATH variable.This can be done using the command <green>'PATH=new_direc:$PATH' </green> and then <green>export PATH</green>(export will be explained when we discuss variables later on) .From now on everytime you give a command it first searches the given directory and then the other directories in the PATH variable.
+Another question: What if we want to know the system temperature at any point of time?Wont it be nice if we can find out the charging of the laptop battery directly from the terminal.Well there is a command <green>acpi</green> that is very useful in this case.After installing it using apt-get you can use it with various options like:
 
-2.<green>alias</green>:Sometimes we use a particular command a lot like say finding out the amount of disc space free which we discussed before.But that is such a long command.It becomes very painful to keep typing the whole thing everytime.Thats why there is an option in the terminal such that you can have a<red> shortcut for some command</red>.Say we want the cp command to be always interactive.In such a case we can use the command <red> alias cp='cp -i' </red> and this will make the cp command interactive always.But remember that the alias that we do in the terminal are only valid as long as that session or any of its child process are running.Once that session is closed that alias is lost.
- Also note a small point that if we want to run an aliased version of a command,that can be done using <red> \command </red>.This ignores the alias and runs it as a bash command.
-  Then how do we make an alias permanent?There is a file called the <red>.bashrc file</red> in your <red>/home/$USER</red> directory.Search that file and you will find some basic aliases already(do this outside the tutorial).Edit this file in any text editor of your choice and add the alias command there and then restart the terminal.From now on,the alias is permanent and it can be used whenever you want.
+<green>-b</green>: This displays the battery charge
+<green>-t</green>: This displays the system temperature
+<green>-v</green>: This displays every single device
+<green>-c</green>: This displays the cooling device information.
 
-3.<green>dircolors</green>:This command is used to get color setup for ls.
-
-4.<green>sleep</green>:This command is used to deay for a specific period of time.For example in a script say we want to change wallpapers every 30 seconds then we use this command to let the script become inactive for 30 seconds.
-
-<blue>Usage</blue>:sleep number
-Maybe you can search for how to change the wallpapers using terminal!!
+These are some of the useful commands that you use pretty often.These commands help keep your computer more personalized doing what you want them to do.
 </white>
 </start>
+

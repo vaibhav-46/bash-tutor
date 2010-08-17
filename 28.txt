@@ -1,13 +1,22 @@
-<start><title>BASHRC file </title>
+<start><title>Chapter 28---Starting off with a Sha-Bang</title>
 <white>
-In the previous chapter we saw a number of files that are read before we start bash.But the most important file that is read is in the home directory and its path is ~/.bashrc.This is what is generally edited to customize bash.This is a very important file and making any miatake with this file can result in the bash terminal not working properly.This is where the aliases are defined and also it is determined whether the terminal will be colored or not.
+To write a script using bash the main thing is to include at the start of the file the statement <red>'#!/bin/bash'</red> and save the file with the extension <red> .sh </red>.This tells the shell that the file is a shell script and the header tells the shell which shell to use(in this case it is bash).Note that once a script is written you have to make the script executable using the <red> chmod </red> command.
 
-In addition the PS1 variable is defined here.Any changes to the variable in this file changes the prompt from the next time this file is read.To apply the changes in the same bash terminal use the command <green> export ~/.bashrc </green>.In addition to this,we can even defime some functions in the bashrc file and then those functions can be used anytime in the terminal.A better way to do this is to include all the functins in a perticular file and then source the file using the command <green> source path_to_file </green> .
+Before we start off in detail a few comments are in order:
 
-In addition to this you can play around with this file.There are many people who have hosted their bashrc files online.You can look at them and see what all you can do with it.There is a lot of scope with this.
+1.Placing a <red>#</red> before a sentence makes the line a comment and that line is not read by shell(exception is #!).This is generally used to comment on the script so that someone reading the script can actually understand more easily what is going on.Note that comments can even follow the end of a command.
 
-<red>So All The Best with your bashrc file.</red>
+2.Almost all the commands explained before can be used in the script and they will be executed.
 
-Now that we have covered most of the basics it is now time we move on to bash-scripting and see how to create scripts that can help automatize tasks.
+3.The <red>;</red> symbol permits putting two or more commands on the same line.For example we can use <red>' echo hello ; echo there ' </red> .Note though that this is a bad example and better examples will be seen in the loops chapter.
+
+4.All the regex expressions can be used in the scripts to varied effects.
+
+5.The <red>\</red> is a very important symbol.For example we know that * is a regex expression.But what if we want to search for a pattern using grep containing * ? In such a case <red>\</red> is used.\ basically is used to either<red> switch on or off the special meaning</red> associated with a particular symbol.This is something that you will understand more with usage.
+
+6.<blue> Command substitution </blue> : The <red> ` command ` </red> or the <red> $command </red> makes available the output of the command for assignment to a variable without printing anything on the screen.For example we want to save the date in a variable(explained in the next chapter),we can do so using the line <red> date=$( date +%F | cut -d - -f3 ) </red> or <red> date= `date +%f | cut -d - -f3` </red>.
+
+Variables are how programming and scripting languages represent data.So the next chapter is going to solely dedicated to variables.
 </white>
 </start>
+

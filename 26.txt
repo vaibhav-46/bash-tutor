@@ -1,18 +1,13 @@
-<start><title>Chapter 25----Speeding up process</title>
+<start><title>Chapter 26---BASHRC file </title>
 <white>
-Sometimes while working on the computer we want a particular process to run faster than the others.And sometimes we know that some process is taking up too much of the CPU speed and we wont to reduce its priorities.This can be done using two commands called nice and renice.In this chapter we are going to cover these two commands in detail:
+In the previous chapter we saw a number of files that are read before we start bash.But the most important file that is read is in the home directory and its path is ~/.bashrc.This is what is generally edited to customize bash.This is a very important file and making any mistake with this file can result in the bash terminal not working properly.This is where the aliases are defined and also it is determined whether the terminal will be colored or not.
 
-a.<green>nice</green>:This command helps run a program with modified scheduling priority.
+In addition the PS1 variable is defined here.Any changes to the variable in this file changes the prompt from the next time this file is read.To apply the changes in the same bash terminal use the command <green> export ~/.bashrc </green>.In addition to this,we can even define some functions in the bashrc file and then those functions can be used anytime in the terminal.A better way to do this is to include all the functions in a particular file and then source the file using the command <green> source path_to_file </green> .
 
-<blue>Usage</blue>:nice [option] [command [arg]..]
-<blue>Example</blue>:The <red>default</red> schedule priority is <red>10.20</red> stands for <red>maximum</red> priority and 19 stands for least favourable.This way we can change the priority of the given command.
+In addition to this you can play around with this file.There are many people who have hosted their bashrc files on line.You can look at them and see what all you can do with it.There is a lot of scope with this.
 
-b.<green>renice</green>:This alters the priority of running processes.Renicing a user causes all processes owned by the user to have their scheduling priority altered.
-Some options of renice are:
-1.<green>-n</green>:This option changes the scheduling priority of the process,process group or user.
-2.<green>-u</green>:Force the who parameters to be interpreted as user names.
+<red>So All The Best with your bashrc file.</red>
 
-These two process help the user prevent from spending more time in front of the computer biting his nails waiting for a process to finish while the process is in competition with another process.Now you decide which process is more important to you.
+Now that we have covered most of the basics it is now time we move on to bash-scripting and see how to create scripts that can help automatize tasks.
 </white>
 </start>
-

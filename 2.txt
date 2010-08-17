@@ -1,30 +1,26 @@
-<start>                     <title>CHAPTER 1---SOMETHING VERY IMPORTANT</title>
+<start>                        <title>CHAPTER 2---FEW BASIC HELPS</title>
 <white>
-Before we start of,there are many other tools inbuilt to help you get a feel of the commands in a better way.Some of these <red>helps</red> are inbuilt.
+The first and most basic commands that a user should learn are <red> 'ls' and 'cd'</red> as these are the most useful commands and these are used most often:
 
-1.<green>man</green>:This command is used to know how to use a particular command,all its options and usage.This is one of the most important tools to know about the various commands.
-<blue>Usage</blue>:man cmd  
-<blue>Example</blue>: man man
-As the man pages for some commands run into several pages there are a few things that might be useful in reading the man pages:
- a)Press <red>/</red> followed by the phrase to <red>search</red> for a particular word...To go the next word press n
- b)Press space bar to go to the next page
- c)To exit press <red>:q</red>
- d)If you don't know the exact name of the UNIX command you're looking for, you can use:<red> man -k something</red> => man -k responds by printing on the screen a list of all the commands it finds that are similar to the word you typed in place of something or that contain that word in the description of the command.
+1.<green>cd</green>: This is used to move from one directory to another. There are many ways of using cd.
+  The following are the most important usages of cd:
+<green>cd direc_name</green>: changes to the given directory 
+<green>cd ..</green>        : changes to a direc one above the present direc 
+<green>cd </green>          : without any file name it automatically goes to the home direc 
 
-2.<green>info</green>:This command is used to know the finer details of a perticular command..pretty useful to know how and why a perticular command is to be used.
-<blue>Usage</blue>:info cmd 
-<blue>Example</blue>:info info
-Again just as man is a vim-based(will talk about vim later-for now remember vim is a text-editor)application,so is info.So all the above points mentioned in context with man are applicable for info as well.
+<blue>Usage</blue>: Some things that you can try are <green>cd ~ </green> and <green>cd /home/'whoami`</green>
+<blue>Explanation</blue>: The ~ stands for the home direc i.e /home/USERNAME and this directory that you will change into is called a 'virtual home' of your computer.After doing this use <green> "cd -"</green> to go back to the last cd-ed directory.Do play around with this but do make sure that you come back to the current direc(name can be got by typing <green>pwd</green> at the terminal.
 
-3.<green>whatis</green>:Another very useful command that helps a user find out more about a particular command in brief. whatis searches  the  manual  page names and displays the manual page descriptions of any name matched.
-<blue>Usage</blue>:whatis thing_to_be_searched
-<blue>Example</blue>:Do try out <green>whatis mkdir</green> and <green>whatis ls</green>.These commands will be explained in the later chapters.
+2.<green>ls</green>: This command is used to display the contents of a particular directory.
 
-4.<green>whereis</green>:This cmd is pretty useful to get to know the location of the binary file of a command in the computer directory and the path to it.Sometimes this can be very useful in searching for a particular command file that you might have installed or you might want to change as you move along.
-<blue>Usage</blue>:whereis object_to_be_search 
-<blue>Example</blue>:Do try out <green>whereis whatis</green> and <green>whereis find</green>.whatis has already been explained and find will also be covered later. 
+<green>ls</green>       : displays the contents of the directory in which the user is currently
+<green>ls direc</green> : displays the contents of the given directory
 
-A small point to remember is that the commands in this tutorial are not exhaustive and hence it is necesary that one learn how to use the man pages as they are the ultimate source of information.This tutorial is intended to get you started with a few vital basics.These commands are going to be really useful as you move on because there are so many commands that are not going to be covered in this tutorial.Also note that as we move along we will see some small points which you might not understand at that point but hopefully by the end of the tutorial you will understand almost all the examples.</white>
+<blue>Experiment</blue>: Try out <green>ls -lh</green> and the command <green>ls -a</green> .Don t bother too much with the output as of now but that output is going to be useful as we move along.The only point to note as of now is that <red>h</red> option makes the size of the directories in human readable form(do try it out without the h and see but do this only after exit as inside the tutorial none of the file sizes are not big enough for this distinction).
 
-<title>So,lets start!!!!!</title>
+In addition to these commands there is also a command that is very often used in the terminal.Suppose that the directory contains 100 files then the ls output reading becomes difficult.At that point of time <red>less </red>is very useful to read text outputs on the terminal.Once you use less you can navigate the output as if it were a Word document.This makes the output more readable.
+
+More examples of this will follow in the next few chapters.
+
+</white>
 </start>

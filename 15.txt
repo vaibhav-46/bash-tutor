@@ -1,53 +1,45 @@
-<start><title>Chapter 14----Tar-gz files operation</title>
+<start><title>Chapter 15---Process The Processes!!!</title>
 <white>
-Often when we download something or copy something from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
+In this chapter we are going to help reduce the usage of the mouse.Suppose we have started a program say Firefox and we want to shut it down.How do we do that using the terminal?Please read the whole chapter before you start trying out anything on your own.
+      First thing that you must know is that every process that runs on the computer has a unique id(a very useful id).Suppose we want to start Firefox<red>(do it outside the tutorial)</red> from the terminal.This can be done by using the name Firefox on the terminal.But then as long as Firefox is open we cannot use the terminal to do anything else(note that pressing <red>Ctrl+z</red> in the terminal closes the Firefox window).So to start Firefox in the background so that it does not interfere with the terminal use the command <green>Firefox & </green>(note the & symbol..not a typo error!!).The & tells the computer to run the script in the background.Also the output on the terminal gives a number which is the process id of that application.This number is very important as this number uniquely identifies the application on the computer.
 
-1.<green>tar</green>:tar command stores and extracts fileas from a tape or disc archieves.TAR stands for Tape ARchive.This has various options that are to be used along with this command.
+Now that we have understood about process id,we will see some commands that use these ids:
 
-Some options that are regularly used in tar are:
-<green>-c</green>:This option creates a new archive.
-<green>-v</green>:This option verbosely describes the  list files processed
-<green>-f</green>:this option stands for archive the file
-<green>--delete</green>:This option deletes files from the archives.
-<green>-t</green>:This option lists the contents of a archive.
-<green>-x</green>:This option helps in extracting files from the archive.
+1.<green>pidof </green>: This is a useful command to know about the process id of a process.
 
-<blue>Example</blue>:Say we want to archive all the pages that you have created during web buiding.Then type the command <green>tar -cvf web_pages *.html </green> and this will create a tar archive with all the files ending html.If no file is found it will return error and exit.This way we can create and extract archives.Some commonly used ways to extract from archives are
-.tar.bz2:<green>tar xjf arcive_name</green>
-.tar.gz:<green>tar xzf archive_name</green>
-.tar:<green>tar xf arcive_name</green>
-.tgz:<green>tar xzf archive_name</green>
-.tbz2:<green>tar xjf arcive_name</green>
-This way most of the common files can be extracted.
+<blue>Example</blue>: Start Firefox and then type in the terminal <green> pidof Firefox-bin</green>.You can also use a tab to complete the application name!
 
-2.<green>zip</green>:This command is similar to tar command in the sense that it archives the files in the zip format.It even follows the same options as the tar command.Point to note is that .zip files can be extracted using the command <green> unzip archive_name</green>
+2.<green>ps</green>: The process status command reports a snapshot of the current process.This can be used to find all the process running at a time including their process identification numbers.
 
-3.<green>gzip</green>:This command is used to extract archives having the extension .gz or .z.
+<blue>Usage</blue>: ps [options]
+<blue>Examples</blue>:
+a.ps without options prints to stdout four items of information for at least two processes currently on the system:the shell and ps.The four items are labeled <red>PID,TTY,TIME and CMD</red>.<red>TIME</red> is the amount of CPU time in minutes and seconds that the process has been running.<red>CMD</red> is the name of the command that launched the process.<red>TTY</red> (stands for terminal type ) is the name of the terminal that the user is logged into.
+b.<green>ps -aux | less </green> is the most common option that is used to obtain information about all the process.<red>-a</red> option tells the user to list all the process of all the users on the system.<red>-u</red> tells ps to provide detailed information about each process.The <red>-x</red> option adds to the list processes that have no controlling terminal(such as those which were started on booting).Note that the <red>-</red> is not mandatory here.
+c.<green>ps -ef | less </green> is an alternative to the above command.The <red>-e</red> option generates a list of information about every process currently running.The <red>-f</red> option generates a listing that contains fewer items of information for each process than the -l option.
 
-4.<green> bunzip2</green>:This is used for extracting archives having the extensions .bz2,.bz,.tbz2 and bzip2.If some form is given to it that it does not understand it will reurn the same file with the name original_filename.out.
+3.<green>jobs</green>: This command prints all the background process that are running.This can be helpful to find out if any malfunctioning program is running in the background.
 
-These commands are very useful in extracting all the possible archives that are generally used.Finally this is a small script that will generally extract any archive that you like.The way to execute this script is <green>./script_name archive</green>
+4.<green>bq</green>: This command is used to get a program to run in the background.
+<blue>bg [options]</blue>.
 
-#!/bin/bash
+5.<green>kill</green>: This command is used to kill a process that is malfunctioning.But to kill a process the id of the process is required.Only then this command can be used.Basically kill sends a sort of warning to the application and based on the intensity of the warning the application takes action.(see examples) 
 
-if [ -f $1 ]];then
-case $1 in
-*.tar.bz)       tar xjf $1   ;;
-*.tar.gz)tar xzf $1   ;;
-*.bz2)          bunzip2 $1   ;;
-*.rar)rar x $1     ;;
-*.gz)gunzip $1    ;;
-*.tar)tar xf $1    ;;
-*.tbz2)tar xjf $1   ;;
-*.tgz)tar xzf $1   ;;
-*.zip)unzip $1   ;;
-*.z)uncompress $1 ;;
-*)
-esac
-else
-   echo "$1 is not a valid file"
-fi
+<blue>Usage</blue>: kill process_id
+<blue>Example</blue>: Start a process and find its process_id.Now kill the process using the command <green> kill process_id </green>
+Also note that <green> kill -l </green> can be used to find all the signals that kill can send to various process.
 
+6.<green>pkill</green>: This command will send the specified signal ( by default SIGTERM)to each process instead of listing them on stdout.
+
+<blue>Usage</blue>: pkill [options]
+
+7.<green>killall</green>: This command is used to kill the process by name.
+
+<blue>Usage</blue>: killall [options] name
+
+These commands are used a lot in managing the running of various applications.
 </white>
 
 </start>
+
+
+

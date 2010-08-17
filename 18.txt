@@ -1,23 +1,22 @@
-<start><title>Chapter 17------Apt command</title>
+<start><title>Chapter 18---Text Editors</title>
 <white>
-Well you see your friend's computer and like the gmail-notifier that he has.You want it for yourself too but how do you get it...Synaptic Manager(System-->Administration-->Synaptic manager)ofcourse.But then is there a command that can be used to do so?Synaptic Manager() has the list of various applications that are available in the repository that you are connected to.But what if we want to get the applications using the terminal?Obviously are useful to do exctly that.Note that most of this commands require you to be super user.So you can use sudo before the command.
+This chapter will give you a brief intro on the two most used text editors used in Open Source today.Though there are many text editors these 2 are the most prominent ones :<red> vim and emacs</red>.
 
-1.<green>apt-get install</green>:This command is used to install the package that you need.
-<blue>Usage</blue>:sudo apt-get install {package}
+1.<green>Vim</green>: For getting started with vim,the best place would be the vimtutor.Type in the terminal <green>vimtutor</green>.This tutorial has all the basics that are needed to get you started with vim.It covers almost all the basics which a normal user needs.
 
-2.<green>apt-get remove</green>:This command is used to remove some packages that are already installed but this does not remove the configuration files.
-<blue>Usage</blue>:sudo apt-get remove {package}
+Some of the important points about vim are:
 
-3.<green>apt-get --purge remove</green>:This command is used to used to remove installed packages along with the configurational files.
-<blue>Usage</blue>:sudo apt-get --purge remove {package}
+a.Searching is done using <red>/</red>.To find next <red>n</red> and previous <red>N</red>.To replace use <red>%s/this/that</red>.
+b.Saving and exiting can be done using:
+<green>:q</green>:Exit the tutorial 
+<green>:wq!</green>:Save and exit
+<green>:q!</green>:Exit and throw away changes
+c.Copying can be done using <red>c</red> and pasting can be done using <red>p</red>.
 
-4.<green>apt-get update</green>:This command is used to upgrade the distribution including new security updates.It also resynchronizes the package index files.
-<blue>Usage</blue>:sudo apt-get update
 
-5.<green>apt-cache search </green>:This command is used to search for all packages having some pattern as part of the file name.
-<blue>Usage</blue>:sudo apt-cache search pattern
+2.<green>Emacs</green>:Vim is more like a text editor but Emacs can do a lot of other things along with text editing.It can even set up your social status from the terminal... ;). Other than that well I dont know much about it either... :( .
 
-These commands are pretty useful in getting various applications from the repository and also later when we want to get an application from the source code.
-In case you dont understand something or if something does not work you can read up about <red>/etc/apt/sources.list</red> and if you are further interested read up on <red> dpkg</red>.
+
+
 </white>
-</start>
+ </start>

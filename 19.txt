@@ -1,14 +1,43 @@
-<start><title>Chapter 18-----VIM</title>
+<start><title>Chapter 19---Some Interesting commands</title>
 <white>
-This chapter has a few basic points on vim(text editor).Though there are many text editors there are 2 very prominent ones :<red> vim and emacs</red>.Emacs will be covered in the next chapter.Before reading this chapter read the tutorial by typing in the terminal <red>vimtutor</red>.This tutorial has all the basics that are needed to get you started with vim.
+In this chapter we are going to cover a few commands that are randomly used in various scripts.
 
-Now that you have read the basics of vim,we will cover some more useful points of vim here.Some points may be repeated here but thats just to signify the importance of those commands:
+1.<green>date</green>: Just as the name suggests this command is used to display the date and time in various formats and of various files.
 
-1.Searching is done using <red>/</red>.To find next <red>n</red> and previous<red> N</red>.To replace use <red>%s/this/that</red>.
-2.Saving and exiting can be done using:
-<green>:q</green>:Exit the tutorial 
-<green>:wq!</green>:Save and exit
-<green>:q!</green>:Exit and throw away changes
-3.
+Some common <red>options</red> of date are
+a.<green>-d</green>: This command is used along with string to give the whole date format.(try <green>date -d 21-July-2007 </green> )
+b.<green>-r</green>: This command is used to find the <red>last modified time of file</red>.
+
+This is all right but most of the times we want the date in a particular format...date command offers a lot of formats that we can use.Note that we have to use a '+' and then use the format ( ex. <red> date option +format</red> )
+
+Some of the most used formats are:
+a.<green>%a</green>: gives locale's abbreviated weekday name
+b.<green>%B</green>: locale's full month name
+c.<green>%c</green>: locale's date and time
+d.<green>%D</green>: date same as %m/%d/%y (those are obvious enough)
+e.<green>%F</green>: full date;same as %Y-%m-%d
+f.<green>%T</green>: time ;same as %H:%M:%S
+
+Thus we see that we can print the date and time in various formats in various colors too.
+
+2.<green>id</green>: This command is used to find out the id of various users and groups.
+<blue>Usage: id</blue>
+
+Once you open the terminal(outside the tutorial) the thing displayed on the terminal is something like this 
+<red> username@machine-name:$ </red>
+This option is stored as the variable <red>PS1</red> and it can be modified.Also suppose you type in <green> ls \ </green>,it gives a prompt generally <green>'>'</green>.This is stored in the variable <red>PS2</red>.Try to <red>echo $PS1 and $PS2</red>.When we echo PS1 we get something like this
+ <red> '\[\e]0;\u@\h: \w\a\]${Debian_chroot:+($Debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$' </red>(outside the tutorial).Now what does all this mean..for that we will see some special escape characters:
+
+1.<green>'\a'</green>: an ASCII bell character
+2.<green>'\d'</green>: date (u can even use the various formats)
+3.<green>'\e'</green>: an ASCII escape charter(like 033 given in echo chapter)
+4.<green>'\H'</green>: The host name
+5.<green>''</green>: time in 24 hour format('T' denotes 12 hour format)
+6.<green>'\u'</green>: username of current user
+7.<green>'\w'</green>: basename of current working directory
+8.<green>'\['</green>: This begins a sequence of non-printing characters which could be used to embed a terminal control sequence into the prompt
+9.<green>'\]'</green>: This ends a sequence of non-printing characters 
+
+Now armed with all this information,you can analyse the PS1 variable.(Just a case in point the Debian_chroot is just a variable...dont ponder too much about it).Do try playing around with it,you will learn a lot.
 </white>
- </start>
+</start>

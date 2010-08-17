@@ -1,15 +1,18 @@
-<start><title>Important Bash files</title>
+<start><title>Chapter 27---Shells</title>
 <white>
-Ever wondered how the terminal starts every time you click on the symbol.How does it know the PS1 variable(i.e the display prompt in the terminal).Obviously there must be some file where all the required variables are stored.In this chapter we will see some of these files:
+All through this tutorial we have been using this word:<green>Shell</green>.What exactly is a shell?Why do we need a shell?
 
-a.<green>/etc/profile </green>:This is the file generally read when the terminal is invoked interactively.These usually sets the shell variables like <red>PATH,USER,MAIL,HOSTNAME and HISTSIZE</red>(HISTSIZE defines the size of the .bash_history file in the home folder which stores the bash history).All settings that you want to apply to all your user's environments should be in this file
+To answer these questions we need to look at the functioning of the computer.The computer generally only understands 0 and 1.So if we want to make the computer do something,all the commands must be given to the computer in the form of binary files.But it is tough to input programs in 0s and 1s.Generally we take the help of a compiler to convert programs written in ASCII text to binary.So to execute a program you need a compiler.But then to do simple tasks like say print from 1 to 100 you don't want to go through the process of writing a program,compiling and executing.And hence the <blue> scripting languages </blue> were created.Typically <green> scripting languages have a shell which can take complex instructions and execute them on the fly,without compiling.</green>
 
-b.<green>/etc/bashrc </green>: As you will see later bash is not the only type of shell.So all the bash-configuration files are placed in this file since /etc/profile is read by other shells.Sometimes the alias are found in this file.
+In simple words:<red> Shell itself is a binary running in top of a computer and listening to your commands.<red>Without going into complex details about Kernel the shell is just a macro that reads certain English words like ls,cd and gives an output.There are a lot of shells available(to start a shell type the name in the terminal):
+a.<green>csh</green>: Basic shell
+b.<green>ksh</green>: Korn Shell
+c.<green>tcsh</green>: Turbo C shell
+d.<blue>bash</blue>: Bourne Again shell
+e.<green>rksh</green>: Restricted Korn shells
 
-c.<green>~/.bash_profile </green>:Though optional this is the preferred configuration file for configuring user environments individually.In this file,users can add extra configuration options or change default settings.This generally exports the <red> bashrc </red> file(we will exclusively cover bashrc file in the next chapter)
-
-d.<green>~/.bash_logout </green>:This file again optional contains specific instructions for the log out procedure.This is useful for remote connections,which will leave a clean window after closing them.Generally this is executed when we use <red> exit </red> to exit the tutorial.
-
-These are some of the files that are read when bash is started.But there is a very important file read by bash before starting and this is what we are going to see in the next chapter.
+and many others.From now,shell by default means the bash shell.The bash shell is very useful in the sense that it is easily customized using the bashrc,bash_profile and .profile files.Now that we know about what a shell is and also some commands we can start learning how to do bash scripting.
+<white>
+<green>Let The FUN begin </green>
 </white>
-</start> 
+</start>

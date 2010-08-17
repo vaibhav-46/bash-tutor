@@ -1,26 +1,23 @@
-<start><title>Chapter 22----Crontab</title>
+<start><title>Chapter 23---Useful Tools</title>
 <white>
-Sometimes while using the computer,we feel bad that the computer cannot understand our emotions directly.Wont it be nice if the computer does something on its own,when we want to do(say every 2nd Saturday clear some logs).This can actually be done using an application called crontab.Its a pretty useful thing to use to make the computer do something at a particular time.Before we do something type <green>crontab -l </green> and see what it echoes.It gives something like <red>no crontab for user_name </red>.Basically crontab has a file with the time of execution and what it has to perform.This command is used to show all the timers that you have set in this file.
-<red>Crontab</red> is a program making it easy for the users to schedule tasks and run programs at pre-determined periods of time.Now we will see some options that are commonly used along with crontab.For Windows users,this is similar to the scheduled tasks that one uses.
-Some common options are:
-<green>crontab -l</green>:Lists the current cron jobs
-<green>crontab -e</green>:Edit your current crontab file and add/remove/edit crontab tasks.
-<green>crontab -r</green>:Removes the crontab file
-<green>crontab -v</green>:Displays the last time you edited the crontab file.
+Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting and in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
 
-Before we start looking at some examples,we have to see the basic components of a crontab file:
-<red>m h dom mon dow command </red>
-These are the five columns that you get when you try <green>crontab -e</green>.They stand in order for <red>minutes,hour,day of month,month,day of week</red>.Their usage can be better understood using a few examples:
+1.<green> diff </green>: This command is used to compares file line by line and give the difference.
 
-1.Say we want to run a script called run.sh at <red>13:30 on Monday morning everyweek</red>.In that case add to the crontab file(using <green>crontab -e</green>) the following line: <red>30 13 * * 1 ./run.sh >/dev/null 2>&1</red> .An explaination is in order: putting 30 and 13 tells the crrontab that it has to be done at 13:30 and the two * says that no special preference for date of month or the month(i.e for all).Lastly remember that the months are numbered 0-6 starting with 0(Sunday).So 1 implies Monday and hence it means that run the script every Monday at 13:30.
-The I/O redirection is done because every time a cron job is done it sends a mail to the root account and to prevent a mail everytime this is done.
-But <red>remember that every crontab job needs to be placed on its own line</red>.
+<blue>Usage</blue>: diff [options] file1 file2
+<blue>Example</blue>: For example write down two files with some similar data.Then use <green> type file1 file2 </green>.This gives the main difference between two files.This command also has various options that can be used with diff:
+a.<green>-i</green>: ignore case while comparing
+b.<green>-b</green>: ignore the number of white spaces
+c.<green>-u</green>: displays the lines of unified text
+d.<green>-y</green>: output in two columns
+e.<green>-r</green>: recursively compare any subdirectories found
+f.<green>-N</green>: treat absent files as empty
+These are some of the most common options that are used with diff.<red>For a more extensive list refer to the man pages.</red>
 
-2.Now say we want to run the script for 3 days(Sun-Tues) and that also at 13:10;13:20,13:30.Then we have to give the command
-<red>10,20,30 13 * * 0-2 ./run.sh >/dev/null 2>&1 </red>
+2.<green>patch </green>: This command helps apply a different file to the original.All patch does is it takes a patch file containing a difference listing produced by the <red> diff </red> program and applies those differences to one or more original files,producing patched versions.
+One of the main options of patch is the <green>-b </green> option that creates a backup file of the file that is being patched .Other than that there are multiple uses of this but then they are beyond the scope of this tutorial.<red>For more information refer to the man pages.</red>
 
-Like this we can schedule our tasks pretty easily.This command is used a lot especially to set alarms.
+So now that we have covered some(no pun) commands lets look at bash and how it can make our general work easier.
 </white>
 </start>
- 
 

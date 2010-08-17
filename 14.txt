@@ -1,12 +1,53 @@
-<start><title> Chapter 13------AWK</title>
+<start><title>Chapter 14---Tar-gz files operation</title>
 <white>
-Awk is a pattern scanning and programming language.It is very useful in the sense that it is an excellent filter and report writer.The wierd word "AWK" is derived from the name of the language's three developers:<red> A.Aho , B. W. Kernighan and P.Weinberger.</red>
+Often when we download something or copy something from other computers,we get the required thing in tar or zip or some other format.What do we do with these packages?How do we extract the files from them?We will now look at some commands that will help in extracting files from them
 
-Remember that the essential organisation of an awk program follows the form: <red> pattern { action } </red>
+1.<green>tar</green>: tar command stores and extracts files from a tape or disc archives.TAR stands for Tape Archive.This has various options that are to be used along with this command.
 
-<blue>Example</blue>:Say we have a file called line.txt containing the following information in a form of table
-<red>name  id  occupation  address  phone-no  description </red>
-of the person with each person's data in a new line .Now lets say that we want to find out about a person in the file say "ravi"
-We then type <green> awk '/ravi/' list.txt</green> and this gives all the lines having ravi in it(can be done through grep also?).But what if want only particular data like the id and the number.Thats when awk is really useful. Type <green> awk '/ravi/' '{print $1,$2,$4}' list.txt </green> and this will give only the second and the third columns.But what if we want all the names of people having id less than 70 ...that can aslo be done using awk like this <green>awk '{ (if $2 < 70) print $1":" $2 $3 }' list.txt </green>.Note that if no search pattern is found it will display the whole file and if we want to insert any of our own text,it can be done using " ".
+Some options that are regularly used in tar are:
+<green>-c</green>: This option creates a new archive.
+<green>-v</green>: This option verbosely describes the  list files processed
+<green>-f</green>: This option stands for archive the file
+<green>--delete</green>: This option deletes files from the archives.
+<green>-t</green>: This option lists the contents of a archive.
+<green>-x</green>: This option helps in extracting files from the archive.
+
+<blue>Example</blue>: Say we want to archive all the pages that you have created during web building.Then type the command <green>tar -cvf web_pages *.html </green> and this will create a tar archive with all the files ending html.If no file is found it will return error and exit.This way we can create and extract archives.Some commonly used ways to extract from archives are
+.tar.bz2:<green> tar xjf archive_name</green>
+.tar.gz:<green> tar xzf archive_name</green>
+.tar:<green> tar xf archive_name</green>
+.tgz:<green> tar xzf archive_name</green>
+.tbz2:<green> tar xjf archive_name</green>
+This way most of the common files can be extracted.
+
+2.<green>zip</green>: This command is similar to tar command in the sense that it archives the files in the zip format.It even follows the same options as the tar command.Point to note is that .zip files can be extracted using the command <green> unzip archive_name</green>
+
+3.<green>gzip</green>: This command is used to extract archives having the extension .gz or .z.
+
+4.<green> bunzip2</green>: This is used for extracting archives having the extensions .bz2,.bz,.tbz2 and bzip2.If some form is given to it that it does not understand it will return the same file with the name original_filename.out.
+
+These commands are very useful in extracting all the possible archives that are generally used.Finally this is a small script that will generally extract any archive that you like.The way to execute this script is <green>./script_name archive</green>(Sorry for this but scripts will be covered later on!!)
+
+#!/bin/bash
+
+if [ -f $1 ]];then
+case $1 in
+*.tar.bz)       tar xjf $1   ;;
+*.tar.gz)tar xzf $1   ;;
+*.bz2)          bunzip2 $1   ;;
+*.rar)rar x $1     ;;
+*.gz)gunzip $1    ;;
+*.tar)tar xf $1    ;;
+*.tbz2)tar xjf $1   ;;
+*.tgz)tar xzf $1   ;;
+*.zip)unzip $1   ;;
+*.z)uncompress $1 ;;
+*)
+esac
+else
+   echo "$1 is not a valid file"
+fi
+
 </white>
+
 </start>

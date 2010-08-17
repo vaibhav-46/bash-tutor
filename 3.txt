@@ -1,26 +1,29 @@
-<start>                        <title>CHAPTER 2---FEW BASIC HELPS</title>
+<start><title>Chapter 3---Directory commands</title>
 <white>
-The first and most basic commands that a user should learn are <red> 'ls' and 'cd'</red> as these are the most useful commands and these are used most often:
+Now that we know how to view the contents of the directories and also change directories,it is time to learn how to create and delete directories.Before we learn how to do that a small introduction of the file system is in order.
+The main directory is the root directory also known by /.This contains every file that is available on the computer.Now some of the main sub-directories of this folder are:<red>
+a./Boot
+b./Etc
+c./bin
+d./usr
+e./home (/home/$USER is where most of your regular files are present)
+</red>
+and many more..do navigate through them and try finding out about these directories using cd and ls command.Also move around these directories using cd and see how they are arranged.Also there is a command called <red>file</red> that can be used to see what kind of file we are looking at..say you can type in <green>file $PWD</green> and it will give you the name and tell you that it is a directory.More on file later but it can be used to find out about various different kinds of files like text files(containing ASCII characters),executables etc..Get familiar with the general layout and a rough idea of some important files like <red>.bashrc,init.d,profile etc</red>.(Hint in the home directory type <green>ls -a</green>)
 
-1.<green>cd</green> :This is used to move from one directory to another. There are many ways of using cd.
-  The following are the most important usages of cd:
-<green>cd direc_name</green>:changes to the given directory 
-<green>cd ..</green>        :changes to a direc one above the present direc 
-<green>cd </green>          :without any file name it automatically goes to the home direc 
+One question at this stage will obviously be how to create and delete these directories.Note that as a general user you can only create directories in the home folder.So the main commands are:
+1.<green>mkdir</green>: This command is used to create a new directory inside the present working directory(type <green>pwd</green> to know its name).This can be used to create a new directory at any point.Also remember that the file/direc name should preferably not contain spaces in between.
 
-<blue>Usage</blue>:Somne things that you can try are <green>cd ~ </green> and <green>cd /home/'whoami`</green>
-<blue>Explaination</blue>:The ~ stands for the home direc i.e /home/USERNAME and this directory that you will change into is called a 'virtual home' of your computer.After doing this use <green> "cd -"</green> to go back to the last cd-ed directory.Do play around with this but do make sure that you come back to the current direc(name can be got by typing <green>pwd</green> at the terminal.
+<blue>Usage</blue>: mkdir name_of_directory
+<blue>Experiment</blue>: Try making a directory named say Shaastra  and cd'ing into it.Try putting some data into it.Also try to get back one step up using <red> cd .. </red> or <red> cd - </red>
 
-2.<green>ls</green>:This command is used to display the contents of a particular directory.
+Now that we have learn t how to create a directory it is also essential to know how to remove directories.Before starting on rmdir remember that anything removed by the below way cannot be got back as it is permanently deleted. 
 
-<green>ls</green>       :displays the contents of the directory in which the user is currently
-<green>ls direc</green> :displays the contents of the given directory
+2.<green>rmdir</green>: This command is used to remove a empty directory i.e any directory that is empty can be permanently removed using this method.
 
-<blue>Experiment</blue>:Try out <green>ls -lh</green> and the command <green>ls -a</green> .Dont bother too much with the output as of now but that output is going to be useful as we move along.The only point to note as of now is that <red>h</red> option makes the size of the directories in human readable form(do try it out without the h and see but do this only after exit as inside the tutorial none of the file sizes are not big enough for this distinction).
+<blue>Usage</blue>:rmdir name_of_direc
+<blue>Experiment</blue>: Try to rm the directory Shaastra and also check the error if you try to delete a non-empty directory.
 
-In addition to these commands there is also a command that is very often used in the terminal.Suppose that the directory contains 100 files then the ls output reading becomes difficult.At that point of time <red>less </red>is very useful to read text outputs on the terminal.Once you use less you can navigate the output as if it were a Word document.This makes the output more readable.
-
-More examples of this will follow in the next few chapters.
-
+So to delete a directory we need to empty it first and then delete.But this is not a very good process.In the next chapter we will see a command that can delete a non-empty direc.
 </white>
-</start>
+ </start>
+

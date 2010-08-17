@@ -1,23 +1,15 @@
-<start><title>Chapter 24----Useful Tools</title>
+<start><title>Chapter 25---Important Bash files</title>
 <white>
-Coming to the end of the list of commands that we are going to cover in this tutorial,we will cover two useful commands that might be used often in scripting and in general.These two commands <green> diff </green> and <green> patch </green> are used often in various places and they are two very useful tools.
+Ever wondered how the terminal starts every time you click on the icon.How does it know the PS1 variable(i.e the display prompt in the terminal).Obviously there must be some file where all the required variables are stored.In this chapter we will see some of these files:
 
-1.<green> diff </green> : This command is used to compares file line by line and give the difference.
+a.<green>/etc/profile </green>: This is the file generally read when the terminal is invoked interactively.These usually sets the shell variables like <red>PATH,USER,MAIL,HOSTNAME and HISTSIZE</red>(HISTSIZE defines the size of the .bash_history file in the home folder which stores the bash history).All settings that you want to apply to all your user's environments should be in this file
 
-<blue>Usage</blue>:diff [options] file1 file2
-<blue>Example</blue>:For example write down two files with some similar data.Then use <green> type file1 file2 </green>.This gives the main difference between two files.This command also has various options that can be used with diff:
-a.<green>-i</green>:ignore case while comparing
-b.<green>-b</green>:ignore the number of white spaces
-c.<green>-u</green>:displays the lines of unified text
-d.<green>-y</green>:output in two columns
-e.<green>-r</green>:recursively compare any subdirectories found
-f.<green>-N</green>:treat absent files as empty
-These are some of the most common options that are used with diff.<red>For a more extensive list refer to the man pages.</red>
+b.<green>/etc/bashrc </green>: As you will see later bash is not the only type of shell.So all the bash-configuration files are placed in this file since /etc/profile is read by other shells.Sometimes the alias are found in this file.
 
-2.<green>patch </green>:This command helps apply a different file to the original.All patch does is it takes a patch file containing a difference listing produced by the <red> diff </red> program and applies those differences to one or more original files,producing patched versions.
-One of the main options of patch is the <green>-b </green> option that creates a backup file of the file that is being patched .Other than that there are multiple uses of this but then they are beyond the scope of this tutorial.<red>For more information refer to the man pages.</red>
+c.<green>~/.bash_profile </green>: Though optional this is the preferred configuration file for configuring user environments individually.In this file,users can add extra configuration options or change default settings.This generally exports the <red> bashrc </red> file(we will exclusively cover bashrc file in the next chapter)
 
-So now that we have covered some(no pun) commands lets look at bash and how it can make our general work easier.
+d.<green>~/.bash_logout </green>: This file again optional contains specific instructions for the log out procedure.This is useful for remote connections,which will leave a clean window after closing them.Generally this is executed when we use <red> exit </red> to exit the tutorial.
+
+These are some of the files that are read when bash is started.But there is a very important file read by bash before starting and this is what we are going to see in the next chapter.
 </white>
-</start>
-
+</start> 

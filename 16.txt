@@ -1,45 +1,34 @@
-<start><title>Chapter 15----Process The Processes!!!</title>
+<start><title>Chapter 16---Miscellaneous</title>
 <white>
-In this chapter we are going to help reduce the usage of the mouse.Suppose we have started a program say Firefox and we want to shut it down.How do we do that using the terminal?Please read the whole chapter before you start trying out anything on your own.
-      First thing that you must know is that every process that runs on the computer has a unique id(a very useful id).Suppose we want to start firefox<red>(do it outside the tutorial)</red> from the terminal.This can be done by using the name firefox on the terminal.But then as long as Firefox is open we cannot use the terminal to do anything else(note that pressing <red>Ctrl+z</red> in the teminal closes the firefox window).So to start firefox in the background so that it does not interfere with the terminal use the command <green>firefox & </green>(note the & symbol..not a typo error!!).The & tells the computer to run the script in the background.Also the output on the terminal gives a number which is the process id of that application.This number is very important as this number uniquely identifies the application on the computer.
+Ever wondered how to find out more about various files...their size and how to get only particular people to access the files.In this chapter we will cover some commands that will help you do all of these commands.
 
-Now that we have understood about process id,we will see some commands that use these ids:
+1<green>du</green>: This command is used to estimate file space usage.This finds the size of all the files in the given directory.
 
-1.<green>pidof </green>:This is a useful command to know about the process id of a process.
+<blue>Usage</blue>: du [options]a
+<blue>Example</blue>: Try doing only<green> du</green> and you will see the disk usage of each and every file in the directory.But then we don't want the size of all the files in that directory.We want the disc usage for the present directory.Then we use <green>du -s</green>.But then if the file is too large the output is in terms of bytes.To make it more readable use <green>du -sh</green>.This command is used to get the sizes in<red> human readable format</red>.
 
-<blue>Example</blue>:Start firefox and then type in the terminal <green> pidof firefox-bin</green>.You can also use a tab to complete the application name!
+Remember the output of the <red>ls -l </red>command that we mentioned earlier.Now is the time to analyses some of the output of it.Each of the output lines look something like this:
+<red>-rwxr-xr-x  number  group_user  owner  size(in bytes)  last_time_of_modification  name</red>. 
+Note that in some cases the first dash has a <red>'d'</red> written there,which means that it is a <red>directory</red>.What do these initial "rwx" and stuff stand for?These are called the permissions for the given file.These decide who can access these files and who cannot.These are basically sets of 3:<red>read(r),write(w),execute(x)</red>.The first set of three characters represent the rights of <red>file owner</red>,the second set the rights of <red>files group</red> and the third the rights of <red>everyone else</red>.These rights are used to either allow or disallow access to various people.This is done using the following commands.
 
-2.<green>ps</green>:The process status command reports a snapshot of the current process.This can be used to find all the process running at a time including their process identification numbers.
+2.<green>chmod</green>:This command is used to change the permissions of the various files.It is a short form of <red>change modulation</red>.One important point before we see examples and usage is that the r,w,x variables are in order and are denoted by the binary numbers.So <red>111</red>( 111 in binary=7 in decimal)stands for <red>r,w,x all allowed</red> while <red>101</red>(101 in binary=5 in decimal) stands for <red>r,x allowed but w disallowed</red>.Using these decimal numbers we can change the ownership of the files.
 
-<blue>Usage</blue>: ps [options]
-<blue>Examples</blue>:
-a.ps without options prints to stdout four items of information for atleast two processes currently on the system:the shell and ps.The four items are labelled <red>PID,TTY,TIME and CMD</red>.<red>TIME</red> is the amount of CPU time in minutes and seconds that the process has been running.<red>CMD</red> is the name of the command that launched the process.<red>TTY</red> (stands for terminal type ) is the name of the terminal that the user is logged into.
-b.<green>ps -aux | less </green> is the most common option that is used to obtain information about all the process.<red>-a</red> option tells the user to list all the process of all the users on the system.<red>-u</red> tells ps to provide detailed information about each process.The <red>-x</red> option adds to the list processes that have no controlling terminal(such as those which were started on booting).Note that the <red>-</red> is not mandatory here.
-c.<green>ps -ef | less </green> is an alternative to the above command.The <red>-e</red> option generates a list of information about every process currently running.The <red>-f</red> option generates a listing that contains fewer items of information for each process than the -l option.
+<blue>Usage</blue>: chmod binary_number file_name
+<blue>Example</blue>: <green>chmod 444 file_name </green> changes the file ownership to r--r--r-- i.e read only for everyone.Another example is <green>chmod 711 file_name </green> and this means the owner can do anything but others can only run the file.
 
-3.<green>jobs</green>:This command prints all the background process that are running.This can be helpful to find out if any malfunctioning proram is running in the background.
+3.<green>chown</green>: Note that this command can be used only as a <red>super user</red>(more on what a super user is later).But this command is used to transfer the ownership of some file from one group to another.
 
-4.<green>bq</green>:This command is used to get a program to run in the background.
-<blue>bg [options]</blue>.
+<blue>Usage</blue>: chown new_owner file_name
+<blue>Example</blue>: Say we want to change ownership of a file from "foo" user to "blah" user.Then we have to type <green>chown blah file_name </green> but note again that this can only be done as <red>super user.</red>
 
-5.<green>kill</green>:This command is used to kill a process that is malfunctioning.But to kill a process the id of the process is required.Only then this command can be used.Basically kill sends a sort of warning to the application and based on the intensity of the warning the application takes action.(see examples) 
+4.<green>chgrp</green>: As the chown this command transfers the ownership of a file from one group to another.Same usage as the chown command.
 
-<blue>Usage</blue>:kill procedd_id
-<blue>Example</blue>:Start a process and find its process_id.Now kill the process using the command <green> kill process_id </green>
-Also note that <green> kill -l </green> can be used to find all the signals that kill can send to various process.
+5.<green>chpasswd</green>: This command is used to change the login password from the terminal.
 
-6.<green>pkill</green>:This command will send the specified signal ( by default SIGTERM)to each process instead of listing them on stdout.
+Before we move on,lets cover one very important thing called root/super user.The root user is similar to the administrator in a multiple account Windows computer.It is the main user of the system and this user has all the privileges and control over the system.<red>Beware that any wrong changes made as super user can affect the computer</red>.That is why when we want to install something or change ownership it can be done only by being super user.Using <red> sudo </red> before a command to use things that only the system administrator can do(it asks for the admin password to confirm).Note that it is not a good practice to stay logged as root as any wrong command can ruin the system.Thats why the <red> sudo </red> trick helps you you do the process as root and then exits immediately.
 
-<blue>Usage</blue>:pkill [options]
+Note though that chpasswd does not always work.In addition there are other commands like<red> passwd,yppasswd</red> which can also be used to change the password.If one of these do not work,try the others.
 
-7.<green>killall</green>:This command is used to kill the process by name.
-
-<blue>Usage</blue>:killall [options] name
-
-These commands are used a lot in managing the running of various applications.
+Now that we have covered sudo we are moving into more advanced commands that require the user to be a root/or administrator as you may call it.These commands deal with installing applications on the computer.
 </white>
-
-</start>
-
-
-
+ </start>
