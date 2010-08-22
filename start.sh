@@ -15,11 +15,10 @@
 # The total number of tutorials in the chapter.
 NUM_CHAPTERS=$((`ls [0-9]*.txt | wc -l`))
 # This variable needs to be persistent, hence it is exported whenever changed
-CURRENT_CHAPTER=1
+# Test if the variable is alreayd there
 
-export NUM_CHAPTERS
-export CURRENT_CHAPTER
-
+echo "1">chapter.txt
+x=`cat chapter.txt`
 # Setting the terminal screen to display the tutorial
 # This enlarges the terminal to the maximum size
 printf "\e[8;70;120;t"
@@ -33,6 +32,6 @@ touch temp.txt
 touch out.txt
 # This gets the terminal width to use in the printing routine
 width=$(stty size | awk '{print $2}')
-python create.py 1 $PWD $(($width-10)) 
+python create.py $x $PWD $(($width-10)) 
 cat out.txt | less -r
 

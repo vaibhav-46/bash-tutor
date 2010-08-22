@@ -70,7 +70,7 @@ wprintw(my_wins[0]," The way to move around in this tutorial is:\n\n");
 wprintw(my_wins[0]," 1. Next Chapter:F2\n");
 wprintw(my_wins[0]," 2.Prev Chapter:F3\n");
 wprintw(my_wins[0]," 3.To goto a specific chapter type in g<number>:For example to goto 12th chapter press g12\n");
-wprintw(my_wins[0]," 4.To resume: F4(to be done)\n");
+wprintw(my_wins[0]," 4.To resume: F4\n");
 wprintw(my_wins[0]," 5.To see the list of contents: F6(to be done)\n");
 wprintw(my_wins[0]," 6.If at any instant the tutorial does not work you can always fall back on the default of pressing next or prev after q\n");
 wprintw(my_wins[0]," 7.To exit the tutorial press Ctrl+a followed by \\ and y\n\n\n");
@@ -96,7 +96,7 @@ update_panels();
 /*End statements for instructions*/
 attron(COLOR_PAIR(4));
 mvprintw(win_x-3,0,"1.Press tab to see the instructions");
-mvprintw(win_x-2,0,"2.To resume press F4(presently does not work)");
+mvprintw(win_x-2,0,"2.To resume press F4");
 attroff(COLOR_PAIR(4));
 doupdate();
 
@@ -109,12 +109,21 @@ switch(ch)
  case 9:
     top=(PANEL *) panel_userptr(top);
     top_panel(top);
+    break;
+    
+ 
+ case KEY_F(4):
+    endwin();
+    system("screen bash bashtutor.sh");
+    return 0;
+    
    
 }
 update_panels();
 doupdate();
 }
 endwin();
+system("screen bash bashstart.sh");
 return 0;
 }
 

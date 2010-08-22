@@ -22,9 +22,11 @@ done
 
 
 function readfile()
-{
+{       
+	NUM_CHAPTERS=$(( `ls /home/vaibhav/final/[0-9]*.txt | wc -l ` ))
+	if [[ "$CURRENT_CHAPTER" -lt "NUM_CHAPTERS" ]]
+	then
         printf "\e[8;70;120;t"
-	echo $NUM_CHAPTERS
         clear
         size=$(stty size | awk '{print $2}')
 	rm -f temp.txt
@@ -32,12 +34,17 @@ function readfile()
 	touch temp.txt
 	touch out.txt
         python create.py $CURRENT_CHAPTER $PWD $(($size-10))
+        echo "$CURRENT_CHAPTER">chapter.txt
 	cat out.txt | less -r
+	else
+        echo "There are only "$NUM_CHAPTERS" in this tutorial...To go to the required chapter please give the appropriate number!!"
+	fi
 }
 
 
 function next()
 {
+        CURRENT_CHAPTER=`cat chapter.txt`
         if [[ "$CURRENT_CHAPTER" -lt "1" ]]
 	then
 	CURRENT_CHAPTER=1
@@ -49,7 +56,6 @@ function next()
         echo "Chapters done...hope you liked the tutorial"
         else
         CURRENT_CHAPTER=$(($CURRENT_CHAPTER + 1))
-	export CURRENT_CHAPTER
         readfile
         fi
 }
@@ -57,10 +63,12 @@ function next()
 
 function prev()
 {
+        CURRENT_CHAPTER=`cat chapter.txt`
         if [[ "$CURRENT_CHAPTER" -eq "1" ]]
 	then 
 	clear
         echo "This is the first chapter....there is nothing before this!!"
+        echo "To go to the first chapter type ./start.sh"
         else
 	CURRENT_CHAPTER=$(($CURRENT_CHAPTER - 1))
         export CURRENT_CHAPTER
@@ -72,7 +80,6 @@ function prev()
 function goto()
 {
         CURRENT_CHAPTER=$1
-        export CURRENT_CHAPTER
         readfile 
 }
 
