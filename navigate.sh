@@ -23,7 +23,7 @@ done
 
 function readfile()
 {       
-	NUM_CHAPTERS=$(( `ls /home/vaibhav/final/[0-9]*.txt | wc -l ` ))
+	NUM_CHAPTERS=$(( `ls $PWD/[0-9]*.txt | wc -l ` ))
 	if [[ "$CURRENT_CHAPTER" -lt "NUM_CHAPTERS" ]]
 	then
         printf "\e[8;70;120;t"
@@ -37,7 +37,7 @@ function readfile()
         echo "$CURRENT_CHAPTER">chapter.txt
 	cat out.txt | less -r
 	else
-        echo "There are only "$NUM_CHAPTERS" in this tutorial...To go to the required chapter please give the appropriate number!!"
+        echo "There are only "$NUM_CHAPTERS" chapters in this tutorial...To go to the required chapter please give the appropriate number!!"
 	fi
 }
 
