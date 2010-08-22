@@ -13,7 +13,7 @@ bindkey -k k3 process n
 bindkey -k k2 process p
 
 register q ^a\y
-bindkey ^ad process q
+bindkey ^d process q
 
 
 split
