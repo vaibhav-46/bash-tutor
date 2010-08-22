@@ -11,8 +11,12 @@ register n qnext
 register p qprev
 bindkey -k k3 process n
 bindkey -k k2 process p
-bindkey ^d ^a\
-bindkey tab ^atab
+
+register q \y
+bindkey  process q
+
+register m <Tab>
+bindkey <Tab> process m
 
 split
 screen bash
