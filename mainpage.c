@@ -114,7 +114,7 @@ switch(ch)
  
  case KEY_F(4):
     endwin();
-    system("screen -c screenrc bash bashtutor.sh");
+    system("screen -c .screenrc bash bashtutor.sh");
     return 0;
     
    
@@ -123,7 +123,7 @@ update_panels();
 doupdate();
 }
 endwin();
-system("screen -c screenrc bash bashstart.sh");
+system("screen -c .screenrc bash bashstart.sh");
 return 0;
 }
 
