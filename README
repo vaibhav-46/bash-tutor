@@ -1,6 +1,8 @@
-This is a small collection of chapters that are contained as part of bash-tutor.This package contains 2 scripts as of now:
+This is a small collection of chapters that are contained as part of bash-tutor.
+To start off run the executable teach using ./teach.
 
-All that has to be done is to copy the screenrc file to the home folder as .screenrc file and then run teach.sh.
+Press tab at the welcome page to see  the instructions.
+
 
 Navigation:
 -----------
@@ -9,10 +11,6 @@ Navigation:
 2.To go to the next chapter press F2
 3.To go to a required chapter press g followed by the number
 
-Todo :
-------
 
-1.insert a penguin in the start page
-2.try and get some way for the user to restart
 
 
