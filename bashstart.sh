@@ -1,5 +1,5 @@
 #!/bin/bash
-screen 
+screen -c screenrc
 screen -X eval "stuff './start.shq'"
 screen -X eval "stuff 'source navigate.sh'"
 screen -X eval "stuff 'clear'"

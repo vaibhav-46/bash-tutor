@@ -67,8 +67,8 @@ mvwprintw(my_wins[0],3,2,"Instructions:");
 wattroff(my_wins[0],A_UNDERLINE);
 mvwprintw(my_wins[0],5,2,"This application has been made with an idea of helping the user get accustomed to the terminal.\n");
 wprintw(my_wins[0]," The way to move around in this tutorial is:\n\n");
-wprintw(my_wins[0]," 1. Next Chapter:F2\n");
-wprintw(my_wins[0]," 2.Prev Chapter:F3\n");
+wprintw(my_wins[0]," 1. Next Chapter:F3\n");
+wprintw(my_wins[0]," 2.Prev Chapter:F2\n");
 wprintw(my_wins[0]," 3.To goto a specific chapter type in g<number>:For example to goto 12th chapter press g12\n");
 wprintw(my_wins[0]," 4.To resume: F4\n");
 wprintw(my_wins[0]," 5.To see the list of contents: F6(to be done)\n");
@@ -114,7 +114,7 @@ switch(ch)
  
  case KEY_F(4):
     endwin();
-    system("screen bash bashtutor.sh");
+    system("screen -c .screenrc bash bashtutor.sh");
     return 0;
     
    
@@ -123,7 +123,7 @@ update_panels();
 doupdate();
 }
 endwin();
-system("screen bash bashstart.sh");
+system("screen -c .screenrc bash bashstart.sh");
 return 0;
 }
 
