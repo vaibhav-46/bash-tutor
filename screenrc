@@ -12,9 +12,8 @@ register p qprev
 bindkey -k k3 process n
 bindkey -k k2 process p
 
-register q ^a\y
-bindkey ^d process q
-
+register q \y
+bindkey  process q
 
 split
 screen bash
