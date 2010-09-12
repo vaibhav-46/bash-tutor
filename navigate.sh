@@ -24,7 +24,7 @@ done
 function readfile()
 {       
 	NUM_CHAPTERS=$(( `ls $PWD/[0-9]*.txt | wc -l ` ))
-	if [[ "$CURRENT_CHAPTER" -lt "NUM_CHAPTERS" ]]
+	if [[  "CURRENT_CHAPTER" -le "NUM_CHAPTERS" ]]
 	then
         printf "\e[8;70;120;t"
         clear
