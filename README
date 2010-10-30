@@ -1,0 +1,58 @@
+Author : Vaibhav Agarwal
+
+Version : 1
+
+Description : This is a small application to help the user understand various bash commands and how they can be used .
+
+Installation steps : 
+====================
+
+There are a few dependencies that have to be met .These are the steps to be followed:
+
+1. setting up termcolor
+    The following steps shpuld be followed for installing termcolor .....
+        $ cd termcolor/
+        $ python setup.py install
+2. setting up ncurses
+    The following steps should be followed for installing ncurses....
+        $ cd ncurses/
+        $ ./configure
+        $ make
+        $ sudo make install ( it asks for the password ... enter the password )
+3. setting up beautiful-soup
+    In case you use ubuntu type in the command in the terminal "sudo apt-get install python-beautifulsoup" .
+
+Usage :
+=======
+
+Just go to the src/ folder and use the command " ./teach " ( obviously without the quotes )
+
+Navigation:
+===========
+
+1. In the introduction page press TAB to see the instructions
+
+2. Press F2 to start the tutorial
+
+3. Press F4 to continue with the tutorial from where you left of.
+
+4. Press F6 to see the chapters ( also in the intext window type in the number and then press Enter to go the required chapter )
+
+5. In the chapters pressing F3 to go to the previous chapter.
+
+6. In the chapters press F4 to go to the next chapter.
+
+7. To exit the split screen mode, press "Ctrld" .. this will get you back to the the normal mode.
+
+8. To move to the top of the split mode , press 
+
+
+Things to be done :
+===================
+
+There are a few bugs...
+
+a. goto function inside the less does not work 
+
+b. a few chapters and also some more scripts 
+
