@@ -1,0 +1,24 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+startup_message off
+
+# Approach 1
+#bindkey -k k3 stuff qnext
+
+# Approach 2
+register n qnext
+register p qprev
+bindkey -k k3 process n
+bindkey -k k2 process p
+
+
+register q \y
+bindkey  process q
+
+split
+screen bash
+focus
+screen bash
+
+
